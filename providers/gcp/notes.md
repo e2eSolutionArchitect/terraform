@@ -1,1 +1,1 @@
-## Notes for Azure infrastructure
+## Notes for Google Cloud Platform infrastructure
