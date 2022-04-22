@@ -2,13 +2,4 @@
 Terraform for AWS, Azure, GCP
 
 
-### List of AWS Examples
-
-- S3 Backend configuration for Terraform State Management
-- VPC
-
-
-### List of AWS Modules
-
-- S3 Backend configuration for Terraform State Management
-- VPC
+### AWS Examples - Pelase check README-AWS.md
