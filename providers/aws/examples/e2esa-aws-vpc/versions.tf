@@ -8,13 +8,13 @@ terraform {
   }
 
   backend "s3" {
-     bucket="e2esa-terraform-aws-states"
-     key = "state/terraform.tfstate"
-     region ="us-east-1"
-     dynamodb_table = "e2esa-terraform-aws-locks"
-     encrypt =true
-     profile = "default"
-   }
+    bucket         = "e2esa-terraform-aws-states"
+    key            = "state/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "e2esa-terraform-aws-locks"
+    encrypt        = true
+    profile        = "default"
+  }
 }
 
 # provider block

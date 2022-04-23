@@ -12,6 +12,7 @@ terraform {
 
 provider "aws" {
   profile = "default"
-  region  = var.aws_region
+  #shared_credentials_file ="/path/to/.aws/credentials"
+  region = var.aws_region
   #alias   = "us-east-1"
 }
