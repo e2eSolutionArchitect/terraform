@@ -4,7 +4,7 @@ Terraform for AWS, Azure, GCP
 ### For Terraform professional consultancy and Technology advisory please feel free to drop a note to som@e2eSolutionArchitect.com
 [Click here](https://e2esolutionarchitect.com/tag/terraform) for Terraform advance articles
 
-e2eSA Terraform solutions
+e2eSA Solutions for Terraform
 - Initialize Terraform offline in Windows, Ubuntu [Click here](https://github.com/e2eSolutionArchitect/terraform/blob/main/providers/docs/terraform-offline-initialize.md)
 
 #### How to execute
