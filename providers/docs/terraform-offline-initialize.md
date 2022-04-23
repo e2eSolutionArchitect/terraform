@@ -1,6 +1,6 @@
 Step by Step guide https://e2esolutionarchitect.com/terraform-offline-setup-and-initialization-in-windows-and-ubuntu-server/
 
-•	Terraform OFFLINE setup and initialization in Windows system (this article)
+•	Terraform OFFLINE setup and initialization in Windows and Ubuntu system (this article)
 •	Terraform OFFLINE setup and initialization in Unix system on docker (coming soon)
 
 ## Run Terraform offline 
@@ -18,12 +18,12 @@ Create this file inside above directory.
 For windows, Create a file "terraform.rc", if other OS then create ".terraformrc". Dont miss the '.' and the file should NOT be like "terraform.rc.txt"
 
 ## Step 3: 
-Update the file terraform.rc or .terraformrc with below code block
+Update the file terraform.rc (for Windows ) or .terraformrc (for Ubuntu) with below code block
 
 ```
 provider_installation {
   filesystem_mirror {
-    path    = "path/to/the/new/directory" # "c:/Users/<username>/tf_cache"
+    path    = "path/to/the/new/directory" # "c:/tf_cache"
     include = ["registry.terraform.io/hashicorp/*"]
   }
   direct {
@@ -31,7 +31,7 @@ provider_installation {
   }
 }
 
-plugin_cache_dir = "path/to/the/new/directory" # "c:/Users/<username>/tf_cache"
+plugin_cache_dir = "path/to/the/new/directory" # "c:/tf_cache"
 disable_checkpoint=true
 ```
 
@@ -39,8 +39,17 @@ disable_checkpoint=true
 Setup env variables as follows
   
   ```
-  $env:TF_PLUGIN_CACHE_DIR="$HOME/tf_cache"
-  $env:TF_CLI_CONFIG_FILE="$HOME/tf_cache/terraform.rc" # terraform.rc for windows, .terraformrc for linux. eg. "c:/Users/<username>/tf_cache/terraform.rc"
+for Windows
+$env:TF_PLUGIN_CACHE_DIR="c:/tf_cache"
+$env:TF_CLI_CONFIG_FILE="c:/tf_cache/terraform.rc" 
+
+for Ubuntu
+export TF_PLUGIN_CACHE_DIR="c:/tf_cache"
+export TF_CLI_CONFIG_FILE="c:/tf_cache/terraform.rc"
+
+verify in Ubuntu
+echo $TF_CLI_CONFIG_FILE
+
   ```
 
 ## Step 5: 
