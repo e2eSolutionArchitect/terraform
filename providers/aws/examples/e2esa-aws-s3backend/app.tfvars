@@ -13,6 +13,6 @@ enable_lifecycle_rule = false
 
 db_table_name = "e2esa-tf-locks"
 billing_mode  = "PAY_PER_REQUEST"
-hash_key      = "LockId"
-attr_name     = "LockId"
+hash_key      = "LockID"
+attr_name     = "LockID"
 attr_type     = "S"

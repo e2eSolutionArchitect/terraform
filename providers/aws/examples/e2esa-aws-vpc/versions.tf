@@ -8,10 +8,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "e2esa-terraform-aws-states"
+    bucket         = "e2esa-tf-states"
     key            = "state/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "e2esa-terraform-aws-locks"
+    dynamodb_table = "e2esa-tf-locks"
     encrypt        = true
     profile        = "default"
   }
