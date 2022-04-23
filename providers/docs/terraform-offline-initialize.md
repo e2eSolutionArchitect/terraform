@@ -3,7 +3,7 @@ Step by Step guide https://e2esolutionarchitect.com/terraform-offline-setup-and-
 •	Terraform OFFLINE setup and initialization in Windows and Ubuntu system (this article)
 •	Terraform OFFLINE setup and initialization in Unix system on docker (coming soon)
 
-## Run Terraform offline 
+## Initialize Terraform offline 
 
 ## Step 1: (Using PowerShell, if you are using anything else just to below instructions accordingly)
 Create a directory in your file system. suppose creating "tf_cache" directory in user home ($HOME)
