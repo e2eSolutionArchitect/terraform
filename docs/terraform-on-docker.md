@@ -1,4 +1,4 @@
-Install Docker on Ubuntu (Click here)[https://github.com/e2eSolutionArchitect/scripts/blob/main/docker/install-docker-aws-ec2.md] on AWS EC2 (Click here)[https://github.com/e2eSolutionArchitect/scripts/blob/main/docker/install-docker-aws-ec2.md]
+Install Docker on Ubuntu [Click here](https://github.com/e2eSolutionArchitect/scripts/blob/main/docker/install-docker-aws-ec2.md) on AWS EC2 [Click here](https://github.com/e2eSolutionArchitect/scripts/blob/main/docker/install-docker-aws-ec2.md)
 
 
 Run terraform docker with below command
