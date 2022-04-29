@@ -1,5 +1,6 @@
 Install Docker on Ubuntu [Click here](https://github.com/e2eSolutionArchitect/scripts/blob/main/docker/install-docker-aws-ec2.md) on AWS EC2 [Click here](https://github.com/e2eSolutionArchitect/scripts/blob/main/docker/install-docker-aws-ec2.md)
 
+Setup Terraform cache with file system mirror (creating tf_cache) [Click here](https://github.com/e2eSolutionArchitect/terraform/blob/main/docs/terraform-offline-initialize.md)
 
 Run terraform docker with below command
 
