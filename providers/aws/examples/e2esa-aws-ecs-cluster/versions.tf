@@ -9,7 +9,7 @@ terraform {
 
   backend "s3" {
     bucket         = "e2esa-tf-states"
-    key            = "vpc/terraform.tfstate"
+    key            = "ecs-cluster/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "e2esa-tf-locks"
     encrypt        = true
@@ -22,5 +22,4 @@ terraform {
 provider "aws" {
   profile = "default"
   region  = var.aws_region
-  #alias   = "us-east-1"
 }
