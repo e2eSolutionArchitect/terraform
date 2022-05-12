@@ -11,7 +11,7 @@ module "aws_s3_bucket" {
   source = "../../modules/e2esa-module-aws-vpc"
 
   create_vpc           = var.create_vpc
-  create_igw=var.create_igw
+  create_igw           = var.create_igw
   name                 = var.name
   cidr                 = var.cidr
   instance_tenancy     = var.instance_tenancy

@@ -5,13 +5,13 @@ variable "createdBy" {}
 # General 
 variable "aws_region" {}
 variable "tf_workspace_env" {
-    type= string
-    description="Enter Terraform workspace"
+  type        = string
+  description = "Enter Terraform workspace"
 
-    validation {
-      condition =contains(["dev"],var.tf_workspace_env)
-    error_message="ERROR: Please select appropriate workspace. Default workspace is NOT recommended."
-    }
+  validation {
+    condition     = contains(["dev"], var.tf_workspace_env)
+    error_message = "ERROR: Please select appropriate workspace. Default workspace is NOT recommended."
+  }
 }
 
 # VPC
