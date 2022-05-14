@@ -1,4 +1,3 @@
-
 # Tags
 variable "project" {}
 variable "createdBy" {}
@@ -7,6 +6,6 @@ variable "aws_region" {}
 
 
 # ECS
+variable "create_ecs_cluster" {}
 variable "ecs_cluster_name" {}
 variable "container_insights" {}
-variable "create_ecs_cluster" {}
