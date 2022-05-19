@@ -16,9 +16,9 @@ Here Development EC@ is our "Build Server"
 {
   "Version": "2012-10-17"
   "Statement": [
-    "Sid":
-    "Effect":
-    "Action":
+    "Sid": "VisualEditor0",
+    "Effect": "Allow",
+    "Action": "sts:AssumeRole",
     "Resource": "arn:aws:iam::<PRODUCTION ACCOUNT NO>:role/<cross account role>"
   ]
 }
@@ -29,4 +29,30 @@ Here Development EC@ is our "Build Server"
 - Select the EC2 > Action > Security > Modify IAM Role
 
 ### Step 4: - in DEVELOPMENT 
+- Use "assume_role" in terraform provider like below.
 - Run Terraform in Development EC2 instance. It doesn't require any aws profile or credential to pass. The attached IAM role will provide required access. 
+
+```
+
+terraform {
+  required_version = "~> 1.1.6"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.5.0"
+    }
+  }  
+}
+
+provider "aws" {
+  region  = var.aws_region
+  sts_region = var.aws_region
+  assume_role {
+    role_arn="arn:aws:iam::<aws production account name>:role/<cross account rolename>"
+  }
+  endpoints {
+    s3="s3.us-east-1.amazonaws.com"
+  }
+}
+
+```
