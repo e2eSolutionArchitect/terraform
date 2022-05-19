@@ -1,5 +1,6 @@
 
-## Consider two Accounts Development and Production. We want to run Terraform from Development account to provision resources in Production without any aws credentials. That's why an IAM instance profile needs to be attached to the Development EC2
+## Consider two Accounts Development and Production. We want to run Terraform from Development account to provision resources in Production without any aws credentials. That's why an IAM instance profile needs to be attached to the Development EC2.
+Here Development EC@ is our "Build Server"
 
 ### Step 1: in PRODUCTION
 - Create a Cross account ROLE in PRODUCTION account with account id of Development account. 
