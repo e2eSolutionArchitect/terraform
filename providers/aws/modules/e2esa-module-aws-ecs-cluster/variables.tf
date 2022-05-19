@@ -3,7 +3,7 @@
 # -------------------------------------------
 
 variable "aws_region" {
-  description = "AWS infrastructure regio"
+  description = "AWS infrastructure region"
   type        = string
   default     = null
 }
@@ -22,7 +22,7 @@ variable "tags" {
 
 # ECS
 variable "create_ecs_cluster" {
-  description = "AWS infrastructure regio"
+  description = "Decision to create ecs cluster"
   type        = bool
   default     = true
 }
@@ -34,6 +34,7 @@ variable "ecs_cluster_name" {
 }
 
 variable "container_insights" {
+  description = "Enable container insights"
   type    = bool
   default = false
 }
