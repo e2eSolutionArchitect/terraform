@@ -1,8 +1,8 @@
 ## 'End To End Solution Architect' forum brings to you the terraform scripts for infrastructure provisioning in AWS, Azure and Google Cloud Platform
 Terraform for AWS, Azure, GCP
 
-### For Terraform professional consultancy and Technology advisory please feel free to drop a note to som@e2eSolutionArchitect.com
-[Click here](https://e2esolutionarchitect.com/tag/terraform) for Terraform advance articles
+### For Terraform professional consultancy and Technical advisory please feel free to drop a note to som@e2eSolutionArchitect.com
+[Click here](https://e2esolutionarchitect.com/tag/terraform) for Terraform articles
 
 ## e2eSA Online Video Tutorials [Click here](https://www.youtube.com/channel/UC5Juuk7aTvbRmrABMq4onJA/videos)
 
