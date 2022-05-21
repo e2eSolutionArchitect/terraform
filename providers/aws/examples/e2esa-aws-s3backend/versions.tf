@@ -11,7 +11,7 @@ terraform {
 # provider block
 
 provider "aws" {
-  profile = "default"
+  profile = "production"
   #shared_credentials_file ="/path/to/.aws/credentials"
   region = var.aws_region
   #alias   = "us-east-1"

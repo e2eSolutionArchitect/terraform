@@ -6,7 +6,8 @@ locals {
     Project     = var.project
     CreatedBy   = var.createdBy
     CreatedOn   = timestamp()
-    Environment = terraform.workspace
+    Environment =var.environment
+    TFWorkspace = terraform.workspace
   }
 }
 

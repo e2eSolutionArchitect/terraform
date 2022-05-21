@@ -12,8 +12,8 @@ terraform {
   backend "s3" {
     bucket         = "e2esa-tf-states"
     key            = "ecs-cluster/terraform.tfstate"
-    region         = "us-east-1"
-    dynamodb_table = "e2esa-tf-locks"
+    region         = var.aws_region
+    dynamodb_table = var.backend_dynamodb_table
     encrypt        = true
     profile        = "default"
   }

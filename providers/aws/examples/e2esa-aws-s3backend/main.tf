@@ -11,7 +11,7 @@ locals {
 }
 
 module "aws_s3_bucket" {
-  source = "../../modules/e2esa-aws-s3"
+  source = "../../modules/e2esa-module-aws-s3"
 
   #for_each              = toset(var.s3_bucket_names)
   #s3_bucket_name           = each.key
@@ -23,7 +23,7 @@ module "aws_s3_bucket" {
 }
 
 module "aws_dynamodb" {
-  source        = "../../modules/e2esa-aws-dynamodb"
+  source        = "../../modules/e2esa-module-aws-dynamodb"
   db_table_name = var.db_table_name
   billing_mode  = var.billing_mode
   hash_key      = var.hash_key

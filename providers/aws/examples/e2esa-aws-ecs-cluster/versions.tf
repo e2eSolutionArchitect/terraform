@@ -6,20 +6,20 @@ terraform {
       version = "~> 4.5.0"
     }
   }
-
-  backend "s3" {
-    bucket         = "e2esa-tf-states"
-    key            = "ecs-cluster/terraform.tfstate"
-    region         = "us-east-1"
-    dynamodb_table = "e2esa-tf-locks"
-    encrypt        = true
-    profile        = "default"
-  }
+  # backend "s3" {}
+  # backend "s3" {
+  #   bucket         = var.backend_s3_bucket
+  #   key            = "${var.project}/terraform.tfstate"
+  #   region         = var.aws_region
+  #   dynamodb_table = var.backend_dynamodb_table
+  #   encrypt        = true
+  #   profile        = var.profile
+  # }
 }
 
 # provider block
 
 provider "aws" {
-  profile = "default"
+  profile = var.profile
   region  = var.aws_region
 }
