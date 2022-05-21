@@ -18,10 +18,11 @@ e2eSA Solutions for Terraform
 - Setp 5: terraform destroy -var-file="app.tfvars" -var="createdBy=e2esa"
 
 ### Tech Docs & Instructions
-- Setup Terraform backend/state management with AWS S3 [Click here ](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/e2esa-aws-s3backend).
+- Manage Multiple environment with backend configuration [Click here](https://github.com/e2eSolutionArchitect/KEDB/blob/main/terraform/terraform%20backend%20values%20not%20allowed.md)
+
 
 ### Projects
-- Manage Multiple environment with backend configuration [Click here](https://github.com/e2eSolutionArchitect/KEDB/blob/main/terraform/terraform%20backend%20values%20not%20allowed.md)
+- Setup Terraform backend/state management with AWS S3 [Click here ](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/e2esa-aws-s3backend).
 - Run jmeter in AWS ECS (Fargate and EC2) using Terraform [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/e2esa-aws-jmeter-ecs)
 - AWS ECS Fargate service [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/e2esa-aws-ecs-service)
 - AWS ECS Cluster [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/e2esa-aws-ecs-cluster)
