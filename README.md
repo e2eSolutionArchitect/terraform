@@ -17,7 +17,7 @@ e2eSA Solutions for Terraform
 - Setp 4: terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
 - Setp 5: terraform destroy -var-file="app.tfvars" -var="createdBy=e2esa"
 
-### Tech Docs & Instructions
+### Tech Docs & KEDB [Click here](https://github.com/e2eSolutionArchitect/KEDB)
 - Manage Multiple environment with backend configuration [Click here](https://github.com/e2eSolutionArchitect/KEDB/blob/main/terraform/terraform%20backend%20values%20not%20allowed.md)
 
 
