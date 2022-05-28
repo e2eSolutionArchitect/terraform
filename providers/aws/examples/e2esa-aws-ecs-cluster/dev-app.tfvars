@@ -2,13 +2,13 @@
 project = "e2esa-tutorials"
 
 # General 
-aws_region = "us-east-1"
-profile = "development"
-environment="dev"
+aws_region  = "us-east-1"
+profile     = "development"
+environment = "dev"
 
 # Backend
-backend_s3_bucket="e2esa-tf-states"
-backend_dynamodb_table="e2esa-tf-locks"
+backend_s3_bucket      = "e2esa-tf-states"
+backend_dynamodb_table = "e2esa-tf-locks"
 
 # ECS
 create_ecs_cluster = true

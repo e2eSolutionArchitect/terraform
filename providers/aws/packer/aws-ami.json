@@ -1,0 +1,40 @@
+{
+  "variables": {
+    "aws_region": "us-west-2",
+    "aws_subnet_id": "subnet-xxxxx",
+    "aws_vpc_id": "vpc-xxxxx",
+    "aws_ami_name": "CentOS-7-HVM-EBS-{{timestamp}}",
+    "source_ami": "ami-0c4f7023847b90238"
+},
+    "builders": [
+      {
+        "vpc_id": "{{user `aws_vpc_id`}}",
+        "subnet_id": "{{user `aws_subnet_id`}}",
+        "type": "amazon-ebs",
+        "ami_virtualization_type": "hvm",
+        "region": "{{user `aws_region`}}",
+        "source_ami": "{{user `source_ami`}}",
+        "ami_name": "{{user `aws_ami_name`}}-{{timestamp}}",
+        "ami_description": "Latest CentOS AMI with EBS backend on HVM",
+        "instance_type": "t2.micro",
+        "ssh_username": "ubuntu",
+        "account_id": "AccountIDNUMBER",
+        "source_ami_filter": {
+          "filters": {
+               "virtualization-type": "hvm",
+                "name": "ops_aws_cent_7_*",
+                "root-device-type": "ebs"
+                      },
+          "owners": ["xxxxxxxxxxx"],
+          "most_recent": true
+      },
+        "tags": {"Environment": "test", "name": "packer.io test"}
+      }
+    ],
+    "provisioners": [
+      {
+        "type": "shell",
+        "script": "provision.sh"
+      }
+    ]
+  }

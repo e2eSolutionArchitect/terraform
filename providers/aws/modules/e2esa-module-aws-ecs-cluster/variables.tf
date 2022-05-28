@@ -35,8 +35,8 @@ variable "ecs_cluster_name" {
 
 variable "container_insights" {
   description = "Enable container insights"
-  type    = bool
-  default = false
+  type        = bool
+  default     = false
 }
 
 # variable "container_insights" {

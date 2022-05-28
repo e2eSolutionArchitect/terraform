@@ -7,7 +7,7 @@ terraform {
     }
   }
 
-# TF State Management
+  # TF State Management
 
   backend "s3" {
     bucket         = "e2esa-tf-states"
@@ -17,19 +17,19 @@ terraform {
     encrypt        = true
     profile        = "default"
   }
-  
+
 }
 
 # Provider block
 
 provider "aws" {
-  profile = "default"
-  region  = var.aws_region
+  profile    = "default"
+  region     = var.aws_region
   sts_region = var.aws_region
   assume_role {
-    role_arn="arn:aws:iam::<aws account name>:role/<rolename>"
+    role_arn = "arn:aws:iam::<aws account name>:role/<rolename>"
   }
   endpoints {
-    s3="s3.us-east-1.amazonaws.com"
+    s3 = "s3.us-east-1.amazonaws.com"
   }
 }
