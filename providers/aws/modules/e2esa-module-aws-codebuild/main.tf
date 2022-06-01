@@ -41,7 +41,7 @@ resource "aws_codebuild_project" "this" {
     s3_logs {
       status   = var.s3_logs_status #"ENABLED"
       #location = "${aws_s3_bucket.this.id}/build-log"
-      location = "${var.s3_bucket_name}/build-log"
+      location = "${var.s3_bucket_id}/build-log"
     }
   }
 

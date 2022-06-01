@@ -34,7 +34,7 @@ variable "project_desc" {
 variable "build_timeout" {
   description = "Build Timeout"
   type        = string
-  default     = null
+  default     = "5"
 }
 
 variable "artifacts_type" {
