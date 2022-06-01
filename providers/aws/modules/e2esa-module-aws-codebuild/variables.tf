@@ -101,7 +101,7 @@ variable "s3_logs_status" {
 variable "source_type" {
   description = "source_type"
   type        = string
-  default     = null
+  default     = "GITHUB"
 }
 
 variable "source_location" {
@@ -143,4 +143,10 @@ variable "cw_stream_name" {
   description = "cw_stream_name"
   type        = string
   default     = null
+}
+
+variable "fetch_submodules" {
+  description = "fetch_submodules"
+  type        = bool
+  default     = true
 }

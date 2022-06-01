@@ -20,16 +20,15 @@ resource "aws_codebuild_project" "this" {
     image_pull_credentials_type = var.image_pull_credentials_type#"CODEBUILD"
 
    #for_each = var.environment_variables
-    environment_variable {
-      name  = "SOME_KEY1"
-      value = "SOME_VALUE1"
-    }
 
+   dynamic "env" {
+    for_each = var.environment_variables
     environment_variable {
-      name  = "SOME_KEY2"
-      value = "SOME_VALUE2"
-      type  = "PARAMETER_STORE"
+      name  = env.value["name"] #"SOME_KEY2"
+      value = env.value["value"] #"SOME_VALUE2"
+      type  = env.value["type"] #"PARAMETER_STORE"
     }
+   }
   }
 
   logs_config {
@@ -51,7 +50,7 @@ resource "aws_codebuild_project" "this" {
     git_clone_depth = 1
 
     git_submodules_config {
-      fetch_submodules = true
+      fetch_submodules = var.fetch_submodules
     }
   }
 
