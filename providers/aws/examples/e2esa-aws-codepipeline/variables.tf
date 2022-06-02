@@ -5,6 +5,7 @@ variable "createdBy" {}
 # General 
 variable "aws_region" {}
 
+# CodeBuild
 variable "project_name" {}
 variable "project_desc" {}
 variable "environment_compute_type" {}
@@ -21,3 +22,7 @@ variable "subnets" {}
 variable "security_group_ids" {}
 variable "source_location" {}
 
+# CodePipeline
+variable "s3_bucket_id" {}
+variable "full_repository_id" {}
+variable "codestar_connector_credentials" {}
