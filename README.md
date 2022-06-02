@@ -26,11 +26,14 @@ e2eSA Solutions for Terraform
 - Run jmeter in AWS ECS (Fargate and EC2) using Terraform [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/e2esa-aws-jmeter-ecs)
 - AWS ECS Fargate service [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/e2esa-aws-ecs-service)
 - AWS ECS Cluster [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/e2esa-aws-ecs-cluster)
+- Create AWS CodePipeline to trigger Terraform
 
 ### Terraform Modules (AWS)
 - AWS S3 [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/modules/e2esa-aws-s3).
 - DynamoDB [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/modules/e2esa-aws-dynamodb).
 - ECS Cluster [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/modules/e2esa-module-aws-ecs-cluster).
+- CodePipeline
+- CodeBuild
 
 ### e2eSA modules published in Terraform Public Registry [Click here](https://registry.terraform.io/namespaces/e2eSolutionArchitect)
 - [AWS ECS Cluster](https://registry.terraform.io/modules/e2eSolutionArchitect/ecs-cluster/aws/latest)

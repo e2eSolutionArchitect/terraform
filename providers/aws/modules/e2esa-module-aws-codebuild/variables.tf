@@ -40,13 +40,7 @@ variable "build_timeout" {
 variable "artifacts_type" {
   description = "Artifacts type"
   type        = string
-  default     = null
-}
-
-variable "cache_type" {
-  description = "Cache Type"
-  type        = string
-  default     = null
+  default     = "CODEPIPELINE"
 }
 
 variable "environment_compute_type" {
@@ -74,40 +68,47 @@ variable "image_pull_credentials_type" {
 }
 
 
-variable "s3_bucket_name" {
-  description = "s3_bucket_name"
+variable "privileged_mode_enabled" {
+  description = "privileged_mode_enabled"
+  type        = bool
+  default     = false
+}
+
+variable "dockerhub_credentials" {
+  description = "dockerhub_credentials"
   type        = string
   default     = null
 }
 
-variable "s3_bucket_id" {
-  description = "s3_bucket_id"
+variable "credential_provider" {
+  description = "credential_provider"
   type        = string
-  default     = null
+  default     = "SECRETS_MANAGER"
 }
 
-variable "s3_bucket_arn" {
-  description = "s3_bucket_arn"
-  type        = string
-  default     = null
-}
 
-variable "s3_logs_status" {
-  description = "s3_logs_status"
+variable "source_version" {
+  description = "source_version"
   type        = string
-  default     = null
+  default     = "main"
 }
 
 variable "source_type" {
   description = "source_type"
   type        = string
-  default     = "GITHUB"
+  default     = "CODEPIPELINE"#"GITHUB"
 }
 
 variable "source_location" {
   description = "source_location"
   type        = string
-  default     = null
+  default     = ""
+}
+
+variable "vpc_id" {
+  description = "vpc_id"
+  type        = string
+  default     = ""
 }
 
 variable "subnets" {
@@ -125,9 +126,9 @@ variable "security_group_ids" {
 variable "environment_variables" {
   description = "environment variables"
   type = list(object({
-    name = string
-    value      = string
-    type      = string
+    name  = string
+    value = string
+    type  = string
   }))
   default = []
 }
@@ -149,4 +150,28 @@ variable "fetch_submodules" {
   description = "fetch_submodules"
   type        = bool
   default     = true
+}
+
+variable "buildspec_file_absolute_path" {
+  description = "buildspec_file_absolute_path"
+  type        = string
+  default     = "./buildspec/buildspec.yml"
+}
+
+variable "role_name" {
+  description = "role_name"
+  type        = string
+  default     = "E2EsaTerraformCodeBuildRole"
+}
+
+variable "policy_name" {
+  description = "policy_name"
+  type        = string
+  default     = "E2EsaTerraformCodeBuildPolicy"
+}
+
+variable "report_build_status" {
+  description = "report_build_status"
+  type        = bool
+  default     = false
 }
