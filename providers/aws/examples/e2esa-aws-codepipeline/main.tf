@@ -25,9 +25,9 @@ module "codebuild-plan" {
   report_build_status          = var.report_build_status
   source_version               = var.source_version
   buildspec_file_absolute_path = var.buildspec_file_absolute_path
-  vpc_id                       = var.vpc_id
-  subnets                      = var.subnets
-  security_group_ids           = var.security_group_ids
+  #vpc_id                       = var.vpc_id
+  #subnets                      = var.subnets
+  #security_group_ids           = var.security_group_ids
   tags                         = local.tags
 }
 
