@@ -29,6 +29,7 @@ resource "aws_codebuild_project" "this" {
     }
   }
 
+# Make sure the group name and stream names exist
   logs_config {
     cloudwatch_logs {
       group_name  = var.cw_group_name
@@ -54,11 +55,13 @@ resource "aws_codebuild_project" "this" {
 
   source_version = var.source_version
 
-  vpc_config {
-    vpc_id             = var.vpc_id
-    subnets            = var.subnets
-    security_group_ids = var.security_group_ids
-  }
+# If you are using private subnets for CodeBuild then only use VPC configureation. In that case VPC must have NAT gateway.
+# If you are simply using all public network then DONT'T use VPC config.  
+  # vpc_config {
+  #   vpc_id             = var.vpc_id
+  #   subnets            = var.subnets
+  #   security_group_ids = var.security_group_ids
+  # }
 
   tags = merge({ "ResourceName" = "${var.project_name}" }, var.tags)
 }
