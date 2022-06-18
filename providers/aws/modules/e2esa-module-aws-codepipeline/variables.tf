@@ -93,3 +93,20 @@ variable "policy_name" {
   default     = "E2EsaTerraformCodePipelinePolicy"
 }
 
+variable "approve_sns_arn" {
+  description = "SNS arn"
+  type        = string
+  default     = "sns"
+}
+
+variable "approve_comment" {
+  description = "approval comment"
+  type        = string
+  default     = "Terraform code updated"
+}
+
+variable "approve_url" {
+  description = "approval url"
+  type        = string
+  default     = "url"
+}

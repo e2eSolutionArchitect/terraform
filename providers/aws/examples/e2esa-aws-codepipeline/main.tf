@@ -24,12 +24,27 @@ module "codebuild-plan" {
   environment_variables        = var.environment_variables
   report_build_status          = var.report_build_status
   source_version               = var.source_version
-  buildspec_file_absolute_path = var.buildspec_file_absolute_path
+  buildspec_file_absolute_path = var.buildspec_file_absolute_path_plan
   #vpc_id                       = var.vpc_id
   #subnets                      = var.subnets
   #security_group_ids           = var.security_group_ids
   tags                         = local.tags
 }
+
+# module "codebuild-apply" {
+#   source = "../../modules/e2esa-module-aws-codebuild"
+#   project_name             = "${var.project_name}-apply"
+#   project_desc             = var.project_desc
+#   environment_compute_type = var.environment_compute_type
+#   environment_image        = var.environment_image
+#   environment_type         = var.environment_type
+#   source_location          = var.source_location
+#   environment_variables        = var.environment_variables
+#   report_build_status          = var.report_build_status
+#   source_version               = var.source_version
+#   buildspec_file_absolute_path = var.buildspec_file_absolute_path_apply
+#   tags                         = local.tags
+# }
 
 module "codepipeline" {
   source = "../../modules/e2esa-module-aws-codepipeline"
