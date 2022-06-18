@@ -8,7 +8,7 @@ aws_region = "us-east-1"
 createdBy  = "e2esa"
 
 
-project_name             = "e2esa-codebuild"
+project_name             = "e2esa-cicdpipeline"
 project_desc             = "e2esa codebuild project"
 environment_compute_type = "BUILD_GENERAL1_SMALL"
 environment_image        = "hashicorp/terraform:1.2.2"
@@ -24,7 +24,7 @@ environment_variables = [
 ]
 report_build_status          = false
 source_version               = "master"
-buildspec_file_absolute_path = "./buildspec/plan-buildspec.yml"
+buildspec_file_absolute_path = "./buildspec/apply-buildspec.yml"
 vpc_id                       = "vpc-####"
 subnets                      = ["subnet-####"]
 security_group_ids           = ["sg-####"]
@@ -33,4 +33,5 @@ source_location              = "https://github.com/e2eSolutionArchitect/tf-codep
 
 s3_bucket_id       = "e2esa-tf-codepipeline"
 full_repository_id = "e2eSolutionArchitect/tf-codepipeline"
-codestar_connector_credentials="arn:aws:codestar-connections:us-east-1:######:connection/######"
+#codestar_connector_credentials="arn:aws:codestar-connections:us-east-1:######:connection/######"
+codestar_connector_credentials = "arn:aws:codestar-connections:us-east-1:306442480424:connection/cd9d26df-0a50-4989-ba9d-cce4adfa3c43"

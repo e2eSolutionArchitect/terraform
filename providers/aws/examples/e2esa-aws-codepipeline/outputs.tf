@@ -4,6 +4,6 @@ output "aws_codepipeline_arn" {
 }
 
 output "aws_codebuild_project_arn" {
-  value       = module.codebuild-plan.aws_codebuild_project_arn
+  value       = module.codebuild.aws_codebuild_project_arn
   description = "aws codebuild project arn"
 }

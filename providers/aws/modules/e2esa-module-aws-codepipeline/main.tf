@@ -27,7 +27,7 @@ resource "aws_codepipeline" "this" {
   }
 
   stage {
-    name = "Plan"
+    name = "Apply" #"Plan"
     action {
       name            = "Build"
       category        = "Build"
@@ -41,37 +41,37 @@ resource "aws_codepipeline" "this" {
     }
   }
 
-  stage {
-    name = "Approve"
+  # stage {
+  #   name = "Approve"
 
-    action {
-      name            = "Approval"
-      category        = "Approval"
-      owner           = "AWS"
-      provider        = "Manual"
-      version         = "1"
-      input_artifacts = [var.input_artifacts]
-      configuration = {
-        #NotificationArn = var.approve_sns_arn
-        CustomData = var.approve_comment
-        #ExternalEntityLink = var.approve_url
-      }
-    }
-  }
+  #   action {
+  #     name            = "Approval"
+  #     category        = "Approval"
+  #     owner           = "AWS"
+  #     provider        = "Manual"
+  #     version         = "1"
+  #     input_artifacts = [var.input_artifacts]
+  #     configuration = {
+  #       #NotificationArn = var.approve_sns_arn
+  #       CustomData = var.approve_comment
+  #       #ExternalEntityLink = var.approve_url
+  #     }
+  #   }
+  # }
 
-  stage {
-    name = "Deploy"
-    action {
-      name            = "Deploy"
-      category        = "Build"
-      provider        = "CodeBuild"
-      version         = "1"
-      owner           = "AWS"
-      input_artifacts = [var.input_artifacts]
-      configuration = {
-        ProjectName = var.project_name
-      }
-    }
-  }
+  # stage {
+  #   name = "Deploy"
+  #   action {
+  #     name            = "Deploy"
+  #     category        = "Build"
+  #     provider        = "CodeBuild"
+  #     version         = "1"
+  #     owner           = "AWS"
+  #     input_artifacts = [var.input_artifacts]
+  #     configuration = {
+  #       ProjectName = var.project_name
+  #     }
+  #   }
+  # }
 
 }

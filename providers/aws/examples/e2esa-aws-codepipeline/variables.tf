@@ -16,8 +16,7 @@ variable "credential_provider" {}
 variable "environment_variables" {}
 variable "report_build_status" {}
 variable "source_version" {}
-variable "buildspec_file_absolute_path_plan" {}
-variable "buildspec_file_absolute_path_apply" {}
+variable "buildspec_file_absolute_path" {}
 variable "vpc_id" {}
 variable "subnets" {}
 variable "security_group_ids" {}

@@ -10,7 +10,7 @@ locals {
   }
 }
 
-module "codebuild-plan" {
+module "codebuild" {
   source = "../../modules/e2esa-module-aws-codebuild"
   #source             = "git::https://github.com/e2eSolutionArchitect/terraform.git//providers/aws/modules/e2esa-module-aws-codebuild?ref=main"
   project_name             = var.project_name
@@ -24,7 +24,7 @@ module "codebuild-plan" {
   environment_variables        = var.environment_variables
   report_build_status          = var.report_build_status
   source_version               = var.source_version
-  buildspec_file_absolute_path = var.buildspec_file_absolute_path_plan
+  buildspec_file_absolute_path = var.buildspec_file_absolute_path
   #vpc_id                       = var.vpc_id
   #subnets                      = var.subnets
   #security_group_ids           = var.security_group_ids
