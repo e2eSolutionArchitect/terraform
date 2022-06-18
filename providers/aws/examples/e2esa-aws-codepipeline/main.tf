@@ -28,7 +28,7 @@ module "codebuild-plan" {
   #vpc_id                       = var.vpc_id
   #subnets                      = var.subnets
   #security_group_ids           = var.security_group_ids
-  tags                         = local.tags
+  tags = local.tags
 }
 
 # module "codebuild-apply" {
@@ -53,5 +53,5 @@ module "codepipeline" {
   s3_bucket_id                   = var.s3_bucket_id
   full_repository_id             = var.full_repository_id
   codestar_connector_credentials = var.codestar_connector_credentials
-  tags = local.tags
+  tags                           = local.tags
 }

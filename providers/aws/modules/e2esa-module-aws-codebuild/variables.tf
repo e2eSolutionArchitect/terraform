@@ -96,7 +96,7 @@ variable "source_version" {
 variable "source_type" {
   description = "source_type"
   type        = string
-  default     = "CODEPIPELINE"#"GITHUB"
+  default     = "CODEPIPELINE" #"GITHUB"
 }
 
 variable "source_location" {
