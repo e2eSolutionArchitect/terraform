@@ -34,4 +34,3 @@ source_location              = "https://github.com/e2eSolutionArchitect/tf-codep
 s3_bucket_id       = "e2esa-tf-codepipeline"
 full_repository_id = "e2eSolutionArchitect/tf-codepipeline"
 #codestar_connector_credentials="arn:aws:codestar-connections:us-east-1:######:connection/######"
-codestar_connector_credentials = "arn:aws:codestar-connections:us-east-1:306442480424:connection/cd9d26df-0a50-4989-ba9d-cce4adfa3c43"
