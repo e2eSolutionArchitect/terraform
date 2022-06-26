@@ -27,10 +27,16 @@ variable "create_ecs_cluster" {
   default     = true
 }
 
-variable "ecs_cluster_name" {
-  description = "ECS Cluster name"
+variable "ecs_cluster_id" {
+  description = "ECS Cluster id"
   type        = string
   default     = null
+}
+
+variable "ecs_tasks_sg_ids" {
+  description = "ecs_tasks_sg_ids"
+  type        = list(string)
+  default     = []
 }
 
 variable "container_insights" {
@@ -67,4 +73,16 @@ variable "port_mappings" {
     hostPort      = number
   }))
   default = []
+}
+
+variable "awslogs_group_name" {
+  description = "awslogs_group_name"
+  type        = string
+  default     = "e2esaLg"
+}
+
+variable "awslogs_stream_prefix" {
+  description = "awslogs_stream_prefix"
+  type        = string
+  default     = "e2esa"
 }

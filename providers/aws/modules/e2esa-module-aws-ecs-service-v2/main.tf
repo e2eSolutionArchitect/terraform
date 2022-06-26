@@ -40,14 +40,14 @@ resource "aws_ecs_task_definition" "this" {
 resource "aws_ecs_service" "this" {
 
   name            = var.ecs_service_name
-  cluster         = var.ecs_cluster_name
+  cluster         = var.ecs_cluster_id
   task_definition = aws_ecs_task_definition.this.arn
   desired_count   = var.app_count
   launch_type     = var.ecs_launch_type
   # platform_version="1.4.0"
 
   network_configuration {
-    security_groups  = [aws_security_group.ecs_tasks.id]
+    security_groups  = var.ecs_tasks_sg_ids #[aws_security_group.ecs_tasks.id]
     subnets          = var.public_subnets
     assign_public_ip = true
   }
@@ -63,31 +63,4 @@ resource "aws_ecs_service" "this" {
   tags = merge(
     { "ResourceName" = var.ecs_cluster_name }, var.tags
   )
-}
-
-# -----------------ROLE ------------------
-
-data "aws_iam_policy_document" "ecs_task_execution_role" {
-  version = "2012-10-17"
-  statement {
-    sid     = ""
-    effect  = "Allow"
-    actions = ["sts:AssumeRole"]
-
-    principals {
-      type        = "Service"
-      identifiers = ["ecs-tasks.amazonaws.com"]
-    }
-  }
-}
-
-resource "aws_iam_role" "ecs_task_execution_role" {
-  name               = var.ecs_task_execution_role_name
-  assume_role_policy = data.aws_iam_policy_document.ecs_task_execution_role.json
-}
-
-resource "aws_iam_policy_attachment" "ecs_task_execution_role" {
-  role       = aws_iam_role.ecs_task_execution_role.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
-
 }
