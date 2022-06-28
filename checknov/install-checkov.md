@@ -27,6 +27,6 @@ checkov --directory $PWD # incase you are already into the tf code directory
 ```
 
 ```
-checkov --file /user/tf/example.tf
-checkov -f /user/cloudformation/example1.yml -f /user/cloudformation/example2.yml
+checkov --file /path/to/file/example.tf
+checkov -f /path/to/file/example1.yml -f /path/to/file/example2.yml
 ```
