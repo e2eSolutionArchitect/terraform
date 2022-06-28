@@ -25,3 +25,8 @@ checkov
 checkov --directory /user/path/to/iac/code
 checkov --directory $PWD # incase you are already into the tf code directory
 ```
+
+```
+checkov --file /user/tf/example.tf
+checkov -f /user/cloudformation/example1.yml -f /user/cloudformation/example2.yml
+```
