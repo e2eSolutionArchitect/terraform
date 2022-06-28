@@ -3,7 +3,6 @@
 ## This is a sample Terraform file to check CHECKOV
 ## Run checkov 
 ## checkov --directory /user/path/to/iac/code
-## checkov --directory $PWD
 ## checkov --file /user/tf/example.tf
 ## checkov -f /user/cloudformation/example1.yml -f /user/cloudformation/example2.yml
 
