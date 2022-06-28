@@ -11,7 +11,7 @@
 
 locals {
   sg_name    = "checkov-test"
-  aws_vpc_id = "vpc-#####" #enter vpc id hear
+  aws_vpc_id = "vpc-#####" #enter vpc id here
   cidr_block = ["0.0.0.0/0"]
   from_port  = "80"
   to_port    = "80"
