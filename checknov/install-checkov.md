@@ -23,10 +23,19 @@ checkov
 
 ```
 checkov --directory /user/path/to/iac/code
-checkov --directory $PWD # incase you are already into the tf code directory
 ```
 
 ```
 checkov --file /path/to/file/example.tf
 checkov -f /path/to/file/example1.yml -f /path/to/file/example2.yml
+```
+
+## Skip docker file
+```
+checkov --directory /user/path/to/iac/code/.terraform --skip-check CKV_DOCKER_* -o junitxml > /user/path/to/iac/code/report.xml
+```
+
+## output to a file
+```
+checkov --directory /user/path/to/iac/code/.terraform --skip-check CKV_DOCKER_* -o junitxml > /user/path/to/iac/code/report.xml
 ```
