@@ -40,3 +40,10 @@ checkov --directory /user/path/to/iac/code/.terraform --skip-check CKV_DOCKER_* 
 checkov --directory /user/path/to/iac/code/.terraform --skip-check CKV_DOCKER_* -o json > /user/path/to/iac/code/report.json
 ```
 output could be like -o { json,junitxml,cli } 
+NOTE: If you get permission denied issue here then check the directory permission by 
+```
+ls -la
+and update the permission to read write
+
+sudo chmod 677 <directory/file>
+```
