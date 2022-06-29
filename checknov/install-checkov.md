@@ -37,5 +37,6 @@ checkov --directory /user/path/to/iac/code/.terraform --skip-check CKV_DOCKER_* 
 
 ## output to a file
 ```
-checkov --directory /user/path/to/iac/code/.terraform --skip-check CKV_DOCKER_* -o junitxml > /user/path/to/iac/code/report.xml
+checkov --directory /user/path/to/iac/code/.terraform --skip-check CKV_DOCKER_* -o json > /user/path/to/iac/code/report.json
 ```
+output could be like -o { json,junitxml,cli } 
