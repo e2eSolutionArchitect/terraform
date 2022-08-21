@@ -19,7 +19,7 @@ resource "aws_lb" "this" {
 resource "aws_lb_target_group" "this" {
   name        = "tg-${var.name}"
   port        = var.lb_target_port
-  protocol    = var.lb_protocol #"HTTP"
+  protocol    = var.lb_protocol    #"HTTP"
   target_type = var.lb_target_type #"ip" for ALB/NLB, "instance" for autoscaling group, 
   vpc_id      = var.vpc_id
   tags        = merge({ "Name" = "tg-${var.name}" }, var.tags)
