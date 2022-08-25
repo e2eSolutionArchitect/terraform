@@ -14,3 +14,9 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "list" {
+  description = "list"
+  type        = list(string)
+  default     = []
+}

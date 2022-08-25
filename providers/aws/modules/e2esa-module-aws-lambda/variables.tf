@@ -50,6 +50,20 @@ variable "lambda_role_arn" {
   default     = ""
 }
 
-# -------------------------------------------
-# IAM Lambda Variables
-# -------------------------------------------
+variable "lambda_alias_name" {
+  description = "lambda_alias_name"
+  type        = string
+  default     = ""
+}
+
+variable "lambda_func_current_version" {
+  description = "lambda_func_current_version"
+  type        = string
+  default     = ""
+}
+
+variable "lambda_func_target_version" {
+  description = "lambda_func_target_version"
+  type        = string
+  default     = ""
+}
