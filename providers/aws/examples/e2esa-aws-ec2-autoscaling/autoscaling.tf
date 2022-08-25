@@ -11,7 +11,9 @@ resource "aws_launch_template" "this" {
   #   name = "test"
   # }
 
-  #vpc_security_group_ids = var.vpc_security_group_ids
+  # vpc_security_group_ids = var.vpc_security_group_ids
+
+  # Note: If using 'network_interfaces' like below then DON't user 'vpc_security_group_ids' separately. use 'security_groups' under network_interfaces
   network_interfaces {
     associate_public_ip_address = true
     security_groups             = var.vpc_security_group_ids
