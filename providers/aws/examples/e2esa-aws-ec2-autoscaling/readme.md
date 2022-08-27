@@ -13,6 +13,9 @@
 ## About the project
 ### EC2 Autoscaling
 
+<img width="1433" alt="image" src="https://user-images.githubusercontent.com/62712515/187027488-697eed70-2213-48f7-b70c-a98a2920e7b2.png">
+
+
 - This project will provision a complete fleet of EC2 with Autoscaling. 
 - The instances will be spread accross all AZs (as per provided subnets) for High Availability
 - CloudWatch alarm for scale up and scale down will trigger the scaling up/down policy
