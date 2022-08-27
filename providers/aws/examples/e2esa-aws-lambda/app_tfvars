@@ -1,0 +1,16 @@
+# Common
+project = "e2esa-tutorials"
+
+# General 
+aws_region = "us-east-1"
+
+# Lambda
+lambda_filename_zip         = "index.zip"
+lambda_function_name        = "lambda-test"
+lambda_role_arn             = ""
+lambda_handler              = "index.handler"
+lambda_runtime              = "nodejs14.x"
+lambda_alias_name           = "latest"
+lambda_func_current_version = "4"
+lambda_func_target_version  = "5"
+

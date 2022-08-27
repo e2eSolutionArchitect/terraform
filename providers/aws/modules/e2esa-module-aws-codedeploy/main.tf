@@ -2,7 +2,7 @@
 resource "aws_codedeploy_app" "this" {
   compute_platform = "Lambda"
   name             = var.cd_app_name #"example"
-    tags = merge(
+  tags = merge(
     { "ResourceName" = var.cd_app_name }, var.tags
   )
 }
@@ -47,12 +47,12 @@ resource "aws_iam_role_policy_attachment" "AWSCodeDeployRole" {
 }
 
 resource "aws_codedeploy_deployment_group" "this" {
-  app_name              = aws_codedeploy_app.this.name
-  deployment_group_name = "${var.cd_app_name}-deploy-grp"
-  service_role_arn      = aws_iam_role.this.arn
+  app_name               = aws_codedeploy_app.this.name
+  deployment_group_name  = "${var.cd_app_name}-deploy-grp"
+  service_role_arn       = aws_iam_role.this.arn
   deployment_config_name = var.deployment_config_name #"CodeDeployDefault.LambdaAllAtOnce"
   #deployment_config_name = aws_codedeploy_deployment_config.this.id
-    trigger_configuration {
+  trigger_configuration {
     trigger_events = ["DeploymentFailure", "DeploymentSuccess", "DeploymentFailure", "DeploymentStop",
     "InstanceStart", "InstanceSuccess", "InstanceFailure"]
     trigger_name       = var.trigger_name
@@ -64,7 +64,7 @@ resource "aws_codedeploy_deployment_group" "this" {
     events  = ["DEPLOYMENT_FAILURE"]
   }
 
-    deployment_style {
+  deployment_style {
     deployment_option = "WITH_TRAFFIC_CONTROL"
     deployment_type   = "BLUE_GREEN" #"IN_PLACE"
   }

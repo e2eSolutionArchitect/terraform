@@ -1,0 +1,12 @@
+# Common
+project = "e2esa-tutorials"
+
+# General 
+aws_region = "us-east-1"
+
+# CodeDeploy
+
+cd_app_name            = "e2esa-cd"
+trigger_name           = "e2esa-trigger"
+alarms                 = ["e2esa-alarm"]
+deployment_config_name = "CodeDeployDefault.LambdaAllAtOnce"

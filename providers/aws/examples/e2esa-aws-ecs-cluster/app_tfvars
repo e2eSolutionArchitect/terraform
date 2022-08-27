@@ -7,8 +7,8 @@ profile     = "development"
 environment = "dev"
 
 # Backend
-backend_s3_bucket      = "e2esa-tf-states"
-backend_dynamodb_table = "e2esa-tf-locks"
+backend_s3_bucket      = "tf_states"
+backend_dynamodb_table = "tf_locks"
 
 # ECS
 create_ecs_cluster = true

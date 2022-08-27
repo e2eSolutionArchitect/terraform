@@ -31,7 +31,7 @@ resource "aws_lambda_alias" "test_lambda_alias" {
   #     "2" = 0.5
   #   }
   # }
-    depends_on = [aws_lambda_function.this]
+  depends_on = [aws_lambda_function.this]
 }
 
 resource "aws_iam_role" "this" {

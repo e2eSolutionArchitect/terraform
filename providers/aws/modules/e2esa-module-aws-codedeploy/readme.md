@@ -6,4 +6,4 @@
 - Please feel free to contract us at https://e2esolutionarchitect.com/
 
 ## About the module
-- Provision Code deploy Application and Code deploy group
+- Provision Code deploy Application and Code deploy group for LAMBDA deployment

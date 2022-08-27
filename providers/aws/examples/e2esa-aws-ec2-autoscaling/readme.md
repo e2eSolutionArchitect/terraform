@@ -10,6 +10,19 @@
 ```
  terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
 ```
+## About the project
+### EC2 Autoscaling
+
+- This project will provision a complete fleet of EC2 with Autoscaling. 
+- The instances will be spread accross all AZs (as per provided subnets) for High Availability
+- CloudWatch alarm for scale up and scale down will trigger the scaling up/down policy
+- Launch template will provision the instances as per given specification and user-data
+- ELB will be provisioned and attached to Autoscaling group
+- ASG is aligned with ELB health check. 
+- ELB health check will fail for any unhealthy instance and based on that auto scaling group will trigger provisioning new instance
+- Instances will have httpd installed and it will be accessed though public ips. 
+
+
 ### While using LB with ASG (Auto Scaling Group) , the TG type  must be 'instance' not ip)
 
 ### If using 'network_interfaces' like below then DON't user 'vpc_security_group_ids' separately. use 'security_groups' under network_interfaces
