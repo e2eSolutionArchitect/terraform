@@ -26,6 +26,17 @@
 - Instances will have httpd installed and it will be accessed though public ips. 
 
 
+| Type  | Name | Identifier/Source | File |
+| ------ | ------- | ------ | ------- |
+| module | "aws_lb" | "../../modules/e2esa-module-aws-elb" | main.tf |
+| module | "aws_lb" | "../../modules/e2esa-module-aws-elb" | main.tf |
+| resource | "aws_launch_template" | "this" | autoscaling.tf |
+| resource | "aws_autoscaling_group" | "this" | autoscaling.tf |
+| resource | "aws_autoscaling_policy" | "scale_up" | autoscaling.tf |
+| resource | "aws_cloudwatch_metric_alarm" | "scale_up_alarm" | autoscaling.tf |
+| resource | "aws_autoscaling_policy" | "scale_down" | autoscaling.tf |
+| resource | "aws_cloudwatch_metric_alarm" | "scale_down_alarm" | autoscaling.tf |
+
 ### While using LB with ASG (Auto Scaling Group) , the TG type  must be 'instance' not ip)
 
 ### If using 'network_interfaces' like below then DON't user 'vpc_security_group_ids' separately. use 'security_groups' under network_interfaces
