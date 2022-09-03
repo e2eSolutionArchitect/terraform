@@ -1,12 +1,11 @@
 
+## Author
+This project is maintained by '[end-to-end Solution Architect](https://e2esolutionarchitect.com/)'. Please feel free to drop a note to contactus@e2eSolutionArchitect.com for any queries
 
-## README
-- end-to-end Solution Architect forum is contributing this as knowledge sharing. You are free to use and modify this. 
-- Please check repository https://github.com/e2eSolutionArchitect/terraform
-- We encourage you to contribute your knowledge with us and create a stronger IT community.
-- Please feel free to contact us at https://e2esolutionarchitect.com/
+## Permission
+end-to-end Solution Architect forum is contributing this as knowledge sharing. You are free to use and modify this.
 
-#### Rename app_tfvars file name to as app.tfvars and then execute  below command
+Rename app_tfvars file name to as app.tfvars and then execute  below command
 ```
  terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
 ```
@@ -63,6 +62,12 @@
 | ecs_cluster_name | cluster name  | string |"e2esa-cluster-dev"  | true | 
 | container_insights | container insights | boolean | true | true | 
 
+## Outputs
+| Name  | Description | 
+| ------ | ------- |
+| ecs_cluster_id | Cluster Id  | 
+| ecs_cluster_arn | Cluster arn |
+| ecs_cluster_name | Cluster name |
 
 
 ### While using LB with ASG (Auto Scaling Group) , the TG type  must be 'instance' not ip)
@@ -77,3 +82,7 @@
 Here is this example we are creating LB port 80 (or any port). Installing apache2 for webserver. otherwise target Group will have all unhealthy instances and ASG will continue launching new instances. Eventhough you may find the instances are up&running under EC2 dashboard. 
 
 -
+
+## Notes
+- Please check repository https://github.com/e2eSolutionArchitect/terraform
+- We encourage you to contribute your knowledge with us and create a stronger IT community.
