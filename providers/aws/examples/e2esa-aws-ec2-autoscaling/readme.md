@@ -82,8 +82,6 @@ Rename app_tfvars file name to as app.tfvars and then execute  below command
 
 Here is this example we are creating LB port 80 (or any port). Installing apache2 for webserver. otherwise target Group will have all unhealthy instances and ASG will continue launching new instances. Eventhough you may find the instances are up&running under EC2 dashboard. 
 
--
-
 ## Notes
 - Please check repository https://github.com/e2eSolutionArchitect/terraform
 - We encourage you to contribute your knowledge with us and create a stronger IT community.
