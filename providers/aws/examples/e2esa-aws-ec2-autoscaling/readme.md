@@ -25,6 +25,19 @@
 - ELB health check will fail for any unhealthy instance and based on that auto scaling group will trigger provisioning new instance
 - Instances will have httpd installed and it will be accessed though public ips. 
 
+## Requirements
+
+| Name  | Version |
+| ------ | ------- |
+| terraform | ~> 1.1.6 |
+| aws | ~> 4.5.0 |
+
+## Providers
+
+| Name  | Version |
+| ------ | ------- |
+| aws | ~> 4.5.0 |
+
 
 | Type  | Name | Identifier | Source |
 | ------ | ------- | ------ | ------- |
