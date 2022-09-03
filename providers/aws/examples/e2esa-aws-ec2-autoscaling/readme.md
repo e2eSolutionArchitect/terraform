@@ -5,10 +5,6 @@ This project is maintained by '[end-to-end Solution Architect](https://e2esoluti
 ## Permission
 end-to-end Solution Architect forum is contributing this as knowledge sharing. You are free to use and modify this.
 
-Rename app_tfvars file name to as app.tfvars and then execute  below command
-```
- terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
-```
 ## About the project
 ### EC2 Autoscaling
 
@@ -23,6 +19,11 @@ Rename app_tfvars file name to as app.tfvars and then execute  below command
 - ASG is aligned with ELB health check. 
 - ELB health check will fail for any unhealthy instance and based on that auto scaling group will trigger provisioning new instance
 - Instances will have httpd installed and it will be accessed though public ips. 
+
+Rename app_tfvars file name to as app.tfvars and then execute  below command
+```
+ terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
+```
 
 ## Requirements
 
