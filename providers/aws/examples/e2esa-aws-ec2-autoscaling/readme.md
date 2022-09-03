@@ -26,7 +26,7 @@
 - Instances will have httpd installed and it will be accessed though public ips. 
 
 
-| Type  | Name | Identifier/Source | File |
+| Type  | Name | Identifier | Source |
 | ------ | ------- | ------ | ------- |
 | module | "aws_lb" | "../../modules/e2esa-module-aws-elb" | main.tf |
 | resource | "aws_launch_template" | "this" | autoscaling.tf |
