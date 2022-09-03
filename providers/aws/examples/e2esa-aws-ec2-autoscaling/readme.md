@@ -29,7 +29,6 @@
 | Type  | Name | Identifier/Source | File |
 | ------ | ------- | ------ | ------- |
 | module | "aws_lb" | "../../modules/e2esa-module-aws-elb" | main.tf |
-| module | "aws_lb" | "../../modules/e2esa-module-aws-elb" | main.tf |
 | resource | "aws_launch_template" | "this" | autoscaling.tf |
 | resource | "aws_autoscaling_group" | "this" | autoscaling.tf |
 | resource | "aws_autoscaling_policy" | "scale_up" | autoscaling.tf |
