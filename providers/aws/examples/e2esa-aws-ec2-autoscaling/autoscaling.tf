@@ -107,7 +107,7 @@ resource "aws_cloudwatch_metric_alarm" "scale_down_alarm" {
   namespace           = "AWS/EC2"
   period              = "120"
   statistic           = "Average"
-  threshold           = "5" # No of instance will scale down when CPU utilization is lower than 5 %
+  threshold           = "5" # Instance will scale down when CPU utilization is lower than 5 %
   dimensions = {
     "AutoScalingGroupName" = aws_autoscaling_group.this.name
   }

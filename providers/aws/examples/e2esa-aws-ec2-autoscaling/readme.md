@@ -12,7 +12,7 @@ end-to-end Solution Architect forum is contributing this as knowledge sharing. Y
 
 
 - This project will provision a complete fleet of EC2 with Autoscaling. 
-- The instances will be spread accross all AZs (as per provided subnets) for High Availability
+- The instances will be spread across all AZs (as per provided subnets) for High Availability
 - CloudWatch alarm for scale up and scale down will trigger the scaling up/down policy
 - Launch template will provision the instances as per given specification and user-data
 - ELB will be provisioned and attached to Autoscaling group
