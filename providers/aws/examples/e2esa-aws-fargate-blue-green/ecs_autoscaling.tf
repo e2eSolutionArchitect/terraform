@@ -20,7 +20,7 @@ resource "aws_cloudwatch_metric_alarm" "scale_up_alarm" {
   alarm_name          = "${var.project}-asg-scale-up-alarm"
   alarm_description   = "asg-scale-up-cpu-alarm"
   comparison_operator = "GreaterThanOrEqualToThreshold"
-  evaluation_periods  = var.scale_up_evaluation_periods #"2"
+  evaluation_periods  = "2"
   metric_name         = "CPUUtilization"
   namespace           = "AWS/ECS" # "AWS/EC2" for EC2 , "AWS/ECS" for ecs
   period              = "120"
@@ -55,7 +55,7 @@ resource "aws_cloudwatch_metric_alarm" "scale_down_alarm" {
   alarm_name          = "${var.project}-asg-scale-down-alarm"
   alarm_description   = "asg-scale-down-cpu-alarm"
   comparison_operator = "LessThanOrEqualToThreshold"
-  evaluation_periods  = var.scale_down_evaluation_periods #"2"
+  evaluation_periods  = "2"
   metric_name         = "CPUUtilization"
   namespace           = "AWS/ECS" # "AWS/EC2" for EC2 , "AWS/ECS" for ecs
   period              = "120"

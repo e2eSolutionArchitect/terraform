@@ -11,7 +11,7 @@ locals {
 }
 
 
-module "ecs_cluster" {
+module "ecs_service" {
   source                 = "../../modules/e2esa-module-aws-ecs-service"
   ecs_task_family        = var.ecs_task_family
   vpc_id                 = var.vpc_id

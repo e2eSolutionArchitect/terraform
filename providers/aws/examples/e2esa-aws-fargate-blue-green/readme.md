@@ -19,7 +19,7 @@ Rename app_tfvars file name to as app.tfvars and then execute  below command
 
 | Name  | Version |
 | ------ | ------- |
-| terraform | ~> 1.1.6 |
+| terraform | ~> 1.2.0 |
 | aws | ~> 4.5.0 |
 
 ## Providers

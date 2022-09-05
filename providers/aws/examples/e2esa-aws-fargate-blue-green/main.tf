@@ -18,7 +18,7 @@ module "ecs_cluster" {
   tags               = local.tags
 }
 
-module "ecs_cluster" {
+module "ecs_service" {
   source                 = "../../modules/e2esa-module-aws-ecs-service"
   ecs_task_family        = var.ecs_task_family
   vpc_id                 = var.vpc_id
@@ -26,28 +26,28 @@ module "ecs_cluster" {
   prefix                 = var.ecs_task_name
   ecs_cluster_name       = var.ecs_cluster_name
   ecs_cluster_id         = var.ecs_cluster_id
-  name                   = "${var.project_name}-service-${var.environment_name}"
+  name                   = "${var.project}-service-${var.environment_name}"
   ecs_service_name       = var.ecs_service_name
   ecs_launch_type        = var.ecs_launch_type
-  execution_role_arn     = var.execution_role_arn
+  execution_role_arn     = var.ecs_execution_role_arn
   ecs_security_group_ids = var.ecs_security_group_ids
-  app_name               = var.app_name
-  app_count              = var.app_count
-  app_image              = var.app_image
-  app_port               = var.app_port
-  container_insights     = var.container_insights
-  port_mappings          = var.port_mappings
-  fargate_cpu            = var.fargate_cpu
-  fargate_cpu_memory     = var.fargate_cpu_memory
-  network_mode           = var.network_mode
+  app_name               = var.ecs_app_name
+  app_count              = var.ecs_app_count
+  app_image              = var.ecs_app_image
+  app_port               = var.ecs_app_port
+  container_insights     = var.ecs_container_insights
+  port_mappings          = var.ecs_port_mappings
+  fargate_cpu            = var.ecs_fargate_cpu
+  fargate_cpu_memory     = var.ecs_fargate_cpu_memory
+  network_mode           = var.ecs_network_mode
   awslogs_group_name     = var.awslogs_group_name
   awslogs_stream_prefix  = var.awslogs_stream_prefix
   aws_region             = var.aws_region
-  lb_target_group_arn    = var.lb_target_group_arn
+  lb_target_group_arn    = aws_lb_target_group.blue_tg.arn # var.lb_target_group_arn
   tags                   = local.tags
 
   depends_on = [
-    aws_security_group.lb_sg
+    aws_security_group.lb_sg ,aws_lb_target_group.blue_tg
   ]
 }
 
