@@ -11,7 +11,7 @@ locals {
 }
 
 module "aws_lb" {
-  source                     = "../../modules/e2esa-module-aws-elb"
+  source = "../../modules/e2esa-module-aws-elb"
   #source             = "git::https://github.com/e2eSolutionArchitect/terraform.git//providers/aws/modules/e2esa-module-aws-elb?ref=main"
   name                       = var.project
   internal                   = var.lb_internal
