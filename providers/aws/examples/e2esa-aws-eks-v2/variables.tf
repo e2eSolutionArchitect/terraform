@@ -4,6 +4,17 @@ variable "createdBy" {}
 # General 
 variable "aws_region" {}
 
+# EKS Manager
+variable "ami" {}
+variable "instance_type" {}
+variable "associate_public_ip_address" {}
+variable "availability_zone" {}
+variable "subnet_id" {}
+variable "vpc_security_group_ids" {}
+variable "iam_instance_profile" {}
+variable "disable_api_termination" {}
+
+
 # EKS Cluster Input Variables
 variable "cluster_name" {
   description = "Name of the EKS cluster. Also used as a prefix in names of related resources."
@@ -23,7 +34,7 @@ variable "cluster_version" {
   default     = null
 }
 
-variable "ec2_ssh_key" {
+variable "key_name" {
   description = "keypair to connect ec2"
   type        = string
   default     = null
