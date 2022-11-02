@@ -1,6 +1,6 @@
 
 resource "aws_codedeploy_app" "this" {
-  compute_platform = var.compute_platform  
+  compute_platform = var.compute_platform
   name             = "${var.project}-${var.prefix}-deploy-app"
   tags = merge(
     { "ResourceName" = "${var.project}-${var.prefix}-deploy-app" }, var.tags
@@ -11,10 +11,10 @@ resource "aws_codedeploy_deployment_group" "this" {
   app_name               = aws_codedeploy_app.this.name
   deployment_group_name  = "${var.project}-${var.prefix}-deploy-grp"
   service_role_arn       = aws_iam_role.this.arn
-  deployment_config_name = var.deployment_config_name 
+  deployment_config_name = var.deployment_config_name
   #deployment_config_name = aws_codedeploy_deployment_config.this.id
   trigger_configuration {
-    trigger_events = var.trigger_events 
+    trigger_events     = var.trigger_events
     trigger_name       = var.trigger_name
     trigger_target_arn = aws_sns_topic.this.arn
   }
@@ -41,7 +41,7 @@ resource "aws_codedeploy_deployment_group" "this" {
   }
 
   alarm_configuration {
-    alarms  = var.alarms 
+    alarms  = var.alarms
     enabled = true
   }
 }

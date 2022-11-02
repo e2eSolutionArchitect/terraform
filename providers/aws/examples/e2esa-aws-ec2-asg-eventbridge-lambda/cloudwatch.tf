@@ -2,10 +2,10 @@
 
 # Cloudwatch log group and log stream
 module "aws_cloudwatch" {
-  source = "../../modules/e2esa-module-aws-cloudwatch"
-  cw_name=var.cw_name
-  retention_in_days=var.cw_retention_in_days
-  tags                  = local.tags
+  source            = "../../modules/e2esa-module-aws-cloudwatch"
+  cw_name           = var.cw_name
+  retention_in_days = var.cw_retention_in_days
+  tags              = local.tags
 }
 
 # CloudWatch EventBridge

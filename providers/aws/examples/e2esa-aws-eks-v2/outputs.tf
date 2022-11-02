@@ -26,7 +26,7 @@ output "cluster_version" {
 
 output "cluster_iam_role_name" {
   description = "IAM role name of the EKS cluster."
-  value       = aws_iam_role.eks_master_role.name 
+  value       = aws_iam_role.eks_master_role.name
 }
 
 output "cluster_iam_role_arn" {
@@ -57,7 +57,7 @@ output "node_group_public_arn" {
 
 output "node_group_public_status" {
   description = "Public Node Group status"
-  value       = aws_eks_node_group.eks_ng_public.status 
+  value       = aws_eks_node_group.eks_ng_public.status
 }
 
 output "node_group_public_version" {

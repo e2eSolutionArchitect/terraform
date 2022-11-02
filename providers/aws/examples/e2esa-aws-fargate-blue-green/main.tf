@@ -47,7 +47,7 @@ module "ecs_service" {
   tags                   = local.tags
 
   depends_on = [
-    aws_security_group.lb_sg ,aws_lb_target_group.blue_tg
+    aws_security_group.lb_sg, aws_lb_target_group.blue_tg
   ]
 }
 

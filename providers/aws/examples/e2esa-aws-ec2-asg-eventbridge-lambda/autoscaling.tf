@@ -32,17 +32,17 @@ resource "aws_autoscaling_lifecycle_hook" "this" {
   name                   = "${var.project}-lchook"
   autoscaling_group_name = aws_autoscaling_group.this.name
   default_result         = "CONTINUE"
-  heartbeat_timeout      = 60 # seconds to hold the ec2 state
+  heartbeat_timeout      = 60                                     # seconds to hold the ec2 state
   lifecycle_transition   = "autoscaling:EC2_INSTANCE_TERMINATING" # autoscaling:EC2_INSTANCE_LAUNCHING or autoscaling:EC2_INSTANCE_TERMINATING
 
-#   notification_metadata = <<EOF
-# {
-#   "foo": "bar"
-# }
-# EOF
+  #   notification_metadata = <<EOF
+  # {
+  #   "foo": "bar"
+  # }
+  # EOF
 
-#   notification_target_arn = "arn:aws:sqs:us-east-1:444455556666:queue1*"
-#   role_arn                = "arn:aws:iam::123456789012:role/S3Access"
+  #   notification_target_arn = "arn:aws:sqs:us-east-1:444455556666:queue1*"
+  #   role_arn                = "arn:aws:iam::123456789012:role/S3Access"
 }
 
 # scale up policy
