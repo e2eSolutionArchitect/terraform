@@ -1,8 +1,13 @@
 # Tags
 variable "project" {}
+variable "prefix" {}
 variable "createdBy" {}
+
 # General 
 variable "aws_region" {}
+
+
+variable "vpc_id" {}
 
 # EKS Manager
 variable "ami" {}
@@ -14,6 +19,8 @@ variable "vpc_security_group_ids" {}
 variable "iam_instance_profile" {}
 variable "disable_api_termination" {}
 
+# NAT gateway
+variable "nat_public_subnet_id" {}
 
 # EKS Cluster Input Variables
 variable "cluster_name" {

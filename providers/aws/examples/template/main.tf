@@ -2,6 +2,7 @@
 # terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
 
 locals {
+  name = "${var.project}-${var.prefix}"
   tags = {
     Project     = var.project
     CreatedBy   = var.createdBy
