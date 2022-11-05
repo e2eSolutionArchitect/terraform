@@ -1,4 +1,4 @@
-# output "aws_instance_arn" {
-#   value       = module.ec2.aws_instance_arn
-#   description = "aws_instance arn"
-# }
+output "natgw_allocation_id" {
+  value       = module.aws_natgw.natgw_allocation_id
+  description = "aws_natgw natgw_allocation_id"
+}

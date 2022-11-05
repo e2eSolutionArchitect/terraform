@@ -50,13 +50,13 @@ sudo mv /tmp/eksctl /usr/local/bin
 # Test that your installation was successful with the following command.
 eksctl version
 
+# Downloading the manifest file
+wget https://s3.us-west-2.amazonaws.com/amazon-eks/docs/eks-console-full-access.yaml
+sudo mv eks-console-full-access.yaml /home/ubuntu/eks-console-full-access.yaml
 
 # Configuring kubeconfig
 aws eks --region us-east-1 update-kubeconfig --name e2esa-tutorials-eks-cluster
 kubectl get nodes -o wide
-
-# Downloading the manifest file
-wget https://s3.us-west-2.amazonaws.com/amazon-eks/docs/eks-console-full-access.yaml
 
 # Deploy the manifest file
 kubectl apply -f eks-console-full-access.yaml

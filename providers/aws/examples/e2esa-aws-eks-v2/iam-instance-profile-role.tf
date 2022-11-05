@@ -37,16 +37,11 @@ resource "aws_iam_role_policy" "role_policy" {
     Statement = [
       {
         Action = [
-          "eks:*",
+          "*",
         ]
         Effect   = "Allow"
         Resource = "*"
-      },
-        {
-            "Effect": "Allow",
-            "Action": "ssm:GetParameter",
-            "Resource": "arn:aws:ssm:*:306442480424:parameter/*"
-        }
+      }
     ]
   })
 }

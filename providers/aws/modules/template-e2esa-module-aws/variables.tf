@@ -15,6 +15,12 @@ variable "tags" {
   default     = {}
 }
 
+variable "prefix" {
+  description = "Resource name prefix"
+  type        = string
+  default     = null
+}
+
 variable "list" {
   description = "list"
   type        = list(string)

@@ -21,6 +21,8 @@ variable "disable_api_termination" {}
 
 # NAT gateway
 variable "nat_public_subnet_id" {}
+variable "nat_private_subnet_id" {}
+
 
 # EKS Cluster Input Variables
 variable "cluster_name" {
