@@ -93,3 +93,19 @@ output "natgw_allocation_id" {
   value       = module.aws_natgw.natgw_allocation_id
   description = "aws_natgw natgw_allocation_id"
 }
+
+# Fargate
+output "aws_eks_fargate_profile_arn" {
+  value       = aws_eks_fargate_profile.this.arn
+  description = "aws_eks_fargate_profile_arn"
+}
+
+output "aws_eks_fargate_profile_id" {
+  value       = aws_eks_fargate_profile.this.id
+  description = "aws_eks_fargate_profile_id"
+}
+
+output "aws_eks_fargate_profile_status" {
+  value       = aws_eks_fargate_profile.this.status
+  description = "aws_eks_fargate_profile_status"
+}
