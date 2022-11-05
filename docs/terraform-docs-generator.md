@@ -26,3 +26,4 @@ browse inside your terraform project directory and run below command
 terraform-docs markdown table .
 ```
 
+[Click here](https://github.com/e2eSolutionArchitect/terraform/blob/main/providers/aws/examples/e2esa-aws-eks-ec2/readme.md) for sample documentation generated for a project
