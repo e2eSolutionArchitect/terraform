@@ -14,6 +14,14 @@ Rename app_tfvars file name to as app.tfvars and then execute  below command
 ```
  terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
 ```
+
+## Run terraform-docs to generate tf document
+browse inside your terraform project directory and run the below command 
+
+```
+terraform-docs markdown table . > tf-spec.md
+```
+
 Please check the Terraform spec file [click here](tf-spec.md)
 
 ## Notes
