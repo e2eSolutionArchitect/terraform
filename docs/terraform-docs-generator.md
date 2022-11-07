@@ -24,7 +24,7 @@ scoop install terraform-docs
 browse inside your terraform project directory and run below command 
 ```
 terraform-docs markdown table .  # it will stdout the content in console
-terraform-docs markdown table . > readme.md # it will flush the output automatically in readme.md
+terraform-docs markdown table . > tf-spec.md # it will flush the output automatically in tf-spec.md
 ```
 
 [Click here](https://github.com/e2eSolutionArchitect/terraform/blob/main/providers/aws/examples/e2esa-aws-eks-ec2/readme.md) for sample documentation generated for a project
