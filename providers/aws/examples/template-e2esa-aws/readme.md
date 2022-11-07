@@ -14,38 +14,7 @@ Rename app_tfvars file name to as app.tfvars and then execute  below command
 ```
  terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
 ```
-
-## Requirements
-
-| Name  | Version |
-| ------ | ------- |
-| terraform | ~> 1.1.6 |
-| aws | ~> 4.5.0 |
-
-## Providers
-
-| Name  | Version |
-| ------ | ------- |
-| aws | ~> 4.5.0 |
-
-
-| Type  | Name | Identifier | Source |
-| ------ | ------- | ------ | ------- |
-| module | "aws_lb" |  | "../../modules/e2esa-module-aws-elb", main.tf |
-| resource | "aws_launch_template" | "this" | autoscaling.tf |
-
-## Inputs
-
-| Name  | Description | Type | Default | Required |
-| ------ | ------- | ------ | ------- | ------- |
-| project | Project name  | string  | "e2esa-tutorials" | true | 
-| aws_region | region  | string | "us-east-1" | true | 
-
-## Outputs
-| Name  | Description | 
-| ------ | ------- |
-| ecs_cluster_arn | Cluster arn |
-| ecs_cluster_name | Cluster name |
+Please check the Terraform spec file [click here](tf-spec.md)
 
 ## Notes
 - Please check repository https://github.com/e2eSolutionArchitect/terraform
