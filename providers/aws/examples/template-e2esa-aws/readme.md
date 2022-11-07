@@ -22,7 +22,8 @@ browse inside your terraform project directory and run the below command
 terraform-docs markdown table . > tf-spec.md
 ```
 
-Please check the Terraform spec file [click here](tf-spec.md)
+## Terraform project specification 
+[click here](tf-spec.md)
 
 ## Notes
 - Please check repository https://github.com/e2eSolutionArchitect/terraform
