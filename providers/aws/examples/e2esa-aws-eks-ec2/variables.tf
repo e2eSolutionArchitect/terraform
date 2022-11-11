@@ -82,3 +82,18 @@ variable "private_subnets" {
 
 # EKS Node Group Variables
 ## Placeholder space you can create if required
+
+
+# Load Balancer
+variable "lb_name" {}
+variable "lb_internal" {}
+variable "lb_load_balancer_type" {}
+variable "lb_security_groups" {}
+variable "lb_subnets" {}
+variable "lb_enable_deletion_protection" {}
+variable "lb_target_port" {}
+variable "lb_protocol" {}
+variable "lb_target_type" {}
+variable "vpc_id" {}
+variable "lb_listener_port" {}
+variable "lb_listener_protocol" {}
