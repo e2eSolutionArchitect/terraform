@@ -2,6 +2,7 @@
 # terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
 
 locals {
+  name = "${var.project}-${var.prefix}"
   tags = {
     Project     = var.project
     CreatedBy   = var.createdBy
@@ -12,7 +13,7 @@ locals {
 
 module "aws_lb" {
   source                     = "../../modules/e2esa-module-aws-elb"
-  name                       = var.lb_name
+  name                       = "${local.name}-${var.lb_name}"
   internal                   = var.lb_internal
   load_balancer_type         = var.lb_load_balancer_type
   security_groups            = var.lb_security_groups
