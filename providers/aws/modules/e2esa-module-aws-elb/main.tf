@@ -38,3 +38,12 @@ resource "aws_lb_listener" "this" {
     target_group_arn = aws_lb_target_group.this.arn
   }
 }
+
+resource "aws_lb_target_group_attachment" "this" {
+  target_group_arn = aws_lb_target_group.this.arn
+  target_id        = aws_instance.test.id
+  port             = var.lb_target_port # 80
+}
+
+#for_each = var.instance_ids
+# [for subnet in aws_subnet.public : subnet.id]

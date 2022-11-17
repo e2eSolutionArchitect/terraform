@@ -40,5 +40,5 @@ resource "aws_eks_node_group" "eks_ng_public" {
     aws_iam_role_policy_attachment.eks-AmazonEC2ContainerRegistryReadOnly,
   ]
 
-tags = merge({ "ResourceName" = "e2esa-public-node-group" }, local.tags)
+tags = merge({ "EKSNodeName" = "${local.name}-eks-ng-public"}, local.tags)
 }

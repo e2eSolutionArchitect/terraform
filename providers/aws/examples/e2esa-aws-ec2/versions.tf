@@ -3,7 +3,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.5.0"
+      version = "~> 4.37.0"
     }
   }
 }
@@ -15,12 +15,12 @@ provider "aws" {
   region  = var.aws_region
 }
 
-terraform {
-  cloud {
-    organization = "e2esolutionarchitect"
+# terraform {
+#   cloud {
+#     organization = "e2esolutionarchitect"
 
-    workspaces {
-      name = "e2esa-ws-aws-ec2"
-    }
-  }
-}
+#     workspaces {
+#       name = "e2esa-ws-aws-ec2"
+#     }
+#   }
+# }
