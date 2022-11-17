@@ -97,6 +97,12 @@ variable "lb_target_type" {}
 variable "lb_listener_port" {}
 variable "lb_listener_protocol" {}
 
+variable "lb_target_tags_map" {
+  description = "Tag map for the LB target resources"
+  type        = map(string)
+  default     = {}
+}
+
 # EKS OIDC ROOT CA Thumbprint - valid until 2037
 variable "eks_oidc_root_ca_thumbprint" {
   type        = string

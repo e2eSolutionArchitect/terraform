@@ -13,5 +13,5 @@ resource "aws_instance" "eks-manager" {
   iam_instance_profile        = "${local.name}-${var.iam_instance_profile}"
   disable_api_termination     = var.disable_api_termination
   tags                        = merge({ "ResourceName" = "eks_manager" }, local.tags)
-  depends_on = [aws_iam_role.role]
+  depends_on                  = [aws_iam_role.role]
 }

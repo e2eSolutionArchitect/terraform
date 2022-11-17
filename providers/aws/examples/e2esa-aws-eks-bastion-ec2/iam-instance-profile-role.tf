@@ -42,11 +42,11 @@ resource "aws_iam_role_policy" "role_policy" {
         Effect   = "Allow"
         Resource = "*"
       },
-        {
-            "Effect": "Allow",
-            "Action": "ssm:GetParameter",
-            "Resource": "arn:aws:ssm:*:306442480424:parameter/*"
-        }
+      {
+        "Effect" : "Allow",
+        "Action" : "ssm:GetParameter",
+        "Resource" : "arn:aws:ssm:*:306442480424:parameter/*"
+      }
     ]
   })
 }

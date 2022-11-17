@@ -15,6 +15,9 @@ module "aws_lb" {
 
   lb_listener_port     = var.lb_listener_port
   lb_listener_protocol = var.lb_listener_protocol
-
-  tags = local.tags
+  lb_target_tags_map   = var.lb_target_tags_map
+  tags                 = local.tags
+  depends_on = [
+    aws_eks_node_group.eks_ng_public, aws_eks_node_group.eks_ng_private
+  ]
 }

@@ -13,14 +13,14 @@ resource "aws_iam_openid_connect_provider" "oidc_provider" {
       Name = "${aws_eks_cluster.eks_cluster.name}-irsa"
     },
     local.tags
-  )  
+  )
 }
 
 
 
 # Extract OIDC Provider from OIDC Provider ARN
 locals {
-    aws_iam_oidc_connect_provider_extract_from_arn = element(split("oidc-provider/", "${aws_iam_openid_connect_provider.oidc_provider.arn}"), 1)
+  aws_iam_oidc_connect_provider_extract_from_arn = element(split("oidc-provider/", "${aws_iam_openid_connect_provider.oidc_provider.arn}"), 1)
 }
 
 

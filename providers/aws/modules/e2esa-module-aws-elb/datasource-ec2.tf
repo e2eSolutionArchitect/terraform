@@ -1,10 +1,10 @@
-# filter multiple instances : aws_instances
+
+# Filter to fetch multiple instances : aws_instances
 data "aws_instances" "this" {
   filter {
     name   = "tag:${var.lb_target_tags_map["name"]}"
     values = ["${var.lb_target_tags_map["value"]}"]
   }
-  depends_on = [module.ec2]
 }
 
 output "data_aws_instance_id" {
@@ -17,13 +17,13 @@ output "data_aws_instance_ids" {
   description = "data_aws_instance_ids"
 }
 
-# filter single instance : aws_instance
+# Filter to fetch single instance : aws_instance
+
 # data "aws_instance" "this" {
 #   filter {
 #     name   = "tag:${var.lb_target_tags_map["name"]}"
 #     values = ["${var.lb_target_tags_map["value"]}"]
 #   }
-#   depends_on = [module.ec2]
 # }
 
 # output "data_aws_instance_id" {
@@ -35,5 +35,4 @@ output "data_aws_instance_ids" {
 #   value       = concat(data.aws_instance.this.*.private_ip, [""])[0]
 #   description = "data_aws_instance_private_ip"
 # }
-
 

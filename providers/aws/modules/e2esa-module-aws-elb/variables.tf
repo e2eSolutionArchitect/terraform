@@ -91,3 +91,20 @@ variable "lb_listener_protocol" {
   type        = string
   default     = "HTTP"
 }
+
+
+
+variable "lb_target_tags_map" {
+  description = "Tag map for the LB target resources"
+  type        = map(string)
+  default     = {}
+}
+
+variable "lb_target_tags_lmap" {
+  description = "List of Tag map for the LB target resources"
+  type = list(object({
+    name  = string
+    value = list(string)
+  }))
+  default = []
+}

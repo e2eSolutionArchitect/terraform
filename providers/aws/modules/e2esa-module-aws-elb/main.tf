@@ -40,10 +40,8 @@ resource "aws_lb_listener" "this" {
 }
 
 resource "aws_lb_target_group_attachment" "this" {
+  count            = length(data.aws_instances.this.ids)
   target_group_arn = aws_lb_target_group.this.arn
-  target_id        = aws_instance.test.id
-  port             = var.lb_target_port # 80
+  target_id        = data.aws_instances.this.ids[count.index] #data.aws_instance.this.id
+  port             = var.lb_target_port                       # 80
 }
-
-#for_each = var.instance_ids
-# [for subnet in aws_subnet.public : subnet.id]

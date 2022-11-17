@@ -12,7 +12,7 @@ resource "aws_eks_node_group" "eks_ng_public" {
   disk_size      = 20
   instance_types = ["t3.medium"]
 
-# refer : https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_node_group#ec2_ssh_key
+  # refer : https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_node_group#ec2_ssh_key
   remote_access {
     ec2_ssh_key = var.key_name
     # If you specify ec2_ssh_key in remote_access configuration, but do not specify source_security_group_ids when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
@@ -40,5 +40,5 @@ resource "aws_eks_node_group" "eks_ng_public" {
     aws_iam_role_policy_attachment.eks-AmazonEC2ContainerRegistryReadOnly,
   ]
 
-tags = merge({ "ResourceName" = "e2esa-public-node-group" }, local.tags)
+  tags = merge({ "ResourceName" = "e2esa-public-node-group" }, local.tags)
 }

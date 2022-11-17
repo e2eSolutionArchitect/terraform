@@ -28,5 +28,9 @@ module "aws_lb" {
   lb_listener_port     = var.lb_listener_port
   lb_listener_protocol = var.lb_listener_protocol
 
+  #lb_target_tag_name =var.lb_target_tag_name
+  #lb_target_tag_values =var.lb_target_tag_values
+  lb_target_tags_map = var.lb_target_tags_map
+
   tags = local.tags
 }

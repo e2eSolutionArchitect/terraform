@@ -19,3 +19,9 @@ variable "lb_target_type" {}
 variable "vpc_id" {}
 variable "lb_listener_port" {}
 variable "lb_listener_protocol" {}
+
+variable "lb_target_tags_map" {
+  description = "Tag map for the LB target resources"
+  type        = map(string)
+  default     = {}
+}

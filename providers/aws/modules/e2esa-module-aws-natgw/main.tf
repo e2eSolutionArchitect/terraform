@@ -1,14 +1,14 @@
 
 resource "aws_eip" "this" {
-  vpc      = true
+  vpc = true
 }
 
 resource "aws_nat_gateway" "this" {
-  allocation_id = aws_eip.this.id
-  subnet_id     = var.nat_public_subnet_id 
+  allocation_id     = aws_eip.this.id
+  subnet_id         = var.nat_public_subnet_id
   connectivity_type = var.connectivity_type #"public" #"private"
 
-tags = merge({ "ResourceName" = "${var.prefix}-natgw" }, var.tags)
+  tags = merge({ "ResourceName" = "${var.prefix}-natgw" }, var.tags)
 
   # To ensure proper ordering, it is recommended to add an explicit dependency
   # on the Internet Gateway for the VPC.
@@ -31,6 +31,6 @@ resource "aws_route" "private_routes" {
 }
 
 resource "aws_route_table_association" "assoc_private_routes" {
-  subnet_id = var.nat_private_subnet_id
+  subnet_id      = var.nat_private_subnet_id
   route_table_id = aws_route_table.this.id
 }

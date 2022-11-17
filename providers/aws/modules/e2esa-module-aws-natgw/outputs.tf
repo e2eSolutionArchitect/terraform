@@ -33,7 +33,7 @@ output "natgw_allocation_id" {
 
 output "natgw_connectivity_type" {
   description = "connectivity_type "
-  value       = try(aws_nat_gateway.this.connectivity_type , "")
+  value       = try(aws_nat_gateway.this.connectivity_type, "")
 }
 
 
