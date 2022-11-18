@@ -18,7 +18,6 @@ variable "subnet_id" {}
 variable "vpc_security_group_ids" {}
 variable "iam_instance_profile" {}
 variable "disable_api_termination" {}
-variable "namespace" {}
 
 # NAT gateway
 variable "nat_public_subnet_id" {}
@@ -83,3 +82,30 @@ variable "private_subnets" {
 
 # EKS Node Group Variables
 ## Placeholder space you can create if required
+
+
+# Load Balancer
+variable "lb_name" {}
+variable "lb_internal" {}
+variable "lb_load_balancer_type" {}
+variable "lb_security_groups" {}
+variable "lb_subnets" {}
+variable "lb_enable_deletion_protection" {}
+variable "lb_target_port" {}
+variable "lb_protocol" {}
+variable "lb_target_type" {}
+variable "lb_listener_port" {}
+variable "lb_listener_protocol" {}
+
+variable "lb_target_tags_map" {
+  description = "Tag map for the LB target resources"
+  type        = map(string)
+  default     = {}
+}
+
+# EKS OIDC ROOT CA Thumbprint - valid until 2037
+variable "eks_oidc_root_ca_thumbprint" {
+  type        = string
+  description = "Thumbprint of Root CA for EKS OIDC, Valid until 2037"
+  default     = "9e99a48a9960b14926bb7f3b02e22da2b0ab7280"
+}

@@ -26,12 +26,12 @@ output "cluster_version" {
 
 output "cluster_iam_role_name" {
   description = "IAM role name of the EKS cluster."
-  value       = aws_iam_role.eks_master_role.name
+  value       = aws_iam_role.eks_cluster_role.name
 }
 
 output "cluster_iam_role_arn" {
   description = "IAM role ARN of the EKS cluster."
-  value       = aws_iam_role.eks_master_role.arn
+  value       = aws_iam_role.eks_cluster_role.arn
 }
 
 output "cluster_oidc_issuer_url" {
@@ -44,49 +44,6 @@ output "cluster_primary_security_group_id" {
   value       = aws_eks_cluster.eks_cluster.vpc_config[0].cluster_security_group_id
 }
 
-# EKS Node Group Outputs - Public
-output "node_group_public_id" {
-  description = "Public Node Group ID"
-  value       = aws_eks_node_group.eks_ng_public.id
-}
-
-output "node_group_public_arn" {
-  description = "Public Node Group ARN"
-  value       = aws_eks_node_group.eks_ng_public.arn
-}
-
-output "node_group_public_status" {
-  description = "Public Node Group status"
-  value       = aws_eks_node_group.eks_ng_public.status
-}
-
-output "node_group_public_version" {
-  description = "Public Node Group Kubernetes Version"
-  value       = aws_eks_node_group.eks_ng_public.version
-}
-
-# EKS Node Group Outputs - Private
-
-output "node_group_private_id" {
-  description = "Node Group 1 ID"
-  value       = aws_eks_node_group.eks_ng_private.id
-}
-
-output "node_group_private_arn" {
-  description = "Private Node Group ARN"
-  value       = aws_eks_node_group.eks_ng_private.arn
-}
-
-output "node_group_private_status" {
-  description = "Private Node Group status"
-  value       = aws_eks_node_group.eks_ng_private.status
-}
-
-output "node_group_private_version" {
-  description = "Private Node Group Kubernetes Version"
-  value       = aws_eks_node_group.eks_ng_private.version
-}
-
 
 # NAT Gateway
 output "natgw_allocation_id" {
@@ -94,18 +51,15 @@ output "natgw_allocation_id" {
   description = "aws_natgw natgw_allocation_id"
 }
 
-# Fargate
-output "aws_eks_fargate_profile_arn" {
-  value       = aws_eks_fargate_profile.this.arn
-  description = "aws_eks_fargate_profile_arn"
+# Output: AWS IAM Open ID Connect Provider ARN
+output "aws_iam_openid_connect_provider_arn" {
+  description = "AWS IAM Open ID Connect Provider ARN"
+  value       = aws_iam_openid_connect_provider.oidc_provider.arn
 }
 
-output "aws_eks_fargate_profile_id" {
-  value       = aws_eks_fargate_profile.this.id
-  description = "aws_eks_fargate_profile_id"
-}
 
-output "aws_eks_fargate_profile_status" {
-  value       = aws_eks_fargate_profile.this.status
-  description = "aws_eks_fargate_profile_status"
+# Output: AWS IAM Open ID Connect Provider
+output "aws_iam_openid_connect_provider_extract_from_arn" {
+  description = "AWS IAM Open ID Connect Provider extract from ARN"
+  value       = local.aws_iam_oidc_connect_provider_extract_from_arn
 }
