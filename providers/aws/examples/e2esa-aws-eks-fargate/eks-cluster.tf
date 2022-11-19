@@ -19,7 +19,7 @@ resource "aws_eks_cluster" "eks_cluster" {
     endpoint_public_access  = var.cluster_endpoint_public_access
     public_access_cidrs     = var.cluster_endpoint_public_access_cidrs
 
-    subnet_ids = var.public_subnets 
+    subnet_ids = var.public_subnets
     # [
     #   aws_subnet.private-us-east-1a.id,
     #   aws_subnet.private-us-east-1b.id,
