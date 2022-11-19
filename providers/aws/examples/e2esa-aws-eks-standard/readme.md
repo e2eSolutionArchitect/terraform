@@ -14,6 +14,8 @@ Rename app_tfvars file name to as app.tfvars and then execute  below command
 ```
  terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
 ```
+![image](https://user-images.githubusercontent.com/62712515/202834755-ce183501-3924-46ba-b8a6-ccc3a361f00c.png)
+
 
 ## Terraform project specification 
 [click here](tf-spec.md)
