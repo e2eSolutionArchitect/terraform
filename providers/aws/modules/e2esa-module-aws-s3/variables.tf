@@ -15,6 +15,7 @@ variable "tags" {
 }
 
 
+
 # -------------------------------------------
 # S3 Variables
 # -------------------------------------------
@@ -37,4 +38,8 @@ variable "enable_lifecycle_rule" {
   default     = false
 }
 
-
+variable "acl" {
+  description = "s3 bucket names"
+  type        = string
+  default     = "private"
+}

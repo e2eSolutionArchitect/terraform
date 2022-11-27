@@ -99,12 +99,3 @@ variable "lb_target_tags_map" {
   type        = map(string)
   default     = {}
 }
-
-variable "lb_target_tags_lmap" {
-  description = "List of Tag map for the LB target resources"
-  type = list(object({
-    name  = string
-    value = list(string)
-  }))
-  default = []
-}

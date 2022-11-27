@@ -1,0 +1,23 @@
+# Common
+project = ""
+prefix  = ""
+
+# General 
+aws_region     = "us-east-1"
+
+# Backend
+backend_s3_bucket      = "e2esa-"
+backend_dynamodb_table = "e2esa-"
+
+
+s3_bucket_name = "domain.com"
+domain_name    = "domain.com"
+acl            = "public-read"
+
+create_route53_hosted_zone = false
+private_zone               = false
+evaluate_target_health     = false
+route53_record_type        = "A"
+
+# ACM
+create_acm_certificate = true

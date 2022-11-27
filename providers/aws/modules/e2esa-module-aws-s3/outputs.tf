@@ -2,7 +2,16 @@
 
 output "aws_s3_bucket_arn" {
   value       = aws_s3_bucket.this.arn
-  description = "s3 aws_s3_bucket_versioning id"
+  description = "s3 aws_s3_bucket_arn"
+}
+output "aws_s3_bucket_id" {
+  value       = aws_s3_bucket.this.id
+  description = "s3 aws_s3_bucket_id"
+}
+
+output "aws_s3_bucket_hosted_zone_id" {
+  value       = aws_s3_bucket.this.hosted_zone_id
+  description = "s3 hosted_zone_id"
 }
 
 output "aws_s3_bucket_versioning_id" {
