@@ -13,6 +13,8 @@ resource "aws_route53_zone" "hosted_zone" {
 
 # Use data to get existing route53 hosting zone record
 
+# Hosting Zone must exist. 
+# Ensure you are connecting to proper AWS account where hosting zone in created. 
 data "aws_route53_zone" "selected" {
   name         = var.domain_name
   private_zone = var.private_zone
