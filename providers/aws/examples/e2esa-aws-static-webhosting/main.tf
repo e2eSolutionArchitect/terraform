@@ -4,10 +4,13 @@
 locals {
   name = "${var.project}-${var.prefix}"
   tags = {
-    Project     = var.project
-    CreatedBy   = var.createdBy
-    CreatedOn   = timestamp()
-    Environment = terraform.workspace
+    Project      = var.project
+    OrgUnit      = var.org_unit
+    BusinessUnit = var.business_unit
+    CostCenter   = var.cost_center
+    CreatedBy    = var.createdBy
+    CreatedOn    = timestamp()
+    Environment  = terraform.workspace
   }
 }
 

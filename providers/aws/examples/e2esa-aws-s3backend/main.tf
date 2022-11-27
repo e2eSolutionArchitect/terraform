@@ -2,6 +2,7 @@
 # terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
 
 locals {
+  name = "${var.project}-${var.prefix}"
   tags = {
     Project     = var.project
     CreatedBy   = var.createdBy
@@ -19,7 +20,8 @@ module "aws_s3_bucket" {
   s3_bucket_name        = var.s3_bucket_name
   enable_lifecycle_rule = var.enable_lifecycle_rule
   s3_versioning         = var.s3_versioning
-  tags                  = local.tags
+  tags                  = merge({ "ResourceName" = var.s3_bucket_name }, local.tags)
+
 }
 
 module "aws_dynamodb" {
@@ -29,5 +31,6 @@ module "aws_dynamodb" {
   hash_key      = var.hash_key
   attr_name     = var.attr_name
   attr_type     = var.attr_type
-  tags          = local.tags
+  tags          = merge({ "ResourceName" = var.db_table_name }, local.tags)
+
 }
