@@ -26,7 +26,7 @@ resource "aws_route53_record" "www" {
   name    = var.domain_name
   type    = var.route53_record_type
   alias {
-    name                   = module.aws_s3_bucket.aws_s3_bucket_id
+    name                   = module.aws_s3_bucket.aws_s3_website_endpoint
     zone_id                = module.aws_s3_bucket.aws_s3_bucket_hosted_zone_id
     evaluate_target_health = var.evaluate_target_health
   }
