@@ -26,3 +26,15 @@ variable "list" {
   type        = list(string)
   default     = []
 }
+
+variable "number" {
+  description = "number"
+  type        = number
+  default     = 0
+}
+
+variable "bool" {
+  description = "bool"
+  type        = bool
+  default     = false
+}

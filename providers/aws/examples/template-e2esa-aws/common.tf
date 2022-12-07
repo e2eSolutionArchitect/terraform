@@ -1,3 +1,4 @@
+
 # terraform apply -var-file="app.tfvars" -var="createdby=e2esa"
 
 locals {

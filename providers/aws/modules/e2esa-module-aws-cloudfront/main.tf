@@ -1,5 +1,5 @@
 locals {
-  comment = "${var.cloudfront_comment}"+"${var.s3_bucket_regional_domain_name}"
+  comment = "${var.cloudfront_comment}" + "${var.s3_bucket_regional_domain_name}"
 }
 
 
@@ -54,7 +54,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   # Cache behavior with precedence 0
   ordered_cache_behavior {
     path_pattern     = "/content/immutable/*"
-    allowed_methods  = var.allowed_methods 
+    allowed_methods  = var.allowed_methods
     cached_methods   = var.cached_methods
     target_origin_id = var.s3_origin_id
 
