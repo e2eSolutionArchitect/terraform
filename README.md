@@ -23,6 +23,7 @@ e2eSA Solutions for Terraform
 
 ![image](https://user-images.githubusercontent.com/62712515/206504025-16ae6833-1289-4f79-bc50-10439207cebd.png)
 
+[![Terraform Advance Playlist](https://user-images.githubusercontent.com/62712515/206504025-16ae6833-1289-4f79-bc50-10439207cebd.png)](https://www.youtube.com/playlist?list=PLuBBTh-4TzDkUiWqlrwwnJ3QFJdP4JiPy)
 
 ### Projects
 - Setup Terraform backend/state management with AWS S3 [Click here ](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/e2esa-aws-s3backend)
