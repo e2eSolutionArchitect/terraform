@@ -14,12 +14,12 @@ e2eSA Solutions for Terraform
 #### How to execute
 - Step 1: terraform init
 - Step 2: terraform validate
-- Setp 3: terraform plan -var-file="app.tfvars" -var="createdBy=e2esa"
-- Setp 4: terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
-- Setp 5: terraform destroy -var-file="app.tfvars" -var="createdBy=e2esa"
+- Setp 3: terraform plan -var-file="app.tfvars" -var="createdby=e2esa"
+- Setp 4: terraform apply -var-file="app.tfvars" -var="createdby=e2esa"
+- Setp 5: terraform destroy -var-file="app.tfvars" -var="createdby=e2esa"
 
 ### Tech Docs & KEDB [Click here](https://github.com/e2eSolutionArchitect/KEDB)
-- Manage Multiple environment with backend configuration [Click here](https://github.com/e2eSolutionArchitect/KEDB/blob/main/terraform/terraform%20backend%20values%20not%20allowed.md)
+- Manage Multiple environments with backend configuration [Click here](https://github.com/e2eSolutionArchitect/KEDB/blob/main/terraform/terraform%20backend%20values%20not%20allowed.md)
 
 
 ### Projects
