@@ -3,7 +3,7 @@ output "arn" {
   value       = try(aws_db_instance.this.arn, "")
 }
 
-output "backup_retention_period " {
+output "backup_retention_period" {
   description = "backup_retention_period "
   value       = try(aws_db_instance.this.backup_retention_period, "")
 }
@@ -68,8 +68,17 @@ output "status" {
   value       = try(aws_db_instance.this.status, "")
 }
 
-output "ca_cert_identifier " {
+output "ca_cert_identifier" {
   description = "Identifier of the CA certificate for the DB instance."
   value       = try(aws_db_instance.this.ca_cert_identifier, "")
 }
 
+output "option_group_id" {
+  description = "option group id"
+  value       = try(aws_db_option_group.this.id, "")
+}
+
+output "option_group_arn" {
+  description = "option group arn"
+  value       = try(aws_db_option_group.this.arn, "")
+}

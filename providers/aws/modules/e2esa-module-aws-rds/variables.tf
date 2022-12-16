@@ -50,6 +50,18 @@ variable "engine_version" {
   default     = "5.7"
 }
 
+variable "option_group_name" {
+  description = "(Optional) Name of the DB option group to associate."
+  type        = string
+  default     = "e2e-optn-grp"
+}
+
+variable "iam_role_arn_for_option_group" {
+  description = "iam_role_arn_for_option_group"
+  type        = string
+  default     = null
+}
+
 variable "instance_class" {
   description = "instance_class"
   type        = string

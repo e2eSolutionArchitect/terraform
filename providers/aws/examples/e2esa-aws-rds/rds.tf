@@ -16,5 +16,6 @@ module "aws_rds" {
   db_subnet_group_name = var.db_subnet_group_name
   db_group_subnet_ids  = var.db_group_subnet_ids
 
-  tags = local.tags
+  iam_role_arn_for_option_group = var.iam_role_arn_for_option_group
+  tags                          = local.tags
 }

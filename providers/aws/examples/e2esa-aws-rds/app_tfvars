@@ -1,0 +1,32 @@
+# Common
+project       = "e2esa-rds"
+prefix        = "backup"
+org_unit      = "E2ESA"
+business_unit = "SMB-INT" # SMB-INT - Small & Medium Business in Org, "SMB-EXTR" - SMB External
+cost_center   = "CCAWS0000"
+
+# General 
+aws_region = "us-east-1"
+
+# RDS
+allocated_storage      = 10
+max_allocated_storage  = 10
+engine                 = "mysql"
+engine_version         = "5.7"
+instance_class         = "db.t3.micro"
+db_name                = "e2esadb"
+username               = "e2esausr"
+password               = "e2esa1234"
+skip_final_snapshot    = true
+multi_az               = false
+publicly_accessible    = false
+db_subnet_group_name   = "e2esadb-grp"
+vpc_security_group_ids = ["sg-", "sg-"]
+db_group_subnet_ids    = ["subnet-", "subnet-"]
+iam_role_arn_for_option_group=""
+
+# S3 import 
+# bucket_name           = "e2esadb-backup-bucket"
+# bucket_prefix         = "backups"
+# ingestion_role        = "arn:aws:iam::1234567890:role/role-xtrabackup-rds-restore"
+ 

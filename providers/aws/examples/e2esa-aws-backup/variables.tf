@@ -11,3 +11,11 @@ variable "appid" {}
 # General 
 variable "aws_region" {}
 
+# Backup variables
+variable "suffix" {}
+variable "plan_schedule" {}
+variable "cold_storage_after" {}
+variable "delete_after" {}
+
+# KMS variables
+variable "kms_name" {}
