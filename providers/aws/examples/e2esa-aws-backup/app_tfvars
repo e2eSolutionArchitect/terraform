@@ -14,6 +14,5 @@ suffix             = "bkup01"
 plan_schedule      = "cron(0 12 * * ? *)"
 cold_storage_after = 1
 delete_after       = 91 # must be 90 days greater than cold_storage_after
-
+s3_bucket_for_aws_backup="e2esa-bucket-for-aws-backup"
 kms_name="backup"
-

@@ -1,4 +1,4 @@
 module "aws_lb" {
   source = "../../modules/e2esa-module-aws-elb"
-  tags   = local.tags
+  tags   = merge({ "resourcename" = "${local.name}-backup-plan-${var.suffix}" }, local.tags)
 }

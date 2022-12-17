@@ -1,4 +1,25 @@
 # to get the Cloud front URL if doamin/alias is not configured
-output "cloudfront_domain_name" {
-  value = try(aws_cloudfront_distribution.s3_distribution.domain_name, "")
+
+output "id" {
+  value = try(aws_cloudfront_distribution.cf.id, "")
+}
+
+output "arn" {
+  value = try(aws_cloudfront_distribution.cf.arn, "")
+}
+
+output "domain_name" {
+  value = try(aws_cloudfront_distribution.cf.domain_name, "")
+}
+
+output "hosted_zone_id" {
+  value = try(aws_cloudfront_distribution.cf.tags_all, "")
+}
+
+output "status" {
+  value = try(aws_cloudfront_distribution.cf.status, "")
+}
+
+output "tags_all" {
+  value = try(aws_cloudfront_distribution.cf.tags_all, "")
 }

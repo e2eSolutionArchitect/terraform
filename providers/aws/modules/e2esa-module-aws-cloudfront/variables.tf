@@ -18,7 +18,7 @@ variable "tags" {
 variable "prefix" {
   description = "Resource name prefix"
   type        = string
-  default     = null
+  default     = "cf-"
 }
 
 
@@ -75,4 +75,34 @@ variable "cached_methods" {
   description = "cached_methods"
   type        = list(string)
   default     = ["GET", "HEAD", "OPTIONS"]
+}
+
+variable "cf_log_s3_bucket" {
+  description = "cf_log_s3_bucket"
+  type        = string
+  default     = null
+}
+
+variable "cf_log_s3_bucket_prefix" {
+  description = "cf_log_s3_bucket_prefix"
+  type        = string
+  default     = "cf-log"
+}
+
+variable "cf_domain_names" {
+  description = "cf_domain_names"
+  type        = string
+  default     = null
+}
+
+variable "whitelist_locations" {
+  description = "whitelist_locations"
+  type        = list(string)
+  default     = ["US", "CA", "IN"]
+}
+
+variable "name" {
+  description = "name"
+  type        = string
+  default     = null
 }

@@ -9,6 +9,6 @@ resource "aws_backup_plan" "plan" {
       delete_after       = var.delete_after
     }
   }
-  tags = merge({ "resourcename" = "${local.name}-baclup-plan-${var.suffix}" }, local.tags)
+  tags = merge({ "resourcename" = "${local.name}-backup-plan-${var.suffix}" }, local.tags)
 
 }

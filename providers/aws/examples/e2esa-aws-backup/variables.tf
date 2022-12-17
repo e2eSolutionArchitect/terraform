@@ -16,6 +16,7 @@ variable "suffix" {}
 variable "plan_schedule" {}
 variable "cold_storage_after" {}
 variable "delete_after" {}
+variable "s3_bucket_for_aws_backup" {}
 
 # KMS variables
 variable "kms_name" {}

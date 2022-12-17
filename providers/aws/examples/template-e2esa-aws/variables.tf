@@ -2,6 +2,7 @@
 # Tags
 variable "project" {}
 variable "prefix" {}
+variable "suffix" {}
 variable "createdby" {}
 variable "org_unit" {}
 variable "business_unit" {}

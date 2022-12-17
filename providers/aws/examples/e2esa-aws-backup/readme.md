@@ -6,7 +6,15 @@ This project is maintained by '[end-to-end Solution Architect](https://e2esoluti
 end-to-end Solution Architect forum is contributing this as knowledge sharing. You are free to use and modify this.
 
 ## About the project
-### Create Backup Plan using AWS Backup service
+### Using AWS Backup service to 
+- Create Backup Plan 
+- Create Backup Vault and Copy to Another vault
+- Create Backup Plan report and store in S3
+- Create Backup Selection and select resources which have tag "is-backup-enabled=true"
+- Secure backup vault with KMS
+- Create Role for Backup and associate with Backup Vault
+- Backup Vault Policy
+- Vault Notification
 
 Rename app_tfvars file name to as app.tfvars and then execute  below command
 ```
