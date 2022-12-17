@@ -1,7 +1,10 @@
 locals {
-  comment = "${var.name}" + "${var.s3_bucket_regional_domain_name}"
+  comment = "${var.name}"
 }
 
+data "aws_s3_bucket" "selected" {
+  bucket = var.s3_origin_id
+}
 
 resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
   comment = local.comment
@@ -9,7 +12,7 @@ resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
 
 resource "aws_cloudfront_distribution" "cf" {
   origin {
-    domain_name              = var.s3_bucket_regional_domain_name
+    domain_name              = data.aws_s3_bucket.selected.bucket_domain_name
     origin_access_control_id = aws_cloudfront_origin_access_control.oac.id
     origin_id                = var.s3_origin_id
 
@@ -26,12 +29,12 @@ resource "aws_cloudfront_distribution" "cf" {
   # Configure logging here if required 	
   logging_config {
     include_cookies = false
-    bucket          = var.cf_log_s3_bucket        #"mylogs.s3.amazonaws.com"
+    bucket          = "${var.cf_log_s3_bucket}.s3.amazonaws.com"
     prefix          = var.cf_log_s3_bucket_prefix #"myprefix"
   }
 
   # If you have domain configured use it here 
-  aliases = [var.cf_domain_names]
+  aliases = var.cf_domain_names
 
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]

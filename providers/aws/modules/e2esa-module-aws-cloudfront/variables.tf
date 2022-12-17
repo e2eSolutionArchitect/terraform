@@ -91,7 +91,7 @@ variable "cf_log_s3_bucket_prefix" {
 
 variable "cf_domain_names" {
   description = "cf_domain_names"
-  type        = string
+  type        = list(string)
   default     = null
 }
 
