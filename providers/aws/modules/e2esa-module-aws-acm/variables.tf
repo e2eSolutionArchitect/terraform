@@ -44,3 +44,15 @@ variable "name" {
   type        = string
   default     = null
 }
+
+variable "domain_name" {
+  description = "domain name"
+  type        = string
+  default     = null
+}
+
+variable "validation_method" {
+  description = "validation_method"
+  type        = string
+  default     = "DNS"
+}

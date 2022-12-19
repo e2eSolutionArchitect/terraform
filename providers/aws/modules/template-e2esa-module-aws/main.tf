@@ -1,7 +1,7 @@
 
 resource "name" "this" {
-
+name="${var.name}-name"
   tags = merge(
-    { "resourcename" = var.cd_app_name }, var.tags
+    { "resourcename" = "${var.name}-name" }, var.tags
   )
 }

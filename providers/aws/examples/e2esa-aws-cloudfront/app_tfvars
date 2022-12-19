@@ -1,0 +1,17 @@
+# Common
+project       = "e2esa"
+prefix        = "cf"
+org_unit      = "E2ESA"
+business_unit = "SMB-INT" # SMB-INT - Small & Medium Business in Org, "SMB-EXTR" - SMB External
+cost_center   = "CCAWS0000"
+appid         = "APP001"
+
+# General 
+aws_region = "us-east-1"
+suffix     = "01"
+
+# CF
+
+s3_origin_id     = "mydomain.com"
+cf_log_s3_bucket = "mydomain.com"
+cf_domain_names  = ["mydomain.com", "www.mydomain.com"]

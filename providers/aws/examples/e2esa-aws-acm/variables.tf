@@ -12,6 +12,5 @@ variable "appid" {}
 # General 
 variable "aws_region" {}
 
-variable "s3_origin_bucket_name" {}
-variable "cf_log_s3_bucket" {}
-variable "cf_domain_names" {}
+variable "domain_name" {}
+variable "validation_method" {}

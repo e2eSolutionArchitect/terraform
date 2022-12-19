@@ -1,0 +1,14 @@
+# Common
+project       = "e2esa"
+prefix        = "acm"
+org_unit      = "E2ESA"
+business_unit = "SMB-INT" # SMB-INT - Small & Medium Business in Org, "SMB-EXTR" - SMB External
+cost_center   = "CCAWS0000"
+appid         = "APP001"
+
+# General 
+aws_region = "us-east-1"
+suffix     = "01"
+
+# CF
+domain_name     = "mydomain.com"
