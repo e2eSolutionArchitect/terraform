@@ -12,7 +12,7 @@ add architecture diagram if application
 
 Rename app_tfvars file name to as app.tfvars and then execute  below command
 ```
- terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
+ terraform apply -var-file="app.tfvars" -var="createdby=e2esa"
 ```
 
 ## Terraform project specification 

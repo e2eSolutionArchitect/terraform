@@ -12,7 +12,7 @@ add architecture diagram if application
 
 Rename app_tfvars file name to as app.tfvars and then execute  below command
 ```
- terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
+ terraform apply -var-file="app.tfvars" -var="createdby=e2esa"
 ```
 
 ## Requirements
@@ -49,7 +49,7 @@ No modules.
 | <a name="input_associate_public_ip_address"></a> [associate\_public\_ip\_address](#input\_associate\_public\_ip\_address) | n/a | `any` | n/a | yes |
 | <a name="input_availability_zone"></a> [availability\_zone](#input\_availability\_zone) | n/a | `any` | n/a | yes |
 | <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | General | `any` | n/a | yes |   
-| <a name="input_createdBy"></a> [createdBy](#input\_createdBy) | n/a | `any` | n/a | yes |
+| <a name="input_createdby"></a> [createdby](#input\_createdby) | n/a | `any` | n/a | yes |
 | <a name="input_disable_api_termination"></a> [disable\_api\_termination](#input\_disable\_api\_termination) | n/a | `any` | n/a | yes |
 | <a name="input_iam_instance_profile"></a> [iam\_instance\_profile](#input\_iam\_instance\_profile) | n/a | `any` | n/a | yes |
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | n/a | `any` | n/a | yes |

@@ -2,7 +2,7 @@ locals {
   name = "${var.project}-${var.prefix}"
   tags = {
     Project     = var.project
-    CreatedBy   = var.createdBy
+    createdby   = var.createdby
     CreatedOn   = timestamp()
     Environment = terraform.workspace
   }

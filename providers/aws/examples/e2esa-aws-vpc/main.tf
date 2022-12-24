@@ -1,7 +1,7 @@
 locals {
   tags = {
     Project     = var.project
-    CreatedBy   = var.createdBy
+    createdby   = var.createdby
     CreatedOn   = timestamp()
     Environment = terraform.workspace
   }

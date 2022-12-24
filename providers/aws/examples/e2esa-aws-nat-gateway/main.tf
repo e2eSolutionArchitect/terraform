@@ -1,12 +1,12 @@
 
 
-# terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
+# terraform apply -var-file="app.tfvars" -var="createdby=e2esa"
 
 locals {
   name = "${var.project}-${var.prefix}"
   tags = {
     Project     = var.project
-    CreatedBy   = var.createdBy
+    createdby   = var.createdby
     CreatedOn   = timestamp()
     Environment = terraform.workspace
   }

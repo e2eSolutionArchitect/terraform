@@ -12,7 +12,7 @@ add architecture diagram if application
 
 Rename app_tfvars file name to as app.tfvars and then execute  below command
 ```
- terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
+ terraform apply -var-file="app.tfvars" -var="createdby=e2esa"
 ```
 
 ## Requirements
@@ -68,7 +68,7 @@ Rename app_tfvars file name to as app.tfvars and then execute  below command
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Name of the EKS cluster. Also used as a prefix in names of related resources. | `string` | `"eksdemo"` | no |
 | <a name="input_cluster_service_ipv4_cidr"></a> [cluster\_service\_ipv4\_cidr](#input\_cluster\_service\_ipv4\_cidr) | service ipv4 cidr for the kubernetes cluster | `string` | `null` | no |
 | <a name="input_cluster_version"></a> [cluster\_version](#input\_cluster\_version) | Kubernetes minor version to use for the EKS cluster (for example 1.21) | `string` | `null` | no |
-| <a name="input_createdBy"></a> [createdBy](#input\_createdBy) | n/a | `any` | n/a | yes |
+| <a name="input_createdby"></a> [createdby](#input\_createdby) | n/a | `any` | n/a | yes |
 | <a name="input_disable_api_termination"></a> [disable\_api\_termination](#input\_disable\_api\_termination) | n/a | `any` | n/a | yes |
 | <a name="input_iam_instance_profile"></a> [iam\_instance\_profile](#input\_iam\_instance\_profile) | n/a | `any` | n/a | yes |
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | n/a | `any` | n/a | yes |

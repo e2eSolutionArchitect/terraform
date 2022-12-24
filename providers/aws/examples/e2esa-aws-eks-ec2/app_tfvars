@@ -6,7 +6,7 @@ prefix ="eks"
 
 # General 
 aws_region = "us-east-1"
-createdBy  = "e2esa"
+createdby  = "e2esa"
 
 
 vpc_id = "vpc-9d5256e7"

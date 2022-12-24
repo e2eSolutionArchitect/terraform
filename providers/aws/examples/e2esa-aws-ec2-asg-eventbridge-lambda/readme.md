@@ -24,7 +24,7 @@ end-to-end Solution Architect forum is contributing this as knowledge sharing. Y
 
 Rename app_tfvars file name to as app.tfvars and then execute  below command
 ```
- terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
+ terraform apply -var-file="app.tfvars" -var="createdby=e2esa"
 ```
 
 ## Requirements
@@ -72,7 +72,7 @@ Rename app_tfvars file name to as app.tfvars and then execute  below command
 |------|-------------|------|---------|:--------:|
 | <a name="input_asg_health_check_type"></a> [asg\_health\_check\_type](#input\_asg\_health\_check\_type) | n/a | `any` | n/a | yes |
 | <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | General | `any` | n/a | yes |   
-| <a name="input_createdBy"></a> [createdBy](#input\_createdBy) | n/a | `any` | n/a | yes |
+| <a name="input_createdby"></a> [createdby](#input\_createdby) | n/a | `any` | n/a | yes |
 | <a name="input_desired_capacity"></a> [desired\_capacity](#input\_desired\_capacity) | n/a | `any` | n/a | yes |
 | <a name="input_enable_lifecycle_rule"></a> [enable\_lifecycle\_rule](#input\_enable\_lifecycle\_rule) | n/a | `any` | n/a | yes |
 | <a name="input_image_id"></a> [image\_id](#input\_image\_id) | n/a | `any` | n/a | yes |

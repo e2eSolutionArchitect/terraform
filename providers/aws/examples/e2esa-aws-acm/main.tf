@@ -1,5 +1,5 @@
 
-# terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
+# terraform apply -var-file="app.tfvars" -var="createdby=e2esa"
 
 locals {
   name = "${var.project}-${var.prefix}"
@@ -18,7 +18,7 @@ locals {
 module "acm" {
   source = "../../modules/e2esa-module-aws-acm"
   #source             = "git::https://github.com/e2eSolutionArchitect/terraform.git//providers/aws/modules/e2esa-module-aws-acm?ref=main"
-  name   = "${local.name}-${var.suffix}"
-  domain_name     = var.domain_name
-  tags = merge({ "resourcename" = "${local.name}-${var.suffix}" }, local.tags)
+  name        = "${local.name}-${var.suffix}"
+  domain_name = var.domain_name
+  tags        = merge({ "resourcename" = "${local.name}-${var.suffix}" }, local.tags)
 }

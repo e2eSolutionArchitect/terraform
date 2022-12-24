@@ -11,4 +11,4 @@ aws_region = "us-east-1"
 suffix     = "01"
 
 # CF
-domain_name     = "mydomain.com"
+domain_name = "mydomain.com"

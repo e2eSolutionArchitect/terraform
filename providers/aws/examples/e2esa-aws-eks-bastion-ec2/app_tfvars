@@ -6,7 +6,7 @@ prefix ="kubectl"
 
 # General 
 aws_region = "us-east-1"
-createdBy  = "e2esa"
+createdby  = "e2esa"
 
 
 # EKS Manager

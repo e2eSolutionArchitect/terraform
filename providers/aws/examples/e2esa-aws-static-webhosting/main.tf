@@ -1,5 +1,5 @@
 
-# terraform apply -var-file="app.tfvars" -var="createdBy=e2esa"
+# terraform apply -var-file="app.tfvars" -var="createdby=e2esa"
 
 locals {
   name = "${var.project}-${var.prefix}"
@@ -8,7 +8,7 @@ locals {
     OrgUnit      = var.org_unit
     BusinessUnit = var.business_unit
     CostCenter   = var.cost_center
-    CreatedBy    = var.createdBy
+    createdby    = var.createdby
     CreatedOn    = timestamp()
     Environment  = terraform.workspace
   }

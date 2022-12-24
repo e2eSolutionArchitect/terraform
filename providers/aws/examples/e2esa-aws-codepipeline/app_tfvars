@@ -5,7 +5,7 @@ project = "e2esa-tutorials"
 
 # General 
 aws_region = "us-east-1"
-createdBy  = "e2esa"
+createdby  = "e2esa"
 
 
 project_name             = "e2esa-cicdpipeline"
