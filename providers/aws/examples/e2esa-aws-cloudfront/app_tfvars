@@ -12,6 +12,6 @@ suffix     = "01"
 
 # CF
 
-s3_origin_id     = "mydomain.com"
-cf_log_s3_bucket = "mydomain.com"
-cf_domain_names  = ["mydomain.com", "www.mydomain.com"]
+#s3_bucket_regional_domain_name = ""
+domain_name     = "mydomain.com"
+cf_domain_names = ["mydomain.com", "www.mydomain.com"]

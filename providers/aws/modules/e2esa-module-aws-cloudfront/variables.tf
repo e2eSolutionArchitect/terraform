@@ -42,11 +42,11 @@ variable "domain_name" {
   default     = null
 }
 
-variable "s3_origin_id" {
-  description = "s3_origin_id"
-  type        = string
-  default     = null
-}
+# variable "s3_origin_id" {
+#   description = "s3_origin_id"
+#   type        = string
+#   default     = null
+# }
 
 variable "viewer_protocol_policy" {
   description = "viewer_protocol_policy"

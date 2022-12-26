@@ -11,7 +11,7 @@ resource "aws_cloudfront_distribution" "cf" {
   origin {
     domain_name              = data.aws_s3_bucket.selected.bucket_domain_name
     origin_access_control_id = aws_cloudfront_origin_access_control.oac.id
-    origin_id                = var.s3_origin_id
+    origin_id                = var.domain_name
   }
 
   enabled             = true
