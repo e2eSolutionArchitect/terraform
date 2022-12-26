@@ -103,7 +103,7 @@ resource "aws_cloudfront_distribution" "cf" {
   tags = merge({ "resourcename" = local.comment }, var.tags)
 
   viewer_certificate {
-    acm_certificate_arn            = data.aws_acm_certificate.amazon_issued.certificate
+    acm_certificate_arn            = data.aws_acm_certificate.amazon_issued.arn
     cloudfront_default_certificate = true
   }
 }
