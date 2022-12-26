@@ -10,19 +10,18 @@ terraform {
   # TF State Management
   # Variables not allowed in backend block. 
   backend "s3" {
-    bucket         = "e2esa-tf-states"
-    key            = "spm/terraform.tfstate"
+    bucket         = "obliqueone-tf-states"
+    key            = "spm/website/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "e2esa-tf-locks"
+    dynamodb_table = "obliqueone-tf-locks"
     encrypt        = true
-    profile        = "default2"
+    profile        = "obliqueone"
   }
-
 }
 
 # provider block
 
 provider "aws" {
-  profile = "default2"
+  profile = "obliqueone"
   region  = var.aws_region
 }

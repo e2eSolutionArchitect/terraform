@@ -1,19 +1,4 @@
 
-# terraform apply -var-file="app.tfvars" -var="createdby=e2esa"
-
-locals {
-  name = "${var.project}-${var.prefix}"
-  tags = {
-    project      = var.project
-    orgunit      = var.org_unit
-    businessunit = var.business_unit
-    costcenter   = var.cost_center
-    createdby    = var.createdby
-    createdon    = timestamp()
-    environment  = terraform.workspace
-  }
-}
-
 # module "aws_s3_bucket" {
 #   source         = "../../modules/e2esa-module-aws-s3"
 #   aws_region     = var.aws_region
@@ -27,7 +12,7 @@ data "aws_s3_bucket" "selected" {
 }
 
 resource "aws_s3_bucket_website_configuration" "this" {
-  bucket = aws_s3_bucket.selected.id
+  bucket = data.aws_s3_bucket.selected.id
 
   index_document {
     suffix = "index.html"
