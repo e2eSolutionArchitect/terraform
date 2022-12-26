@@ -42,11 +42,12 @@ variable "domain_name" {
   default     = null
 }
 
-# variable "s3_origin_id" {
-#   description = "s3_origin_id"
-#   type        = string
-#   default     = null
-# }
+
+variable "ssl_support_method" {
+  description = "One of vip or sni-only. Required if you specify acm_certificate_arn or iam_certificate_id. NOTE: vip causes CloudFront to use a dedicated IP address and may incur extra charges."
+  type        = string
+  default     = "sni-only"
+}
 
 variable "viewer_protocol_policy" {
   description = "viewer_protocol_policy"
