@@ -6,9 +6,16 @@ This project is maintained by '[end-to-end Solution Architect](https://e2esoluti
 end-to-end Solution Architect forum is contributing this as knowledge sharing. You are free to use and modify this.
 
 ## About the project
-### EC2 Autoscaling
+### Create end to end static website hosting infrastructure using AWS S3 , CloudFront
 
-add architecture diagram if application
+Pre-requisite:
+- s3 bucket created
+- Route 53 hosted zone created
+- domain certificate created in ACM 
+
+Tasks done by Terraform:
+- Create a cloudfront distribution 
+- 
 
 Rename app_tfvars file name to as app.tfvars and then execute  below command
 ```

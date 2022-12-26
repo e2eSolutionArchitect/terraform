@@ -2,9 +2,6 @@ locals {
   comment = var.name
 }
 
-data "aws_s3_bucket" "selected" {
-  bucket = var.s3_origin_id
-}
 
 resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
   comment = local.comment
@@ -28,12 +25,12 @@ resource "aws_cloudfront_distribution" "cf" {
     prefix          = var.cf_log_s3_bucket_prefix #"myprefix"
   }
 
-  #aliases = var.cf_domain_names
+  aliases = var.cf_domain_names
 
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
     cached_methods   = ["GET", "HEAD"]
-    target_origin_id = var.s3_origin_id
+    target_origin_id = var.domain_name
 
     forwarded_values {
       query_string = false
@@ -106,7 +103,7 @@ resource "aws_cloudfront_distribution" "cf" {
   tags = merge({ "resourcename" = local.comment }, var.tags)
 
   viewer_certificate {
-    #acm_certificate_arn =""
+    acm_certificate_arn            = data.aws_acm_certificate.amazon_issued.certificate
     cloudfront_default_certificate = true
   }
 }

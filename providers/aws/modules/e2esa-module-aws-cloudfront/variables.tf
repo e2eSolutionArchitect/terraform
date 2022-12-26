@@ -35,6 +35,13 @@ variable "s3_bucket_regional_domain_name" {
   default     = null
 }
 
+
+variable "domain_name" {
+  description = "domain_name"
+  type        = string
+  default     = null
+}
+
 variable "s3_origin_id" {
   description = "s3_origin_id"
   type        = string

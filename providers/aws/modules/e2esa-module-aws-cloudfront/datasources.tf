@@ -7,3 +7,11 @@ data "aws_acm_certificate" "amazon_issued" {
   types       = ["AMAZON_ISSUED"]
   most_recent = true
 }
+
+#------------------------------------------------------------------------------
+# S3
+#------------------------------------------------------------------------------
+# Find s3 bucket details
+data "aws_s3_bucket" "selected" {
+  bucket = var.domain_name
+}

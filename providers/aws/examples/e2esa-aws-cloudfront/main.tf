@@ -16,12 +16,12 @@ locals {
   }
 }
 
-module "aws_cloudfront" {
+module "cloudfront" {
   source = "../../modules/e2esa-module-aws-cloudfront"
   #source             = "git::https://github.com/e2eSolutionArchitect/terraform.git//providers/aws/modules/e2esa-module-aws-cloudfront?ref=main"
   name             = "${local.name}-${var.suffix}"
-  s3_origin_id     = var.s3_origin_bucket_name
-  cf_log_s3_bucket = "${var.cf_log_s3_bucket}.s3.amazonaws.com"
+  s3_origin_id     = var.domain_name
+  cf_log_s3_bucket = "${var.domain_name}.s3.amazonaws.com"
   cf_domain_names  = var.cf_domain_names
   tags             = merge({ "resourcename" = "${local.name}-${var.suffix}" }, local.tags)
 }

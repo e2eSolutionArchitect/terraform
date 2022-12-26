@@ -7,7 +7,7 @@ terraform {
     }
   }
 
-      # TF State Management
+  # TF State Management
   # Variables not allowed in backend block. 
   backend "s3" {
     bucket         = "e2esa-tf-states"

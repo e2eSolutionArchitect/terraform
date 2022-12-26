@@ -12,6 +12,6 @@ variable "appid" {}
 # General 
 variable "aws_region" {}
 
-variable "s3_origin_bucket_name" {}
-variable "cf_log_s3_bucket" {}
+# CF
+variable "domain_name" {}
 variable "cf_domain_names" {}

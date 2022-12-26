@@ -4,26 +4,30 @@
 locals {
   name = "${var.project}-${var.prefix}"
   tags = {
-    Project      = var.project
-    OrgUnit      = var.org_unit
-    BusinessUnit = var.business_unit
-    CostCenter   = var.cost_center
+    project      = var.project
+    orgunit      = var.org_unit
+    businessunit = var.business_unit
+    costcenter   = var.cost_center
     createdby    = var.createdby
-    CreatedOn    = timestamp()
-    Environment  = terraform.workspace
+    createdon    = timestamp()
+    environment  = terraform.workspace
   }
 }
 
-module "aws_s3_bucket" {
-  source         = "../../modules/e2esa-module-aws-s3"
-  aws_region     = var.aws_region
-  s3_bucket_name = var.s3_bucket_name
-  acl            = var.acl
-  tags           = merge({ "ResourceName" = var.s3_bucket_name }, local.tags)
+# module "aws_s3_bucket" {
+#   source         = "../../modules/e2esa-module-aws-s3"
+#   aws_region     = var.aws_region
+#   s3_bucket_name = var.s3_bucket_name
+#   acl            = var.acl
+#   tags           = merge({ "ResourceName" = var.s3_bucket_name }, local.tags)
+# }
+
+data "aws_s3_bucket" "selected" {
+  bucket = var.s3_bucket_name
 }
 
 resource "aws_s3_bucket_website_configuration" "this" {
-  bucket = module.aws_s3_bucket.aws_s3_bucket_id
+  bucket = aws_s3_bucket.selected.id
 
   index_document {
     suffix = "index.html"
