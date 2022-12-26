@@ -106,4 +106,8 @@ resource "aws_cloudfront_distribution" "cf" {
     acm_certificate_arn            = data.aws_acm_certificate.amazon_issued.arn
     cloudfront_default_certificate = true
   }
+
+  depends_on = [
+    aws_cloudfront_origin_access_control.oac
+  ]
 }
