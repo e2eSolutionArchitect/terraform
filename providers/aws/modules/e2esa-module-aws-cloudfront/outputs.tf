@@ -13,7 +13,7 @@ output "domain_name" {
 }
 
 output "hosted_zone_id" {
-  value = try(aws_cloudfront_distribution.cf.tags_all, "")
+  value = try(aws_cloudfront_distribution.cf.hosted_zone_id, "")
 }
 
 output "status" {
