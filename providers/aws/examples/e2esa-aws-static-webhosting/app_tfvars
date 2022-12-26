@@ -1,17 +1,22 @@
 # Common
-project = ""
-prefix  = ""
+project       = "spm"
+prefix        = "webapp"
+org_unit      = "e2esa"
+business_unit = "SMB-INT" # SMB-INT - Small & Medium Business in Org, "SMB-EXTR" - SMB External
+cost_center   = "CCAWS-2435"
+appid         = "spm-web-app01"
 
 # General 
-aws_region     = "us-east-1"
+aws_region = "us-east-1"
+suffix     = "01"
 
 # Backend
-backend_s3_bucket      = "e2esa-"
-backend_dynamodb_table = "e2esa-"
+backend_s3_bucket      = "e2esa-tf-states"
+backend_dynamodb_table = "e2esa-tf-locks"
 
 
-s3_bucket_name = "domain.com"
-domain_name    = "domain.com"
+s3_bucket_name = "mydomain.com"
+domain_name    = "mydomain.com"
 acl            = "public-read"
 
 create_route53_hosted_zone = false
@@ -21,3 +26,6 @@ route53_record_type        = "A"
 
 # ACM
 create_acm_certificate = true
+
+# CF
+cf_domain_names  = ["mydomain.com", "www.mydomain.com"]
