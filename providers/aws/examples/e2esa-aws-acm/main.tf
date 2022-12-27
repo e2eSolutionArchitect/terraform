@@ -20,5 +20,6 @@ module "acm" {
   #source             = "git::https://github.com/e2eSolutionArchitect/terraform.git//providers/aws/modules/e2esa-module-aws-acm?ref=main"
   name        = "${local.name}-${var.suffix}"
   domain_name = var.domain_name
+  additional_domain_names=var.additional_domain_names
   tags        = merge({ "resourcename" = "${local.name}-${var.suffix}" }, local.tags)
 }

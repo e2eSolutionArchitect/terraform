@@ -21,8 +21,8 @@ variable "prefix" {
   default     = null
 }
 
-variable "list" {
-  description = "list"
+variable "additional_domain_names" {
+  description = "additional_domain_names"
   type        = list(string)
   default     = []
 }

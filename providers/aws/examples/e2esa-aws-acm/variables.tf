@@ -13,3 +13,4 @@ variable "appid" {}
 variable "aws_region" {}
 
 variable "domain_name" {}
+variable "additional_domain_names" {}
