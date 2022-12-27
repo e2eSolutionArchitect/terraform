@@ -49,10 +49,22 @@ variable "ssl_support_method" {
   default     = "sni-only"
 }
 
-variable "viewer_protocol_policy" {
-  description = "viewer_protocol_policy"
+variable "redirect-to-https" {
+  description = "viewer_protocol_policy redirect-to-https"
   type        = string
   default     = "redirect-to-https"
+}
+
+variable "allow-all" {
+  description = "viewer_protocol_policy allow-all"
+  type        = string
+  default     = "allow-all"
+}
+
+variable "https-only" {
+  description = "viewer_protocol_policy https-only"
+  type        = string
+  default     = "https-only"
 }
 
 variable "restriction_type" {

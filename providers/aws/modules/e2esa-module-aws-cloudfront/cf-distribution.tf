@@ -40,7 +40,7 @@ resource "aws_cloudfront_distribution" "cf" {
       }
     }
 
-    viewer_protocol_policy = "allow-all"
+    viewer_protocol_policy = var.redirect-to-https #"allow-all"
     min_ttl                = 0
     default_ttl            = 3600
     max_ttl                = 86400
@@ -66,7 +66,7 @@ resource "aws_cloudfront_distribution" "cf" {
     #   default_ttl            = 86400
     #   max_ttl                = 31536000
     #   compress               = true
-    #   viewer_protocol_policy = "redirect-to-https"
+    #   viewer_protocol_policy = var.redirect-to-https #"redirect-to-https"
     # }
 
   # Cache behavior with precedence 1
@@ -88,7 +88,7 @@ resource "aws_cloudfront_distribution" "cf" {
   #     default_ttl            = 3600
   #     max_ttl                = 86400
   #     compress               = true
-  #     viewer_protocol_policy = var.viewer_protocol_policy
+  #     viewer_protocol_policy = var.var.redirect-to-https
   #   }
 
   price_class = var.price_class
