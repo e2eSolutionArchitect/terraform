@@ -4,6 +4,10 @@ Terraform for AWS, Azure, GCP
 ### For Terraform professional consultancy and Technical advisory please feel free to drop a note to som@e2eSolutionArchitect.com
 [Click here](https://e2esolutionarchitect.com/tag/terraform) for Terraform articles
 
+
+[![e2eSA Talent Development Programs](https://user-images.githubusercontent.com/62712515/212548238-92365832-fe03-47c7-8c06-701834a67ebf.png)](https://github.com/e2eSolutionArchitect/academy)
+***[Click here](https://e2esolutionarchitect.eventbrite.com)*** for list of upcoming trainings.
+
 ## e2eSA Online Video Tutorials [Click here](https://www.youtube.com/channel/UC5Juuk7aTvbRmrABMq4onJA/videos)
 
 ## IaC Code scanning by 'Checkov' [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/checknov)
