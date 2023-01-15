@@ -8,6 +8,10 @@ Terraform for AWS, Azure, GCP
 [![e2eSA Talent Development Programs](https://user-images.githubusercontent.com/62712515/212548238-92365832-fe03-47c7-8c06-701834a67ebf.png)](https://github.com/e2eSolutionArchitect/academy)
 ***[Click here](https://e2esolutionarchitect.eventbrite.com)*** for list of upcoming trainings.
 
+### Join the ***Slack*** channel 
+ - [Terraform Infrastructure Automation Engineering](https://talentdevelop-u8d3237.slack.com/archives/C04KCD8183B)
+
+
 ## e2eSA Online Video Tutorials [Click here](https://www.youtube.com/channel/UC5Juuk7aTvbRmrABMq4onJA/videos)
 
 ## IaC Code scanning by 'Checkov' [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/checknov)
