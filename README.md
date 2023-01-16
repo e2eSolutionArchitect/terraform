@@ -11,9 +11,9 @@ Terraform for AWS, Azure, GCP
 ### Join the ***Slack*** channel 
  - [Terraform Infrastructure Automation Engineering](https://talentdevelop-u8d3237.slack.com/archives/C04KCD8183B)
 
-## [HashiCorp Certified: Terraform Associate (002)](https://www.hashicorp.com/certification/terraform-associate): Certification focused Training Program by ['e2e Solution Architect'](https://e2esolutionarchitect.com/role-based-training-program/)
+## [HashiCorp Certified: Terraform Associate (002)](https://github.com/e2eSolutionArchitect/academy/blob/main/certification-based-training-programs/terraform/terraform-associate-002.md): Certification focused Training Program by ['e2e Solution Architect'](https://e2esolutionarchitect.com/role-based-training-program/)
 
-## A New Version of HashiCorp Infrastructure Automation Certification Is Coming Soon. [HashiCorp Certified: Terraform Associate (003)](https://developer.hashicorp.com/terraform/tutorials/certification-003?product_intent=terraform)
+## A New Version of HashiCorp Infrastructure Automation Certification Is Coming Soon. [HashiCorp Certified: Terraform Associate (003)](https://github.com/e2eSolutionArchitect/academy/blob/main/certification-based-training-programs/terraform/terraform-associate-003.md)
 
 ## e2eSA Online Video Tutorials [Click here](https://www.youtube.com/channel/UC5Juuk7aTvbRmrABMq4onJA/videos)
 
