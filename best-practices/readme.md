@@ -39,3 +39,9 @@ module "acm" {
   source             = "git::https://github.com/e2eSolutionArchitect/terraform.git//providers/aws/modules/e2esa-module-aws-acm?ref=main"
   
 ```
+
+## 3. Never share/commit your '*.tfvars' in public repository 
+
+- If you are using public repository for your terraform repo then make sure you have *.tfvars restricted in .gitignore file. 
+- If you are using  private repository used by authorized people only then no issue. 
+
