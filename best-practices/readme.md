@@ -3,7 +3,7 @@
 
 Select any project of your choice from our [terraform project repo](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/) and understanding the anatomy.
 
-## Resource tagging standards & techniques
+## 1. Resource tagging standards & techniques
 - Every resource must be tagged appropriately with its assocoated project, org unit, cost center and environment. 
 - It is great to have createdby and createdon tags also. 
 - Tagging is most useful for resource filtering and cost analysis. 
@@ -24,12 +24,12 @@ locals {
 }
 
 ```
-### add tags for resources
+***add tags for resources***
 ```
 tags        = merge({ "resourcename" = "${local.name}-${var.suffix}" }, local.tags)
 ```
 
-## Use module for every commonly used components
+## 2. Use module for every commonly used components
 
 ```
 module "acm" {
