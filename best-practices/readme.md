@@ -28,3 +28,14 @@ locals {
 ```
 tags        = merge({ "resourcename" = "${local.name}-${var.suffix}" }, local.tags)
 ```
+
+## Use module for every commonly used components
+
+```
+module "acm" {
+ # Import module from local
+  source = "../../modules/e2esa-module-aws-acm"
+ # Import module from remote git
+  source             = "git::https://github.com/e2eSolutionArchitect/terraform.git//providers/aws/modules/e2esa-module-aws-acm?ref=main"
+  
+```
