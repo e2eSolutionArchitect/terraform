@@ -25,50 +25,15 @@ Rename app_tfvars file name to as app.tfvars and then execute  below command
  terraform apply -var-file="app.tfvars" -var="createdby=e2esa"
 ```
 
-## Requirements
+## Terraform project specification 
+[click here](tf-spec.md)
 
-| Name  | Version |
-| ------ | ------- |
-| terraform | ~> 1.1.6 |
-| aws | ~> 4.5.0 |
+## Run terraform-docs to generate tf document
+browse inside your terraform project directory and run the below command 
 
-## Providers
-
-| Name  | Version |
-| ------ | ------- |
-| aws | ~> 4.5.0 |
-
-
-| Type  | Name | Identifier | Source |
-| ------ | ------- | ------ | ------- |
-| module | "aws_lb" |  | "../../modules/e2esa-module-aws-elb", main.tf |
-| resource | "aws_launch_template" | "this" | autoscaling.tf |
-| resource | "aws_autoscaling_group" | "this" | autoscaling.tf |
-| resource | "aws_autoscaling_policy" | "scale_up" | autoscaling.tf |
-| resource | "aws_cloudwatch_metric_alarm" | "scale_up_alarm" | autoscaling.tf |
-| resource | "aws_autoscaling_policy" | "scale_down" | autoscaling.tf |
-| resource | "aws_cloudwatch_metric_alarm" | "scale_down_alarm" | autoscaling.tf |
-
-## Inputs
-
-| Name  | Description | Type | Default | Required |
-| ------ | ------- | ------ | ------- | ------- |
-| project | Project name  | string  | "e2esa-tutorials" | true | 
-| aws_region | region  | string | "us-east-1" | true | 
-| profile | user profile | string | "development" | true | 
-| environment | Environment | string  | "dev" | true | 
-| backend_s3_bucket | state bucket | string | "tf_states" | true | 
-| backend_dynamodb_table | state db table | string | "tf_locks" | true | 
-| create_ecs_cluster | create custer | boolean | true | true | 
-| ecs_cluster_name | cluster name  | string |"e2esa-cluster-dev"  | true | 
-| container_insights | container insights | boolean | true | true | 
-
-## Outputs
-| Name  | Description | 
-| ------ | ------- |
-| ecs_cluster_id | Cluster Id  | 
-| ecs_cluster_arn | Cluster arn |
-| ecs_cluster_name | Cluster name |
+```
+terraform-docs markdown table . > tf-spec.md
+```
 
 
 ### While using LB with ASG (Auto Scaling Group) , the TG type  must be 'instance' not ip)
