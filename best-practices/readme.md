@@ -6,6 +6,7 @@ Select any project of your choice from our [terraform project repo](https://gith
 ## Never add connection/credentials in terraform files
 - It is a big security threat. never add credentials in tf project files. 
 - [Check here](https://github.com/e2eSolutionArchitect/terraform/blob/main/providers/aws/examples/template-e2esa-aws/versions.tf) how to refer connection profile for AWS cloud.
+- [Check here](#) for the ways to keep your connection credentials secure.
 
 ```
 # provider block
