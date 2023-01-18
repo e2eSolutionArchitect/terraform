@@ -20,7 +20,8 @@ provider "aws" {
 ## Maintain project documentation
 
 - It is a great practice to maintain documentation for every terraform project
-- [Check here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/template-e2esa-aws#readme) for sample documentation
+- [Check here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/template-e2esa-aws#readme) for sample documentation.
+- Use [Terraform docs generator](https://github.com/e2eSolutionArchitect/terraform/blob/main/docs/terraform-docs-generator.md) for documentation.
 
 ## Infrastructure Code scanning 
 
