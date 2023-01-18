@@ -6,7 +6,7 @@ Select any project of your choice from our [terraform project repo](https://gith
 ## Never add connection/credentials in terraform files
 - It is a big security threat. never add credentials in tf project files. 
 - [Check here](https://github.com/e2eSolutionArchitect/terraform/blob/main/providers/aws/examples/template-e2esa-aws/versions.tf) how to refer connection profile for AWS cloud.
-- [Check here](#) for the ways to keep your connection credentials secure.
+- [Check here]() for the ways to keep your connection credentials secure.
 
 ```
 # provider block
@@ -16,6 +16,18 @@ provider "aws" {
   region  = var.aws_region
 }
 ```
+
+## Maintain project documentation
+
+- It is a great practice to maintain documentation for every terraform project
+- [Check here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/template-e2esa-aws#readme) for sample documentation
+
+## Infrastructure Code scanning 
+
+- Your Terraform scripting can have vulnerability for network or infrastructure.
+- Use IaC scanning tools for automated scanning
+- As referance use [***Checkov***](https://github.com/e2eSolutionArchitect/terraform/tree/main/checknov) as Infrastructure code scanning for Terraform.
+- Check the [tutorial nere](https://www.youtube.com/watch?v=bAkwvmZ7OGA) for how to use ***Checkov*** for Terraform code scanning.
 
 ## Resource tagging standards & techniques
 - Every resource must be tagged appropriately with its assocoated project, org unit, cost center and environment. 
