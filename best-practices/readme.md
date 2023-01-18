@@ -3,7 +3,20 @@
 
 Select any project of your choice from our [terraform project repo](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/) and understanding the anatomy.
 
-## 1. Resource tagging standards & techniques
+## Never add connection/credentials in terraform files
+- It is a big security threat. never add credentials in tf project files. 
+- [Check here](https://github.com/e2eSolutionArchitect/terraform/blob/main/providers/aws/examples/template-e2esa-aws/versions.tf) how to refer connection profile for AWS cloud.
+
+```
+# provider block
+
+provider "aws" {
+  profile = "default"
+  region  = var.aws_region
+}
+```
+
+## Resource tagging standards & techniques
 - Every resource must be tagged appropriately with its assocoated project, org unit, cost center and environment. 
 - It is great to have createdby and createdon tags also. 
 - Tagging is most useful for resource filtering and cost analysis. 
