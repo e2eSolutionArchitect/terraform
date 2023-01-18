@@ -35,20 +35,12 @@ e2eSA Solutions for Terraform
 [![Terraform Advance Playlist](https://user-images.githubusercontent.com/62712515/206504025-16ae6833-1289-4f79-bc50-10439207cebd.png)](https://www.youtube.com/playlist?list=PLuBBTh-4TzDkUiWqlrwwnJ3QFJdP4JiPy)
 
 ### Projects
-- Setup Terraform backend/state management with AWS S3 [Click here ](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/e2esa-aws-s3backend)
-- Run jmeter in AWS ECS (Fargate and EC2) using Terraform [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/e2esa-aws-jmeter-ecs)
-- AWS ECS Fargate service [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/e2esa-aws-ecs-service)
-- AWS ECS Cluster [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/e2esa-aws-ecs-cluster)
-- Create AWS CodePipeline to trigger Terraform [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples/e2esa-aws-codepipeline)
-- more .. [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples)
+- [AWS projects](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples)
+- [Azure projects](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/azure/projects)
 
 ### Terraform Modules (AWS)
-- AWS S3 [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/modules/e2esa-aws-s3).
-- DynamoDB [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/modules/e2esa-aws-dynamodb).
-- ECS Cluster [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/modules/e2esa-module-aws-ecs-cluster).
-- CodePipeline [click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/modules/e2esa-module-aws-codepipeline)
-- CodeBuild [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/modules/e2esa-module-aws-codebuild)
-- more .. [Click here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/modules)
+- [AWS modules](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/modules)
+- [Azure modules](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/azure/modules)
 
 ### e2eSA modules published in Terraform Public Registry [Click here](https://registry.terraform.io/namespaces/e2eSolutionArchitect)
 - [AWS ECS Cluster](https://registry.terraform.io/modules/e2eSolutionArchitect/ecs-cluster/aws/latest)
