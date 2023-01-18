@@ -38,7 +38,7 @@ e2eSA Solutions for Terraform
 - [AWS projects](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples)
 - [Azure projects](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/azure/projects)
 
-### Terraform Modules (AWS)
+### Terraform Modules
 - [AWS modules](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/modules)
 - [Azure modules](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/azure/modules)
 
