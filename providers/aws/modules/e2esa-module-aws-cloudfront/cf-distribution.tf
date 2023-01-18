@@ -106,6 +106,7 @@ resource "aws_cloudfront_distribution" "cf" {
     acm_certificate_arn            = data.aws_acm_certificate.amazon_issued.arn
     ssl_support_method=var.ssl_support_method #"sni-only"
     cloudfront_default_certificate = true
+    minimum_protocol_version=var.minimum_protocol_version
   }
 
   depends_on = [

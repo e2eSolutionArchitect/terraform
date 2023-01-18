@@ -76,8 +76,16 @@ variable "restriction_type" {
 variable "price_class" {
   description = "price_class"
   type        = string
-  default     = "PriceClass_200"
+  default     = "PriceClass_All" #PriceClass_All, PriceClass_200, PriceClass_100
 }
+
+variable "minimum_protocol_version" {
+  description = "minimum_protocol_version"
+  type        = string
+  default     = "TLSv1.2_2021" # TLSv1.2_2021 (recommended) or TLSv1.2_2019
+}
+
+
 
 variable "cloudfront_default_certificate" {
   description = "cloudfront_default_certificate"
