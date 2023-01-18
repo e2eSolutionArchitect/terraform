@@ -56,7 +56,7 @@ locals {
 tags        = merge({ "resourcename" = "${local.name}-${var.suffix}" }, local.tags)
 ```
 
-## 2. Use module for every commonly used components
+## Use module for every commonly used components
 
 ```
 module "acm" {
@@ -67,7 +67,7 @@ module "acm" {
   
 ```
 
-## 3. Never share/commit your '*.tfvars' in public repository 
+## Never share/commit your '*.tfvars' in public repository 
 
 - If you are using public repository for your terraform repo then make sure you have *.tfvars restricted in .gitignore file. 
 - e2eSA provided project's [app_tfvars](https://github.com/e2eSolutionArchitect/terraform/blob/main/providers/aws/examples/e2esa-aws-acm/app_tfvars) has all variables but dummy values. It is asked to rename the file to app.tfvars and add your values for the mentioned variables. 
