@@ -37,10 +37,12 @@ e2eSA Solutions for Terraform
 ### Projects
 - [AWS projects](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples)
 - [Azure projects](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/azure/projects)
+- [Google Cloud projects](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/google-cloud/projects)
 
 ### Terraform Modules
 - [AWS modules](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/modules)
 - [Azure modules](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/azure/modules)
+- [Google Cloud modules](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/google-cloud/modules)
 
 ### e2eSA modules published in Terraform Public Registry [Click here](https://registry.terraform.io/namespaces/e2eSolutionArchitect)
 - [AWS ECS Cluster](https://registry.terraform.io/modules/e2eSolutionArchitect/ecs-cluster/aws/latest)
