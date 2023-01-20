@@ -1,11 +1,15 @@
 # Common
-project       = "e2esa-demo"
-prefix        = "rg"
+project       = "e2esa"
+prefix        = "vm"
 suffix        = "01"
 org_unit      = "E2ESA"
 business_unit = "SMB-INT" # SMB-INT - Small & Medium Business in Org, "SMB-EXTR" - SMB External
-cost_center   = "CCAWS0000"
+cost_center   = "CCGC0000"
 appid         = "app001"
 
 # General 
-location = "eastus"
+zone = "us-east1-a"
+
+machine_type="f1-micro"
+image="debian-cloud/debian-11"
+startup_script="sudo apt-get update; sudo apt-get install -yq build-essential python3-pip rsync; pip install flask"

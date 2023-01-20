@@ -10,5 +10,10 @@ variable "cost_center" {}
 variable "appid" {}
 
 # General 
-variable "location" {}
+variable "zone" {}
 
+
+# Compute Instance
+variable "startup_script" {}
+variable "image" {}
+variable "machine_type" {}

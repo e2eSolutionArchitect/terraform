@@ -2,8 +2,8 @@
 # Common Variables
 # -------------------------------------------
 
-variable "location" {
-  description = "Azure infrastructure location"
+variable "zone" {
+  description = "Google Cloud infrastructure location"
   type        = string
   default     = null
 }
@@ -44,3 +44,22 @@ variable "name" {
   type        = string
   default     = null
 }
+
+variable "startup_script" {
+  description = "startup_script"
+  type        = string
+  default     = null
+}
+
+variable "image" {
+  description = "image"
+  type        = string
+  default     = null
+}
+
+variable "machine_type" {
+  description = "image"
+  type        = string
+  default     = null
+}
+

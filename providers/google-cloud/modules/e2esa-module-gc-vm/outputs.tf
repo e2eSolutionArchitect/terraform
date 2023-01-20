@@ -1,4 +1,4 @@
 output "id" {
   description = "id"
-  value       = try(azurerm_resource_group.rg.id, "")
+  value       = try(google_compute_instance.vm.id, "")
 }
