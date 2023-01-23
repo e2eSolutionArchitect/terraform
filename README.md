@@ -49,4 +49,4 @@ e2eSA Solutions for Terraform
 
 ## e2eSA CLOUD SKILLS BOOTCAMP 
 
-[![e2eSA CLOUD SKILLS BOOTCAMP](https://user-images.githubusercontent.com/62712515/213931902-aa4143d0-760f-4fd4-9886-7d7d99ef9ec4.png)](https://github.com/e2eSolutionArchitect/academy/blob/main/bootcamp-cloud-skills.md)
+[![e2eSA CLOUD SKILLS BOOTCAMP](https://user-images.githubusercontent.com/62712515/213931902-aa4143d0-760f-4fd4-9886-7d7d99ef9ec4.png)](https://github.com/e2eSolutionArchitect/academy/blob/main/bootcamp/readme.md)
