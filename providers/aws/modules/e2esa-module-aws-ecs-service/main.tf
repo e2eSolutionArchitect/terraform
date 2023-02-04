@@ -1,7 +1,7 @@
 
 
 data "template_file" "this" {
-  template = file("./../modules/e2esa-module-aws-ecs-service/templates/app/json.tpl")
+  template = file("./../modules/e2esa-module-aws-ecs-service/template/json.tpl")
 
   vars = {
     app_name              = var.app_name
