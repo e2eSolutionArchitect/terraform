@@ -6,9 +6,9 @@ ARG JMETER_VERSION="5.4.3"
 ENV JMETER_HOME=/opt/apache-jmeter-${JMETER_VERSION}
 ENV JMETER_DOWNLOAD_URL=https://archive.apache.org/dift/jmeter/binaries/apache-jmeter-${JMETER_VERSION}.tgz
 
-ENV TEST_FILE=/opt/apache-jmeter-${JMETER_VERSION}/bin/examples/CSVSample.jmx
-ENV TEST_LOG_FILE=/opt/apache-jmeter-${JMETER_VERSION}/bin/examples/test.log
-ENV TEST_RESULTS_FILE=/opt/apache-jmeter-${JMETER_VERSION}/bin/examples/test-result.xml
+ENV TEST_FILE=/opt/apache-jmeter-${JMETER_VERSION}/bin/projects/CSVSample.jmx
+ENV TEST_LOG_FILE=/opt/apache-jmeter-${JMETER_VERSION}/bin/projects/test.log
+ENV TEST_RESULTS_FILE=/opt/apache-jmeter-${JMETER_VERSION}/bin/projects/test-result.xml
 ENV PORT 80
 
 ENV NUMBER_OF_REQUESTS_PER_CLIENT=10 \
@@ -18,7 +18,7 @@ ENV NUMBER_OF_REQUESTS_PER_CLIENT=10 \
     TIMEOUT=2000 
 
 # copy test plan
-# COPY examples/test.jmx ${TEST_FILE}
+# COPY projects/test.jmx ${TEST_FILE}
 
 # https://openjdk.java.net/install/
 

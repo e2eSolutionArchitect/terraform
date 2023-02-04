@@ -35,7 +35,7 @@ e2eSA Solutions for Terraform
 [![Terraform Advance Playlist](https://user-images.githubusercontent.com/62712515/206504025-16ae6833-1289-4f79-bc50-10439207cebd.png)](https://www.youtube.com/playlist?list=PLuBBTh-4TzDkUiWqlrwwnJ3QFJdP4JiPy)
 
 ### Projects
-- [AWS projects](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/examples)
+- [AWS projects](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/projects)
 - [Azure projects](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/azure/projects)
 - [Google Cloud projects](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/google-cloud/projects)
 
