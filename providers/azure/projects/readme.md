@@ -1,1 +1,1 @@
-Terraform Azure projects comming soon. 
+Terraform Azure projects. 
