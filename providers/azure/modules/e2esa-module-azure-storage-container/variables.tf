@@ -33,30 +33,10 @@ variable "number" {
   default     = 0
 }
 
-variable "allow_blob_public_access" {
-  description = "allow_blob_public_access"
-  type        = bool
-  default     = false
-}
-
-
 variable "name" {
   description = "name"
   type        = string
   default     = null
-}
-
-variable "account_tier" {
-  description = "account_tier"
-  type        = string
-  default     = "Standard"
-}
-
-
-variable "account_replication_type" {
-  description = "account_replication_type"
-  type        = string
-  default     = "LRS"
 }
 
 variable "container_access_type" {
@@ -65,14 +45,10 @@ variable "container_access_type" {
   default     = "private"
 }
 
-variable "blob_type" {
-  description = "blob_type"
-  type        = string
-  default     = "Block"
-}
 
-variable "blob_source_file" {
-  description = "blob_source_file"
+variable "storage_account_name" {
+  description = "storage_account_name"
   type        = string
   default     = null
 }
+

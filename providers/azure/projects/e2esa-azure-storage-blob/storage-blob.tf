@@ -6,6 +6,7 @@ module "az_storage_blob" {
   #account_replication_type=var.account_replication_type
   #container_access_type=var.container_access_type
   #blob_type=var.blob_type
-  blob_source_file = var.blob_source_file
-  tags             = merge({ "resourcename" = "${local.name}-${var.suffix}" }, local.tags)
+  allow_blob_public_access = var.allow_blob_public_access
+  blob_source_file         = var.blob_source_file
+  tags                     = merge({ "resourcename" = "${local.name}-${var.suffix}" }, local.tags)
 }

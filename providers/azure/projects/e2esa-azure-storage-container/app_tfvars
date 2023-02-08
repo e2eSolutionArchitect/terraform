@@ -1,0 +1,12 @@
+# Common
+project       = "e2esa-demo"
+prefix        = "container"
+suffix        = "01"
+org_unit      = "E2ESA"
+business_unit = "SMB-INT" # SMB-INT - Small & Medium Business in Org, "SMB-EXTR" - SMB External
+cost_center   = "CCAZ0000"
+appid         = "app001"
+
+# General 
+container_access_type = "private"
+storage_account_name="e2esa-azacc-main"

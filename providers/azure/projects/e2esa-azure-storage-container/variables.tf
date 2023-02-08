@@ -10,6 +10,4 @@ variable "cost_center" {}
 variable "appid" {}
 
 # General 
-variable "blob_source_file" {}
-variable "allow_blob_public_access" {}
-
+variable "storage_account_name" {}
