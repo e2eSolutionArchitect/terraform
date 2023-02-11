@@ -9,4 +9,7 @@ appid         = "app001"
 
 # General 
 location = "eastus"
-resource_group_name="rg-e2esa-demo"
+resource_group_name="rm-e2esa-demo"
+#account_tier=""
+#account_replication_type=""
+#allow_blob_public_access=""
