@@ -8,9 +8,13 @@ locals {
     orgunit      = var.org_unit
     businessunit = var.business_unit
     costcenter   = var.cost_center
+    appid        = var.appid
+    appname      = var.name
+    desc         = var.dec
+    tier         = var.tier
     createdby    = var.createdby
     createdon    = timestamp()
-    appid        = var.appid
-    environment  = terraform.workspace
+    env  = var.env
+    tf_ws =terraform.workspace
   }
 }
