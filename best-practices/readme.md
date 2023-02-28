@@ -23,6 +23,9 @@ provider "aws" {
 - [Check here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/projects/template-e2esa-aws#readme) for sample documentation.
 - Use [Terraform docs generator](https://github.com/e2eSolutionArchitect/terraform/blob/main/docs/terraform-docs-generator.md) for documentation.
 
+***Avoid code inline documentation***
+- Purpose of Infrastructure as Code is to reduce conventional documentation. No extra inline code comments required. Simplicity of the code and meaningful variable name should enough.
+
 
 ## 3. Infrastructure Code scanning 
 
@@ -112,3 +115,4 @@ module "acm" {
 
 
 ## 10. 
+
