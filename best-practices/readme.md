@@ -114,5 +114,15 @@ module "acm" {
 - Please don't share the output details publicly. It may contains confidential details of infrastructure
 
 
-## 10. 
+## 10. Format code
+
+- Before code commit please validate and format. 
+
+```
+terraform validate
+terraform fmt
+
+```
+
+
 
