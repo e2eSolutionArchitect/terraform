@@ -50,7 +50,7 @@ locals {
     costcenter   = var.cost_center
     appid        = var.appid
     appname      = var.name
-    desc         = var.dec
+    desc         = var.desc
     tier         = var.tier
     createdby    = var.created_by
     createdon    = timestamp()
