@@ -68,8 +68,8 @@ tags        = merge({ "resourcename" = "${local.name}-${var.suffix}" }, local.ta
  
 ```
 # Backend
-variable "backend_s3_bucket" {}
-variable "backend_dynamodb_table" {}
+variable "backend_s3_bucket_id" {}
+variable "backend_dynamodb_table_name" {}
 
 # ECS
 variable "ecs_cluster_name" {}
