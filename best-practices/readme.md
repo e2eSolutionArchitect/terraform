@@ -128,5 +128,16 @@ terraform fmt -recursive  # to format *.tf files in all sub directories
 
 ```
 
+## 11. Validate your inputs
 
+```
+variable "cost_center" {
+  description = "Cost center for billing"
+  type        = string
+  validation {
+    condition     = length(var.cost_center) > 5 && substr(var.cost_center, 0, 3) == "CC-"
+    error_message = "The cost_center value must be a valid Cost center id, starting with \"CC-\"."
+  }
+}
+```
 
