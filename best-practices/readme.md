@@ -120,7 +120,8 @@ module "acm" {
 
 ```
 terraform validate
-terraform fmt
+terraform fmt # to format current directory *.tf files 
+terraform fmt -recursive  # to format *.tf files in all sub directories
 
 ```
 
