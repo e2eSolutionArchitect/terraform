@@ -114,7 +114,7 @@ module "acm" {
 
 - While creating module definition , expose outputs so you can use them in your main project
 - In case of creating tf project please expose required outputs
-- Please don't share the output details publicly. It may contains confidential details of infrastructure
+- Please don't share the output details publicly. It may contain confidential details of infrastructure
 
 
 ## 10. Format code
