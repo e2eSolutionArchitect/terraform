@@ -23,12 +23,14 @@ provider "aws" {
 - [Check here](https://github.com/e2eSolutionArchitect/terraform/tree/main/providers/aws/projects/template-e2esa-aws#readme) for sample documentation.
 - Use [Terraform docs generator](https://github.com/e2eSolutionArchitect/terraform/blob/main/docs/terraform-docs-generator.md) for documentation.
 
+
 ## 3. Infrastructure Code scanning 
 
 - Your Terraform scripting can have vulnerability for network or infrastructure.
 - Use IaC scanning tools for automated scanning
 - As referance use [***Checkov***](https://github.com/e2eSolutionArchitect/terraform/tree/main/checknov) as Infrastructure code scanning for Terraform.
 - Check the [tutorial nere](https://www.youtube.com/watch?v=bAkwvmZ7OGA) for how to use ***Checkov*** for Terraform code scanning.
+
 
 ## 4. Resource tagging standards & techniques
 - Every resource must be tagged appropriately with its assocoated project, org unit, cost center and environment. 
@@ -56,6 +58,7 @@ locals {
 tags        = merge({ "resourcename" = "${local.name}-${var.suffix}" }, local.tags)
 ```
 
+
 ## 5. Setup variable naming convention
 - Variable names should be unique in a project, meaningfull name and clearly readable. Readability is very important. the short and meaningful name reduces extra verbiage for documentation
 - Please refer below examples for variable name. Just reading the variable name will give you the understanding of what & why
@@ -69,6 +72,7 @@ variable "backend_dynamodb_table" {}
 variable "ecs_cluster_name" {}
 ```
 
+
 ## 6. Setup resource naming convention
 
 ```
@@ -78,6 +82,7 @@ vm-mywebapp-01
 
 # prefix can be resource type/project name etc
 ```
+
 
 ## 7. Use module for every commonly used components
 
@@ -91,11 +96,13 @@ module "acm" {
   
 ```
 
+
 ## 8. Never share/commit your '*.tfvars' in public repository 
 
 - If you are using public repository for your terraform repo then make sure you have *.tfvars restricted in .gitignore file. 
 - e2eSA provided project's [app_tfvars](https://github.com/e2eSolutionArchitect/terraform/blob/main/providers/aws/projects/e2esa-aws-acm/app_tfvars) has all variables but dummy values. It is asked to rename the file to app.tfvars and add your values for the mentioned variables. 
 - If you are using  private repository used by authorized people only then no issue. 
+
 
 ## 9. Don't skip output
 
