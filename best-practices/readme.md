@@ -88,7 +88,7 @@ vm-mywebapp-01
 
 
 ## 7. Use module for every commonly used components
-
+[Click here](https://www.youtube.com/watch?v=3Nuw4DnXkR8) for the tutorial
 ```
 module "acm" {
  # Import module from local
