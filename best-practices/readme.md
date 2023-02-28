@@ -24,7 +24,7 @@ provider "aws" {
 - Use [Terraform docs generator](https://github.com/e2eSolutionArchitect/terraform/blob/main/docs/terraform-docs-generator.md) for documentation.
 
 ***Avoid code inline documentation***
-- Purpose of Infrastructure as Code is to reduce conventional documentation. No extra inline code comments required. Simplicity of the code and meaningful variable name should enough.
+- Purpose of Infrastructure as Code is to reduce conventional documentation. No extra inline code comments required. Simplicity of the code and meaningful variable name should be enough.
 
 
 ## 3. Infrastructure Code scanning 
