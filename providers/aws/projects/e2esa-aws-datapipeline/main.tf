@@ -3,9 +3,18 @@
 #   tags   = merge({ "resourcename" = "${local.name}-datapipeline-${var.suffix}" }, local.tags)
 # }
 
+
+
+
 resource "aws_datapipeline_pipeline" "pipeline" {
   name = local.name
 }
+
+#***********************
+# This project is in progress. It is NOT tested yet. 
+## If you want to contribute , you are most welcome. 
+#***********************
+
 
 resource "aws_datapipeline_pipeline_definition" "definition" {
   pipeline_id = aws_datapipeline_pipeline.pipeline.id
