@@ -20,7 +20,7 @@
 variable "project" {
   description = "Project name"
   type        = string
-    validation {
+  validation {
     condition     = length(var.project) > 4
     error_message = "The project value must be a valid user in organization."
   }
@@ -29,7 +29,7 @@ variable "project" {
 variable "prefix" {
   description = "Short identifier of the resource associated with the project"
   type        = string
-      validation {
+  validation {
     condition     = length(var.prefix) >= 2
     error_message = "The prefix value is mandatory."
   }
@@ -55,7 +55,7 @@ variable "createdby" {
 variable "org_unit" {
   description = "he organizational unit of the resource. such as IT, Marketing, Finance. Depends on how is your org hierarchy is defined"
   type        = string
- validation {
+  validation {
     condition = anytrue([
       var.org_unit == "E2ESA-ORG",
       var.org_unit == "E2ESA-DEMO"
@@ -69,7 +69,7 @@ variable "org_unit" {
 variable "business_unit" {
   description = "Business unit"
   type        = string
-validation {
+  validation {
     condition     = length(var.business_unit) > 2
     error_message = "The business_unit value must be a valid Business Unit in organization."
   }
@@ -87,7 +87,7 @@ variable "cost_center" {
 variable "appid" {
   description = "Application unique identifier code or id"
   type        = string
-    validation {
+  validation {
     condition     = length(var.appid) > 4
     error_message = "The appid value must be a valid appid in organization."
   }
@@ -108,7 +108,7 @@ variable "desc" {
 variable "tier" {
   description = "Which tier the resource/application belongs Web/App/DB"
   type        = string
-   validation {
+  validation {
     condition = anytrue([
       var.tier == "web",
       var.tier == "app",
@@ -121,7 +121,7 @@ variable "tier" {
 variable "env" {
   description = "Which environment the resource is deployed"
   type        = string
- validation {
+  validation {
     condition = anytrue([
       var.env == "dev",
       var.env == "stg",
@@ -141,7 +141,7 @@ variable "env" {
 variable "location" {
   description = "Cloud Resource region"
   type        = string
-   validation {
+  validation {
     condition     = contains(["eastus", "canadaeast", "canadacentral"], var.location)
     error_message = "Invalid location. Region must be in US or Canada"
   }

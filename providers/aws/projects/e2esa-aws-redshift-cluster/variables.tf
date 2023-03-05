@@ -1,4 +1,18 @@
 
+# # Tags
+# variable "project" {}
+# variable "prefix" {}
+# variable "suffix" {}
+# variable "createdby" {}
+# variable "org_unit" {}
+# variable "business_unit" {}
+# variable "cost_center" {}
+# variable "appid" {}
+
+# # General 
+# variable "aws_region" {}
+
+
 # -------------------------------------------
 # Common Variables or Tags
 # -------------------------------------------
@@ -133,15 +147,14 @@ variable "location" {
   }
 }
 
+variable "rs_cluster_identifier" {}
 
-# variable "ip_address" {
-#     description   = "Validate IP address."
-#     type          = string
+variable "rs_database_name" {}
 
-#     validation {
-#         condition = can(regex("^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$",var.ip_address))
-#         error_message = "Invalid IP address provided."
-#     }
-# }
+variable "rs_master_username" {}
 
+variable "rs_master_pass" {}
 
+variable "rs_nodetype" {}
+
+variable "rs_cluster_type" {}

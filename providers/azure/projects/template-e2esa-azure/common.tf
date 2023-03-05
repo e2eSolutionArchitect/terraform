@@ -14,6 +14,6 @@ locals {
     tier         = var.tier
     createdby    = var.created_by
     createdon    = timestamp()
-    env  = var.env
+    env          = var.env
   }
 }
