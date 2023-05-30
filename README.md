@@ -4,7 +4,8 @@ Terraform for AWS, Azure, GCP
 ### For Terraform professional consultancy and Technical advisory please feel free to drop a note to som@e2eSolutionArchitect.com
 [Click here](https://e2esolutionarchitect.com/tag/terraform) for Terraform articles
 
-[![e2eSA Bootcamp](https://github.com/e2eSolutionArchitect/terraform/assets/62712515/2c426185-7f29-4658-8e72-2d3ece8010e7)](https://e2esolutionarchitect.eventbrite.ca)
+[![e2esa-bootcamp-posters-01](https://github.com/e2eSolutionArchitect/terraform/assets/62712515/485d9a63-da4b-4308-853d-cca3a5334e89)](https://e2esolutionarchitect.eventbrite.ca)
+
 
 ***[Click here](https://e2esolutionarchitect.eventbrite.com)*** for list of upcoming trainings.
 
