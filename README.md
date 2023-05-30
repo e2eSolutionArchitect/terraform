@@ -4,8 +4,9 @@ Terraform for AWS, Azure, GCP
 ### For Terraform professional consultancy and Technical advisory please feel free to drop a note to som@e2eSolutionArchitect.com
 [Click here](https://e2esolutionarchitect.com/tag/terraform) for Terraform articles
 
+[![e2esa-bootcamp-posters-01](https://github.com/e2eSolutionArchitect/terraform/assets/62712515/2c426185-7f29-4658-8e72-2d3ece8010e7)](https://e2esolutionarchitect.eventbrite.ca)
 
-[![e2eSA Talent Development Programs](https://user-images.githubusercontent.com/62712515/212548238-92365832-fe03-47c7-8c06-701834a67ebf.png)](https://github.com/e2eSolutionArchitect/academy)
+
 ***[Click here](https://e2esolutionarchitect.eventbrite.com)*** for list of upcoming trainings.
 
 ### Join the ***Slack*** channel 
@@ -50,3 +51,4 @@ e2eSA Solutions for Terraform
 ## e2eSA CLOUD SKILLS BOOTCAMP 
 
 [![e2eSA CLOUD SKILLS BOOTCAMP](https://user-images.githubusercontent.com/62712515/213931902-aa4143d0-760f-4fd4-9886-7d7d99ef9ec4.png)](https://github.com/e2eSolutionArchitect/academy/blob/main/bootcamp/readme.md)
+[![e2eSA Talent Development Programs](https://user-images.githubusercontent.com/62712515/212548238-92365832-fe03-47c7-8c06-701834a67ebf.png)](https://github.com/e2eSolutionArchitect/academy)
