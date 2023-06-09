@@ -6,6 +6,11 @@
 az --version
 ```
 
+## to upgrade cli 
+```
+az upgrade
+```
+
 Azure Provider: [Authenticating using the Azure CLI](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/azure_cli)
 
 ## Connect to Azure cloud from local CLI
@@ -14,10 +19,7 @@ Azure Provider: [Authenticating using the Azure CLI](https://registry.terraform.
 az login
 ```
 
-## to upgrade cli 
-```
-az upgrade
-```
+
 
 ***As output you will get below json***
 ```
