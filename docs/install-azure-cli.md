@@ -14,6 +14,11 @@ Azure Provider: [Authenticating using the Azure CLI](https://registry.terraform.
 az login
 ```
 
+## to upgrade cli 
+```
+az upgrade
+```
+
 ***As output you will get below json***
 ```
 PS C:\Users\myuser> az login
