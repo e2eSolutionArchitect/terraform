@@ -7,7 +7,7 @@ Terraform for AWS, Azure, GCP
 [![e2esa-bootcamp-posters-01](https://github.com/e2eSolutionArchitect/terraform/assets/62712515/485d9a63-da4b-4308-853d-cca3a5334e89)](https://e2esolutionarchitect.eventbrite.ca)
 
 
-***[Click here](https://e2esolutionarchitect.eventbrite.com)*** for list of upcoming trainings.
+***[Click here](https://e2esolutionarchitect.eventbrite.ca)*** for list of upcoming trainings.
 
 ### Join the ***Slack*** channel 
  - [Terraform Infrastructure Automation Engineering](https://talentdevelop-u8d3237.slack.com/archives/C04KCD8183B)
