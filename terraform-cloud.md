@@ -5,9 +5,9 @@
 ```
 terraform login
 ```
--- Create token 
--- enter token in terraform console prompt
--- teraform cloud should be connected
+- Create token 
+- Eenter token in terraform console prompt
+- teraform cloud should be connected
 
 ```
 terraform init 
