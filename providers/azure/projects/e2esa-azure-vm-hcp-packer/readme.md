@@ -28,3 +28,5 @@ terraform-docs markdown table . > tf-spec.md
 - Please check repository https://github.com/e2eSolutionArchitect/terraform
 - We encourage you to contribute your knowledge with us and create a stronger IT community.
 
+## Configure HCP packer 
+Please [check here](https://github.com/e2eSolutionArchitect/hashicorp-packer/blob/main/golden-images/azure/readme.md) for the HCP packer configuration.
