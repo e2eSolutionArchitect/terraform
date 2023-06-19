@@ -6,7 +6,7 @@
 terraform login
 ```
 - Create token 
-- Eenter token in terraform console prompt
+- Enter token in terraform console prompt
 - teraform cloud should be connected
 
 ```
