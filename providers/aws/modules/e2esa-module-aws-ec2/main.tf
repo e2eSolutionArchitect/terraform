@@ -13,17 +13,22 @@
 #   owners = ["801119661308"] # Canonical
 # }
 
+
 resource "aws_instance" "this" {
-  ami               = var.ami #data.aws_ami.this.id
-  instance_type     = "t2.micro"
-  availability_zone = var.availability_zone
-
-  #   lifecycle {
-  #     ignore_changes = [ami]
-  #   }
-
-  tags = merge(var.tags)
+  ami                         = var.ami #data.aws_ami.this.id
+  instance_type               = var.instance_type
+  associate_public_ip_address = var.associate_public_ip_address
+  availability_zone           = var.availability_zone
+  subnet_id                   = var.subnet_id
+  vpc_security_group_ids      = var.vpc_security_group_ids
+  user_data                   = templatefile(var.user_data_filepath, {})
+  key_name                    = var.key_name
+  iam_instance_profile        = var.iam_instance_profile
+  disable_api_termination     = var.disable_api_termination
+  tags                        = merge(var.tags)
 }
+
+
 
 resource "aws_ebs_volume" "this" {
   availability_zone = var.availability_zone
