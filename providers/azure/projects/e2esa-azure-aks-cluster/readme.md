@@ -7,7 +7,9 @@ end-to-end Solution Architect forum is contributing this as knowledge sharing. Y
 
 ## About the project
 
-add architecture diagram if application
+- Create AKS cluster
+- Enable Monitoring
+- Create Azure Log Analytics and Monitor AKS nodes
 
 Rename app_tfvars file name to as app.tfvars and then execute  below command
 ```
@@ -77,4 +79,21 @@ A web browser has been opened at https://login.microsoftonline.com/organizations
 ## Check kubeversion in your region
 ```
 az aks get-versions --location eastus
+```
+
+
+# Access AKS
+```
+# Azure AKS Get Credentials with --admin
+az aks get-credentials --resource-group <resource-grp-name> --name <clustername> --admin
+
+# Get Full Cluster Information
+az aks show --resource-group <resource-grp-name> --name <clustername>
+az aks show --resource-group <resource-grp-name> --name <clustername> -o table
+
+# Get AKS Cluster Information using kubectl
+kubectl cluster-info
+
+# List Kubernetes Nodes
+kubectl get nodes
 ```

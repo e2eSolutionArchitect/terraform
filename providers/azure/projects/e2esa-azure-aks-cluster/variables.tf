@@ -19,5 +19,7 @@ variable "dns_prefix" {}
 variable "vm_size" {}
 
 variable "az_container_registry_name" {} # alpha numeric characters only are allowed in "name": "aks-demo-cnt-reg"
-variable "kubversion" { 
-}
+variable "kubversion" {}
+
+# Log Analytics
+variable "analytics_workspace_name" {}
