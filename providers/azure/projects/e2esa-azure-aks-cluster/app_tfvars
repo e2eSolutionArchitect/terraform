@@ -1,0 +1,15 @@
+# Common
+project       = "e2esa-demo"
+prefix        = "rg"
+suffix        = "01"
+org_unit      = "E2ESA"
+business_unit = "SMB-INT" # SMB-INT - Small & Medium Business in Org, "SMB-EXTR" - SMB External
+cost_center   = "CCAZ0000"
+appid         = "app001"
+
+# General 
+location = "eastus"
+resource_group_name="rm-e2esa-demo"
+#account_tier=""
+#account_replication_type=""
+#allow_blob_public_access=""
