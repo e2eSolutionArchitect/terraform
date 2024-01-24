@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: aks-cluster-demo.azurecr.io/nginx:v1
+        image: akscntreg.azurecr.io/nginx:v1
         ports:
         - containerPort: 80
