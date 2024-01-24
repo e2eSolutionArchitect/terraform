@@ -1,6 +1,6 @@
 # Common
-project       = "e2esa-demo"
-prefix        = "rg"
+project       = "e2esa-aks-demo"
+prefix        = "aks"
 suffix        = "01"
 org_unit      = "E2ESA"
 business_unit = "SMB-INT" # SMB-INT - Small & Medium Business in Org, "SMB-EXTR" - SMB External
@@ -8,8 +8,13 @@ cost_center   = "CCAZ0000"
 appid         = "app001"
 
 # General 
-location = "eastus"
-resource_group_name="rm-e2esa-demo"
-#account_tier=""
-#account_replication_type=""
-#allow_blob_public_access=""
+location             = "eastus"
+
+# AKS
+resource_group_name  = "rg-us-east-aks"
+ask_cluster_name = "aks-cluster-demo"
+dns_prefix = "aks"
+
+az_container_registry_name = "akscntreg" # alpha numeric characters only are allowed in "name": "aks-demo-cnt-reg"
+vm_size= "Standard_D2_v2"
+kubversion= "1.26.10" # az aks get-versions --location eastus
