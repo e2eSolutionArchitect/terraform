@@ -1,3 +1,28 @@
+# Use for_each
+
+Define variable
+```
+variable "policy_arns" {
+  type = set(string)
+  default = []
+}
+```
+
+Values in tfvar
+```
+policy_arns = ["arn:aws:iam::aws:policy/AmazonS3FullAccess","arn:aws:iam::aws:policy/CloudWatchFullAccess"]
+```
+
+Define the loop
+```
+resource "aws_iam_role_policy_attachment" "policy-attach" {
+  for_each = var.policy_arns
+  role       = aws_iam_role.role.name
+  policy_arn = each.value
+}
+
+```
+
 
 # Define a map and use
 
