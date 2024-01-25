@@ -4,10 +4,14 @@ output "client_certificate" {
 }
 
 output "kube_config" {
-  value = azurerm_kubernetes_cluster.aks_cluster.kube_config_raw
+  value     = azurerm_kubernetes_cluster.aks_cluster.kube_config_raw
   sensitive = true
 }
 
 output "latest_version" {
   value = data.azurerm_kubernetes_service_versions.selected.latest_version
+}
+
+output "grafana_url" {
+  value = azurerm_dashboard_grafana.dashboard.endpoint
 }

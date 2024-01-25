@@ -23,3 +23,10 @@ variable "kubversion" {}
 
 # Log Analytics
 variable "analytics_workspace_name" {}
+
+# Azure Monitor
+variable "az_monitor_workspace_name" {}
+
+# Grafana Dashboard
+variable "grafana_dashboard_name" {}
+

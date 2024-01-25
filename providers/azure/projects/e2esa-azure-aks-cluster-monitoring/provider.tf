@@ -1,9 +1,13 @@
 terraform {
-  required_version = "~> 1.6.0"
+  required_version = "~> 1.7.0"
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "~>3.88.0"
+    }
+    azapi = {
+      source  = "azure/azapi"
+      version = "~>1.12.0"
     }
   }
 
@@ -18,9 +22,13 @@ terraform {
 
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
+  skip_provider_registration = "true"
   features {}
 
   #It's also possible to configure Terraform to use a specific Subscription - for example:
   #subscription_id = "00000000-0000-0000-0000-000000000000"
+}
+
+provider "azapi" {
 }
 
