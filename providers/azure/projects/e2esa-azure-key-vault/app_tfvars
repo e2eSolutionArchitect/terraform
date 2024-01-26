@@ -1,5 +1,5 @@
 # Common
-project       = "aks-demo"
+project       = "azvault-demo"
 prefix        = "aks"
 suffix        = "01"
 org_unit      = "OU"
@@ -9,21 +9,9 @@ appid         = "app001"
 
 # General 
 location = "eastus"
+resource_group_name = "rg-us-east-az-vault"
 
-# AKS
-resource_group_name = "rg-us-east-aks"
-ask_cluster_name    = "aks-cluster-demo"
-dns_prefix          = "aks"
-
-az_container_registry_name = "akscntreg" # alpha numeric characters only are allowed in "name": "aks-demo-cnt-reg"
-vm_size                    = "Standard_D2_v2"
-kubversion                 = "1.26.10" # az aks get-versions --location eastus
-
-# Log Analytics
-analytics_workspace_name = "lg-analytics-ws"
-
-# Azure Monitor
-az_monitor_workspace_name = "aks-monitor"
-
-# Grafana Dashboard
-grafana_dashboard_name = "grafasa-dash"
+# Azure Vault
+key_vault_name= "demo-vault"
+secret_val = "sec8rt"
+certificate_password ="pswd001"
