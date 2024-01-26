@@ -97,3 +97,6 @@ kubectl cluster-info
 # List Kubernetes Nodes
 kubectl get nodes
 ```
+
+# Troubleshoot
+- User does not have any required Grafana role assigned [click here](https://github.com/e2eSolutionArchitect/kubernetes/blob/main/aks/docs/User%20does%20not%20have%20any%20required%20Grafana%20role%20assigned-azure-managed-grafana.md)
