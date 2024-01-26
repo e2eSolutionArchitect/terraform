@@ -1,17 +1,18 @@
 
 ## Author
-This project is maintained by '[end-to-end Solution Architect](https://e2esolutionarchitect.com/)'. Please feel free to drop a note to contactus@e2eSolutionArchitect.com for any queries
+This project is maintained by '[end-to-end Solution Architect](https://e2esolutionarchitect.com/)'. Please feel free to drop a note to som@e2eSolutionArchitect.com for any queries
 
 ## Permission
-end-to-end Solution Architect forum is contributing this as knowledge sharing. You are free to use and modify this.
+end-to-end Solution Architect forum is contributing to this repository as knowledge sharing. You are free to use and modify this.
 
 ## About the project
 
 - Create AKS cluster
 - Enable Monitoring
 - Create Azure Log Analytics and Monitor AKS nodes
+- Use Azure Managed Grafana and Prometheus 
 
-Rename app_tfvars file name to as app.tfvars and then execute  below command
+Rename app_tfvars file name to as app.tfvars and then execute  the below command
 ```
  terraform apply -var-file="app.tfvars" -var="createdby=e2esa"
 ```
@@ -20,7 +21,7 @@ Rename app_tfvars file name to as app.tfvars and then execute  below command
 [click here](tf-spec.md)
 
 ## Run terraform-docs to generate tf document
-browse inside your terraform project directory and run the below command 
+browse inside your Terraform project directory and run the below command 
 
 ```
 terraform-docs markdown table . > tf-spec.md
@@ -43,11 +44,11 @@ Azure Provider: [Authenticating using the Azure CLI](https://registry.terraform.
 
 ## Connect to Azure cloud from local CLI
 ```
-# Run below command in Azure CLI . It will open the login in browser and ask to login. Login with credentials. 
+# Run the below command in Azure CLI. It will open the login in the browser and ask to log in. Login with credentials. 
 az login
 ```
 
-***As output you will get below json***
+***As output you will get below JSON ***
 ```
 PS C:\Users\myuser> az login
 A web browser has been opened at https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize. Please continue the login in the web browser. If no web browser is available or if the web browser fails to open, use device code flow with `az login --use-device-code`.
@@ -73,7 +74,7 @@ A web browser has been opened at https://login.microsoftonline.com/organizations
 
 
 ## Notes
-- Please check repository https://github.com/e2eSolutionArchitect/terraform
+- Please check the repository https://github.com/e2eSolutionArchitect/terraform
 - We encourage you to contribute your knowledge with us and create a stronger IT community.
 
 ## Check kubeversion in your region
