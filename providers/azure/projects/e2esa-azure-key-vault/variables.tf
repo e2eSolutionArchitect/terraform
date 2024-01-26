@@ -15,3 +15,5 @@ variable "resource_group_name" {}
 
 # Azure Vault
 variable key_vault_name{}
+variable secret_val{}
+variable certificate_password{}
