@@ -25,8 +25,8 @@ module "ec2" {
 
 ```
 module "ec2" {
-  source = "git::git@github.com:e2eSolutionArchitect/terraform.git//providers/aws/modules/e2esa-module-aws-ec2?ref=main"
+  source = "git::ssh://git@github.com/e2eSolutionArchitect/terraform.git//providers/aws/modules/e2esa-module-aws-ec2?ref=main"
   .....
 }
-
+# ensure that you have SSH private ket setup
 ```
