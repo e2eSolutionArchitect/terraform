@@ -140,6 +140,8 @@ variable "cost_center" {
   }
 }
 ```
+## 12. Always use IAM granular access strategy
+[Click here](https://github.com/e2eSolutionArchitect/scripts/blob/main/aws/best-practices/aws-startup-policy.json) for a AWM policy to start with. 
 
 :writing_hand: Feel free to contact and collaborate with us. You are welcome to contribute in our forum to build a better tomorrow. 
 
