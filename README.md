@@ -1,7 +1,9 @@
-:writing_hand: Feel free to contact and collaborate with us. You are welcome to contribute in our forum to build a better tomorrow. 
+:writing_hand: Feel free to contact and collaborate with us. You are welcome to contribute to our forum to build a better tomorrow. 
 
-## 'End To End Solution Architect' forum brings to you the terraform scripts for infrastructure provisioning in AWS, Azure and Google Cloud Platform
+## 'End To End Solution Architect' forum brings to you the terraform scripts for infrastructure provisioning in AWS, Azure, and Google Cloud Platform
 Terraform for AWS, Azure, GCP
+
+# Please [click here](https://github.com/e2eSolutionArchitect/academy/tree/main/bootcamp) for Cloud, AI, Machine Learning Bootcamp details
 
 ### For Terraform professional consultancy and Technical advisory please feel free to drop a note to som@e2eSolutionArchitect.com
 [Click here](https://e2esolutionarchitect.com/tag/terraform) for Terraform articles
