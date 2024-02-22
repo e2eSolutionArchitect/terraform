@@ -1,4 +1,4 @@
-## Run below TF code to provision azurerm_storage_account. which will be used as state file storage. 
+## Run below TF code to provision azurerm_storage_account. which will be used as state file storage.  Please [refer here](https://developer.hashicorp.com/terraform/language/settings/backends/azurerm) for more details
 
 ```
 terraform {
