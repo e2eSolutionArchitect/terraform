@@ -58,7 +58,19 @@ terraform plan -refresh-only
 terraform apply -refresh-only 
 ```
 
+***Terraform Import***
+```
+# First define the resource in the .tf file
+resource "aws_instance" "myvm" {
+ ami           = "unknown"
+ instance_type = "unknown"
+}
+# Now execute 
+terraform import aws_instance.myvm <Instance ID>
+# It update state file for myvm <Instance ID>
+```
 
+***Other Commands***
 ```
 terraform state mv
 terraform state rm  
