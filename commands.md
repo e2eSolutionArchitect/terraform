@@ -27,7 +27,14 @@ terraform destroy -var-file="dev.tfvars" -aotu-approve
 
 ***Target Destroy***
 ```
-terraform destroy target=<tf_resource_id>
+resource "myresource" "xyz"{
+  # ...resource arguments..
+}
+module "mymodule" {
+  # ...module arguments..
+}
+terraform destroy -target myresource.xyz
+terraform destroy -target module.mymodule
 ```
 
 ***Replace/Taint***
