@@ -40,7 +40,19 @@ terraform apply -replace=<tf_resource_id>
 terraform get 
 ```
 
-***find resource list from state***
+*** Find resource list from state***
 ```
 terraform show 
+```
+
+*** Detect Configuration Drift***
+```
+terraform plan -refresh-only
+terraform apply -refresh-only 
+```
+
+
+```
+terraform state mv
+terraform state rm  
 ```
