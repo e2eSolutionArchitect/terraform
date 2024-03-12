@@ -9,14 +9,6 @@ end-to-end Solution Architect forum is contributing to this repository as knowle
 
 - Enable AKS cluster Monitoring
 
-## Sending Data to Log Analytics Workspace
-- Manual: Setup Diagnostic settings in every reources manually
-- Azure Policy: Buitin policy name "Deploy - Configure diagnostic settings for Azure Kubernetes Service to Log Analytics workspace"
-  - Duplicate the policy and define a custom policy with custom changes from this Built-In policy
-  - Select Scope
-  - Select Log Analytics Workspace
-  - Add resource selector where resource type might be 'All' or specifically any such as Microsoft.KubernetesConfiguration/namespaces,Microsoft.NetworkCloud/kubernetesClusters etc
-
 Rename app_tfvars file name to as app.tfvars and then execute  the below command
 ```
 terraform apply -var-file="dev.tfvars" -var="createdby=e2esa"

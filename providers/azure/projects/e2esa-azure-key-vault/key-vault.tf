@@ -1,6 +1,6 @@
 provider "azurerm" {
   features {
-    
+
   }
 }
 
@@ -77,7 +77,7 @@ resource "azurerm_key_vault" "vault" {
     ]
   }
 
-    tags = merge(
+  tags = merge(
     { "resourcename" = "vault" }, local.tags
   )
 }
