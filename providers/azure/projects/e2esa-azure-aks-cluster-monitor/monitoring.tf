@@ -4,7 +4,7 @@
 # ------------------------------------------
 
 resource "azurerm_monitor_workspace" "monitor" {
-  name                          =  "${local.prefix}-${var.az_monitor_workspace_name}-${random_id.suffix.dec}"
+  name                          = "${local.prefix}-${var.az_monitor_workspace_name}-${random_id.suffix.dec}"
   resource_group_name           = data.azurerm_resource_group.rg.name
   location                      = data.azurerm_resource_group.rg.location
   public_network_access_enabled = true
@@ -37,7 +37,7 @@ resource "azurerm_log_analytics_solution" "log" {
   solution_name         = "ContainerInsights"
   location              = azurerm_log_analytics_workspace.log.location
   resource_group_name   = data.azurerm_resource_group.rg.name
-  workspace_resource_id = data.azurerm_log_analytics_workspace.log.id
+  workspace_resource_id = azurerm_log_analytics_workspace.log.id
   workspace_name        = azurerm_log_analytics_workspace.log.name
 
   plan {
@@ -58,7 +58,7 @@ resource "azurerm_log_analytics_solution" "log" {
 
 resource "azurerm_monitor_diagnostic_setting" "control_plane" {
   name                       = "AKS Control Plane Logging"
-  target_resource_id         = azurerm_kubernetes_cluster.aks_cluster.id
+  target_resource_id         = var.aks_cluster_id #azurerm_kubernetes_cluster.aks_cluster.id
   log_analytics_workspace_id = azurerm_log_analytics_workspace.log.id
 
   enabled_log {

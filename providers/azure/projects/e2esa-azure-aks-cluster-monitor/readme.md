@@ -7,18 +7,19 @@ end-to-end Solution Architect forum is contributing to this repository as knowle
 
 ## About the project
 
-- Create AKS cluster
-- Enable Monitoring
-- Create Azure Log Analytics and Monitor AKS nodes
-- Use Azure Managed Grafana and Prometheus 
+- Enable AKS cluster Monitoring
 
 Rename app_tfvars file name to as app.tfvars and then execute  the below command
 ```
- terraform apply -var-file="app.tfvars" -var="createdby=e2esa"
+terraform apply -var-file="dev.tfvars" -var="createdby=e2esa"
 ```
 
 ## Terraform project specification 
 [click here](tf-spec.md)
+
+```
+terraform-docs markdown table . > tf-spec.md 
+```
 
 ## Run terraform-docs to generate tf document
 browse inside your Terraform project directory and run the below command 
@@ -77,27 +78,6 @@ A web browser has been opened at https://login.microsoftonline.com/organizations
 - Please check the repository https://github.com/e2eSolutionArchitect/terraform
 - We encourage you to contribute your knowledge with us and create a stronger IT community.
 
-## Check kubeversion in your region
-```
-az aks get-versions --location eastus
-```
-
-
-# Access AKS
-```
-# Azure AKS Get Credentials with --admin
-az aks get-credentials --resource-group <resource-grp-name> --name <clustername> --admin
-
-# Get Full Cluster Information
-az aks show --resource-group <resource-grp-name> --name <clustername>
-az aks show --resource-group <resource-grp-name> --name <clustername> -o table
-
-# Get AKS Cluster Information using kubectl
-kubectl cluster-info
-
-# List Kubernetes Nodes
-kubectl get nodes
-```
 
 # Troubleshoot
 - User does not have any required Grafana role assigned [click here](https://github.com/e2eSolutionArchitect/kubernetes/blob/main/aks/docs/User%20does%20not%20have%20any%20required%20Grafana%20role%20assigned-azure-managed-grafana.md)
