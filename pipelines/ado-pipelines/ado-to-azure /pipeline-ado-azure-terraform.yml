@@ -1,0 +1,42 @@
+trigger:
+- none
+
+name: "$(Build.DefinitionName)$(Rev:.r)"
+
+pool:
+  vmImage: "ubuntu-latest"
+
+# Note: there is a variable GROUP added in ADO pipeline. AZURE_CREDS
+variables:
+  currentYear: $[format('{0:yyyy}', pipeline.startTime)]
+  currentMonth: $[format('{0:MM}', pipeline.startTime)]
+  versionPrefix: $(currentYear).$(currentMonth)
+  versionPatch: $[counter(format('{0:yyyyMM}', pipeline.startTime), 0)]
+  imageVersion: '$(versionPrefix).$(versionPatch)'
+  azureSubscription: 'e2esa-azure-service-con-arm'
+
+jobs:
+- job: terraform
+  steps:
+  - task: Bash@3
+    name: BuildAgentIP
+    inputs: 
+      targetType: 'inline'
+      script: |
+        ipaddress=$(curl -s http://ipinfo.io/ip)
+        echo "##vso[task.setvariable variable=address;isOutput=true;]$ipaddress"
+        echo $pwd
+        ls -l
+  # Azure CLI v2
+  # Run Azure CLI commands against an Azure subscription in a PowerShell Core/Shell script when running on Linux agent or PowerShell/PowerShell Core/Batch script when running on Windows agent.
+  - task: AzureCLI@2
+    name: ExecuteTerraform
+    inputs:
+      azureSubscription: 'e2esa-azure-service-con-arm'
+      scriptType: 'bash' # 'ps' | 'pscore' | 'batch' | 'bash'. Required. Script Type. 
+      scriptLocation: 'scriptPath' # 'inlineScript' | 'scriptPath'. Required. Script Location. Default: scriptPath.
+      scriptPath: 'pipelines/scripts/ado-terraform-azure.sh' # string. Required when scriptLocation = scriptPath. Script Path. 
+      addSpnToEnvironment: false # boolean. Access service principal details in script. Default: false.
+      workingDirectory: '$(System.DefaultWorkingDirectory)' # string. Alias: cwd. Working Directory. 
+      failOnStandardError: false # boolean. Fail on Standard Error. Default: false.
+      #inlineScript: # string. Required when scriptLocation = inlineScript. Inline Script. 
