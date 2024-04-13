@@ -9,6 +9,19 @@ end-to-end Solution Architect forum is contributing to this repository as knowle
 
 - AKS Cluster Backup
 
+
+Creater creation should not include backup vault creation but backup plan. That's why please follow below instruction. 
+To make both parts in a single example, Part1 and 2 have been combined in this terraform project. 
+
+***Part1:*** As pre-requisites, backup vault, Storage account and Storage container should be created.
+
+- storage.tf
+- backup_vault.tf
+
+***Part2:*** Cluster should be created with backup plan, extension installation (valero) , TRusted access to backup vault and role assignments
+
+- cluster.tf
+
 ## Troubleshoot 
 [click here](https://github.com/e2eSolutionArchitect/kubernetes/blob/main/aks/docs/aks-backup-troubleshoot.md)
 
