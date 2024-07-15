@@ -30,3 +30,9 @@ module "ec2" {
 }
 # ensure that you have SSH private ket setup
 ```
+
+# for module from a public repo for a specific release v1.0.0
+```
+# here module is in repo root
+source = "git::https://github.com/e2eSolutionArchitect/terraform-aws-apigw.git?ref=v1.0.0"
+```
