@@ -21,6 +21,7 @@ resource "aws_iam_role_policy_attachment" "policy-attach" {
   policy_arn = each.value
 }
 
+# Note: if the variable was declared as list(string) then we had to use toset(var.policy_arns) instead of only var.policy_arns
 ```
 
 
