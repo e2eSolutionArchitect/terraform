@@ -38,7 +38,7 @@ terraform {
   # TF State Management
   # Variables not allowed in backend block. 
   backend "s3" {
-    bucket         = "somcloud-tf-states"
+    bucket         = "tf-states"
     key            = "enter/path/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "tf-locks"
