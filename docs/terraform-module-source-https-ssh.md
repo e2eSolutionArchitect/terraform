@@ -19,6 +19,14 @@ module "ec2" {
 
 # here ref=main is particularly referring to a branch. it could be ref=v1.0.1. where v1.0.1 is a release tag.
 # also don't miss the '//'
+
+OR
+
+module "ec2" {
+  source = "git::https://github.com/e2eSolutionArchitect/e2esa-module-aws-ec2.git?ref=main"
+  .....
+when the module is in repo root.
+}
 ```
 
 # For remote source  - SSH
