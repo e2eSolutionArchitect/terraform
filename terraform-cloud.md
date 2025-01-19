@@ -1,6 +1,8 @@
 
 ## Instruction to configure Terraform project for Terraform Cloud 
 
+Refer [here](https://github.com/TheSolutionArchitect/terraform/tree/main/terraform-cloud) for TFC with GitHub Actions for AWS. Configuration guide. 
+
 - Using CLI for terraform apply 
 ```
 terraform login
