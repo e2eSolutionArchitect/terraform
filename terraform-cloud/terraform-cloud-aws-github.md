@@ -4,7 +4,7 @@
 ## Pre-requisites:
 
 **AWS OIDC Role**
-- Please refer [here](https://github.com/TheSolutionArchitect/terraform/blob/main/terraform-cloud/oidc-aws-iam-role.md) for OIDC role creation.
+- Please refer [here](https://github.com/e2eSolutionArchitect/terraform/blob/main/terraform-cloud/oidc-aws-iam-role.md) for OIDC role creation.
 
 **Terraform Cloud Configuration**
 - Create Terraform Cloud Organization
@@ -177,7 +177,10 @@ terraform init
 ```
 
 ## ATTENTION REQUIRED:
-The below line of code in pipeline plays a vital role. 
+
+1. Don't user VCS version control if GitHub pipeline is expected to kickoff TFC. Use alternative run workflows such as CLI driven or API run workflows driven types that can be a consideration to execute runs within Terraform Cloud.
+
+2. The below line of code in pipeline plays a vital role. 
 ```
 echo -e "access_key = \"${AWS_ACCESS_KEY_ID}\"\nsecret_key = \"${AWS_SECRET_ACCESS_KEY}\"\ntoken = \"${AWS_SESSION_TOKEN}\"\naws_region = \"${AWS_REGION:-${AWS_DEFAULT_REGION}}\"" | tee credentials.auto.tfvars
 ```
