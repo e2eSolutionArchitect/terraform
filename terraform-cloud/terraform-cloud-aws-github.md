@@ -27,14 +27,25 @@ terraform {
   NOTE: No variables or secrets to be added in Terraform Cloud Configuration
   
 
-**GitHub Configuration**
-
 GitHub Variables:
-|   |   |   |
-|---|---|---|
-|TF_API_TOKEN | Token created from Terraform Cloud portal | <token value> |
-|AWS_ROLE_ARN | the oidc role |arn:aws:iam::############:role/e2esa-aws-terraform-github-oidc |
-|AWS_REGION | AWS Region | e.g., us-east-1 |
+|   |   |   |   |
+|---|---|---|---|
+|TFC_API_TOKEN | repo secret| Token created from Terraform Cloud portal | <token value> |
+|AWS_ACCOUNT_ID | repo secret| AWS Account Id | e.g., 8712763499834|
+|AWS_OIDC_ROLE_NAME | repo variable| the oidc role |e.g e2esa-aws-terraform-github-oidc |
+|AWS_REGION | repo variable| AWS Region | e.g., us-east-1 |
+
+arn:aws:iam::{{ secret.AWS_ACCOUNT_ID }}:role/{{ vars.AWS_ROLE_NAME }} 
+
+# :high_brightness: Scenarios
+
+## **Scenario 1:** 
+Commit code to GitHub :arrow_forward: GitHub Actions Pipeline kicks-off :arrow_forward: GH connects to Terraform Cloud (TFC) and initiates job in TFC :arrow_forward: GH Actions pipeline shows the output from TFC under GH pipeline output :arrow_forward: call next job in GH pipeline. 
+
+Refer [TFC with GitHub Action Pipeline](.github/workflows/tfc-deploy-gh-action-shared-workflow.yml)
+
+## **Scenario 2:** 
+Commit code to GitHub :arrow_forward: GH perform Terraform execution. This scenario doesn't include Terraform Cloud. 
 
 ## Developer's system: VSC Code
 
