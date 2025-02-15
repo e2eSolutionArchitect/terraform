@@ -16,3 +16,4 @@
 - [terraform-aws-kms](https://github.com/e2eSolutionArchitect/terraform-aws-kms)
 - [terraform-aws-iam-role](https://github.com/e2eSolutionArchitect/terraform-aws-iam-role)
 - [terraform-aws-ecs-cluster](https://github.com/e2eSolutionArchitect/terraform-aws-ecs-cluster)
+- [terraform-aws-cloudwatch](https://github.com/e2eSolutionArchitect/terraform-aws-cloudwatch)
