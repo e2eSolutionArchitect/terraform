@@ -41,7 +41,7 @@ Please refer below code. [click here](https://github.com/e2eSolutionArchitect/gi
 
 # While using Terraform Cloud/TF Enterprise
 
-Please refer below code for Remote state Management in Terraform Cloud / Terraform Enterprise
+## 1. Please refer below code for Remote state Management in Terraform Cloud / Terraform Enterprise
 ```
 terraform {
   cloud {
@@ -55,3 +55,23 @@ terraform {
   }
 }
 ```
+
+## 2. GitHub secrets/vars
+- Terraform Cloud API Token. e.g., TFC_API_TOKEN
+
+
+# While using Terraform Opensource
+
+## 1. Please refer below code for Remote State Management 
+```
+  backend "s3" {
+    bucket         = "tf-states"
+    key            = "tfc-gh-aws-oidc/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "tf-locks"
+    encrypt        = true
+    profile        = "demo" # Uncomment while running from developers system. Comment when running using the pipeline
+  }
+```
+## 2. GitHub secrets/vars
+- AWS OIDC Role Arn . e.g., TF_GH_OIDC_ROLE_ARN
