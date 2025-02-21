@@ -38,3 +38,20 @@ Please refer below code. [click here](https://github.com/e2eSolutionArchitect/gi
     with:
         terraform_version: 1.10.0
 ```
+
+# While using Terraform Cloud/TF Enterprise
+
+Please refer below code for Remote state Management in Terraform Cloud / Terraform Enterprise
+```
+terraform {
+  cloud {
+    hostname = "app.terraform.io"
+    organization = "demo"
+    token = null
+    
+    workspaces {
+      name = "demo-ws-aws-ec2"
+    }
+  }
+}
+```
